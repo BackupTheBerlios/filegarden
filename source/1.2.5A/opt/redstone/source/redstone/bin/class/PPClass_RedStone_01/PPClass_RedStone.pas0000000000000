@@ -1,0 +1,266 @@
+unit PPClass_RedStone;
+
+interface
+
+uses
+Qt, SysUtils, Classes, qGraphics, qControls, qForms, qDialogs,inifiles
+ ,RedStone_Public_Comp
+  ;
+
+type
+
+
+  TPPClass_RedStone = class(TObject)
+
+
+  private
+    FPassRS_Calling_Form:TForm;
+    FPassRS_Calling_Handle:QApplicationH;
+    FCurrComp_Pakage_Class:TRedStone_Public_Comp;
+    FCurrComp_Pakage_Handle: HMODULE;
+    FPPClass_Filename:String;
+    FCallClass_Filename:String;
+    FRedStone_SysPath:String;
+    FPPClass_UserHOMEDIR:String;
+    (******************************************)
+    FRS_MainPath:String;
+    FRS_RecPath:String;
+    FRS_AppRecPath:String;
+    FRS_CompRecPath:String;
+    FRS_MenuRecPath:String;
+    FRS_CompRecName:String;
+    FRS_MenuRecName:String;
+    FRS_AppRecName:String;
+    FRS_App_Configuration_Extension:String;
+    FRS_Component_Configuration_Extension:String;
+
+  protected
+    property RS_Calling_Form: TForm read FPassRS_Calling_Form;
+    property RS_Calling_Handle:QApplicationH  read FPassRS_Calling_Handle;
+    property RS_CallClassFilename: String read FCallClass_Filename;
+    property RS_Class_Filename: String read FPPClass_Filename;
+ 
+
+  public
+    constructor Create(APassRS_Calling_Handle:QApplicationH;
+                          APassRS_Calling_Form:TForm;APassRS_Calling_APP_ExeName:String);//override;    
+    destructor Destroy; override;
+    function CRS_GetCompType(ACompProcName:String):String;
+    function RS_GetRecValue(const ASection,Akey:String):String;
+    procedure LoadCompVCL(const APassPublic_Comp_Name: String;const  APass_ExeName:string;APassStringList:TStringList);
+    procedure UnloadComp;
+    procedure LoadCompDLLFromString(const ADLL_String: String);
+    function CRS_Print_Properties2Str:String;
+    Procedure CRS_Print_Properties2File(AFilename:string);
+
+  published
+    property RS_MainPath:String read FRS_MainPath;
+    property RS_RecPath:String read FRS_RecPath;
+    property RS_AppRecPath:String read FRS_AppRecPath;
+    property RS_CompRecPath:String read FRS_CompRecPath;
+    property RS_MenuRecPath:String read FRS_MenuRecPath;
+    property RS_AppRecName:String read FRS_AppRecName;
+    property RS_CompRecName:String read FRS_CompRecName;
+    property RS_MenuRecName:String read FRS_MenuRecName;
+    property RS_App_Configuration_Extension:String read FRS_App_Configuration_Extension;
+    property RS_Component_Configuration_Extension:String read FRS_Component_Configuration_Extension;
+    property RS_Calling_UserHOMEDIR: String read FPPClass_UserHOMEDIR;
+    property RS_SysPath: String read FRedStone_SysPath;
+
+
+  end;
+ const
+    Constant_SYSTEM_Conf_Filename:string='redsys.rec';
+    Constant_CALLING_App_Conf_Extension:string='conf';
+    Constant_Component_Conf_Extension:string='rec';
+
+//procedure Register;
+
+implementation
+
+function TPPClass_RedStone.RS_GetRecValue(const ASection,Akey:String):String;
+var
+ini:tinifile;
+outstr:string;
+begin
+ini:=tinifile.create(FRedStone_SysPath+'/'+Constant_SYSTEM_Conf_Filename);
+outstr:=ini.ReadString(ASection,Akey,'');
+  if pos('[HOME]/',outstr)<>0 then 
+      outstr:=StringReplace(outstr,'[HOME]',FPPClass_UserHOMEDIR,[rfIgnoreCase]);
+result:=outstr;
+//result:= FPPClass_Filename;
+ini.free;
+end;
+
+constructor TPPClass_RedStone.Create(APassRS_Calling_Handle:QApplicationH;
+                          APassRS_Calling_Form:TForm;APassRS_Calling_APP_ExeName:String);//override;
+var
+ps,pc,s:string;
+h:THandle;
+begin
+  inherited create;
+   FPassRS_Calling_Form:=nil;
+   FPassRS_Calling_Handle:=nil;
+   FPassRS_Calling_Form:=APassRS_Calling_Form;
+   FPassRS_Calling_Handle:=APassRS_Calling_Handle;
+   h:=GetModuleHandle('PPClass_RedStone_01.so');
+   SetLength(PS, 100);	
+   SetLength(PS, GetModuleFilename( h, PChar(ps), Length(ps) ) );
+   SetLength(PC, 100);
+   SetLength(PC, GetModuleFilename( 0, PChar(pc), Length(pc) ) );
+   FPPClass_Filename:=ps;
+   FCallClass_Filename:=pc;
+   FRedStone_SysPath:=extractfilepath(FPPClass_Filename);
+   FPPClass_UserHOMEDIR:=GetEnvironmentVariable('HOME');
+   
+if  (pos('command_redstone',lowercase(APassRS_Calling_APP_ExeName))>1) then
+begin
+ FRS_MainPath:=RS_getrecvalue(extractfilename(APassRS_Calling_APP_ExeName),'main_path');
+ FRS_RecPath:=RS_getrecvalue(extractfilename(APassRS_Calling_APP_ExeName),'rec_path');
+ FRS_AppRecPath:=RS_getrecvalue(extractfilename(APassRS_Calling_APP_ExeName),'app_rec_path');
+ FRS_CompRecPath:=RS_getrecvalue(extractfilename(APassRS_Calling_APP_ExeName),'comp_rec_path');
+ FRS_MenuRecPath:=RS_getrecvalue(extractfilename(APassRS_Calling_APP_ExeName),'menu_rec_path');
+ FRS_AppRecName:=RS_getrecvalue(extractfilename(APassRS_Calling_APP_ExeName),'app_rec_name');
+ FRS_CompRecName:=RS_getrecvalue(extractfilename(APassRS_Calling_APP_ExeName),'comp_rec_name');
+ FRS_MenuRecName:=RS_getrecvalue(extractfilename(APassRS_Calling_APP_ExeName),'menu_rec_name');
+ FRS_App_Configuration_Extension:=Constant_CALLING_App_Conf_Extension;
+ FRS_Component_Configuration_Extension:=Constant_Component_Conf_Extension;
+
+ end;
+ 
+ if  (pos('command_redstone',lowercase(APassRS_Calling_APP_ExeName))=0) then
+ begin
+ s:=RS_getrecvalue(extractfilename(APassRS_Calling_APP_ExeName),'parent_app');
+ FRS_MainPath:=extractfilepath(s);
+ FRS_RecPath:=RS_getrecvalue(extractfilename(s),'rec_path');
+ FRS_AppRecPath:=RS_getrecvalue(extractfilename(s),'app_rec_path');
+ FRS_CompRecPath:=RS_getrecvalue(extractfilename(s),'comp_rec_path');
+ FRS_MenuRecPath:=RS_getrecvalue(extractfilename(s),'menu_rec_path');
+ FRS_AppRecName:=RS_getrecvalue(extractfilename(s),'app_rec_name');
+ FRS_CompRecName:=RS_getrecvalue(extractfilename(s),'comp_rec_name');
+ FRS_MenuRecName:=RS_getrecvalue(extractfilename(s),'menu_rec_name');
+ FRS_App_Configuration_Extension:=Constant_CALLING_App_Conf_Extension;
+ FRS_Component_Configuration_Extension:=Constant_Component_Conf_Extension;
+ end;
+
+end;
+
+destructor TPPClass_RedStone.Destroy;
+begin
+
+  UnloadComp;
+  inherited;
+end;
+
+Procedure TPPClass_RedStone.LoadCompVCL(const APassPublic_Comp_Name: String;
+                              const  APass_ExeName:string;APassStringList:TStringList);
+
+var
+  ini:tinifile;
+  RSP: TRedStone_Internal_Public_Comp;
+  sss
+  ,app_rec_path
+  ,app_rec_name
+  ,app_comp_name
+  ,app_comp_classname
+  :string;
+begin
+  ini:=nil;
+  if FCurrComp_Pakage_Handle <> 0 then
+    UnloadComp;
+
+  try
+ sss:=ExtractFileName(FCallClass_Filename);
+ sss:=ExtractFileName(APass_ExeName);
+   ini:=tinifile.create(FRedStone_SysPath+'/redsys.rec');
+   app_rec_path:=ini.ReadString(sss, 'comp_rec_path', '');
+   if pos('[HOME]/',app_rec_path)<>0 then 
+      app_rec_path:=StringReplace(app_rec_path,'[HOME]',FPPClass_UserHOMEDIR,[rfIgnoreCase]);
+   app_rec_name:=ini.ReadString(sss, 'comp_rec_name', '')+'.rec';
+   ini.free;
+   if fileexists(app_rec_path+'/'+app_rec_name)=false then
+      ini:=tinifile.create(FRedStone_SysPath+'/'+'Redstone_comp.rec')else
+   if fileexists(app_rec_path+'/'+app_rec_name)=true then
+      ini:=tinifile.create(app_rec_path+'/'+app_rec_name);
+   app_comp_name:=ini.ReadString(APassPublic_Comp_Name, 'comp_name', '');
+   app_comp_classname:=ini.ReadString(APassPublic_Comp_Name, 'comp_classname', '');
+   ini.free;
+
+   FCurrComp_Pakage_Handle := LoadPackage(app_comp_name);
+    RSP := TRedStone_Internal_Public_Comp(findClass(app_comp_classname));
+    FCurrComp_Pakage_Class := RSP.Create(FPassRS_Calling_Handle,FPassRS_Calling_Form,
+                                         APass_ExeName,APassStringList);
+
+  except
+    on E: Exception do
+    begin
+      UnloadComp;
+      if ini<>nil then
+      ini.free;
+      raise;
+    end;
+  end;
+
+end;
+
+procedure TPPClass_RedStone.UnloadComp;
+begin
+
+  if FCurrComp_Pakage_Handle <> 0 then
+  begin
+
+    if FCurrComp_Pakage_Class <> nil then
+    begin
+
+      FCurrComp_Pakage_Class.Free;
+      FCurrComp_Pakage_Class := nil;
+    end;
+
+
+    UnRegisterModuleClasses(FCurrComp_Pakage_Handle);
+
+    UnloadPackage(FCurrComp_Pakage_Handle);
+
+    FCurrComp_Pakage_Handle := 0;
+
+  end;
+end;
+
+procedure TPPClass_RedStone.LoadCompDLLFromString(const ADLL_String: String);
+begin
+//
+end;
+
+function TPPClass_RedStone.CRS_GetCompType(ACompProcName:String):String;
+var ini:tinifile;
+
+begin
+//create_frame{vrs;default;300;200;default}  //x;xx;sss#aa|ss|qq|a;xx;x
+ini:=tinifile.create(FRS_CompRecPath+'/'+FRS_CompRecName+'.rec');
+result:=trim(ini.ReadString(ACompProcName, 'comp_type', ''));
+ini.free;
+end;
+
+function TPPClass_RedStone.CRS_Print_Properties2Str:String;
+begin
+result:= FRS_MainPath+
+         FRS_RecPath+
+         FRS_AppRecPath+
+         FRS_MenuRecPath+
+         FRS_CompRecPath+
+         FRS_CompRecName+
+         FRS_MenuRecName+
+         FRS_AppRecName+
+         FRS_App_Configuration_Extension+
+         FRS_Component_Configuration_Extension;
+
+end;
+
+Procedure TPPClass_RedStone.CRS_Print_Properties2File(AFilename:string);
+begin
+
+
+end;
+
+end.
+ 

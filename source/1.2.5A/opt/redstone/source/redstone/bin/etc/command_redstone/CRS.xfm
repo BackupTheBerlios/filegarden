@@ -1,0 +1,14 @@
+object Form1: TForm1
+  Left = 356
+  Top = 124
+  Width = 543
+  Height = 375
+  Caption = 'Form1'
+  Color = clBackground
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 75
+  TextHeight = 15
+  TextWidth = 7
+Font.Charset =fcsDefaultCharSet 
+end

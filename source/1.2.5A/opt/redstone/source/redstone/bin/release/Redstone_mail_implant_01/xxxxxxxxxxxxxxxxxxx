@@ -1,0 +1,213 @@
+var i:integer;MimePart:TMimePart;
+begin
+ //EncodingCode=ME_7BIT, ME_8BIT, ME_QUOTED_PRINTABLE and ME_BASE64.
+ // If type not recognised, result is ME_7BIT.
+ //MP_TEXT, MP_MULTIPART, MP_MESSAGE and MP_BINARY
+ 
+for i:=0 to APASSPartCount-1 do
+begin
+
+MimePart:=(APASSMimePart.GetSubPart(i));
+(*
+//Write
+ Write(
+'*********************************************************'+#13#10+
+'For Mail with subject         : '+APASSHeader+#13#10+ 
+'No. of mime parts             : '+inttostr(MimePart.GetSubPartCount)+#13#10+ 
+'Content-Type                  : '+MimePart.Primary+'/'+MimePart.Secondary+#13#10+ 
+'Content-Transfer-Encoding     : '+MimePart.Encoding+#13#10+ 
+'Content-Disposition           : '+MimePart.Disposition+#13#10+ 
+'filename                      : '+MimePart.filename+#13#10+
+'*********************************************************'+#13#10+#13#10
+);
+*)
+CheckEncodingCode(APASSHeader,MimePart);
+
+if MimePart.GetSubPartCount>0 then 
+begin
+MimePart.DecomposeParts;
+ProcessMIMEPart(APASSHeader,MimePart,MimePart.GetSubPartCount);
+end;
+
+end;//for i:=0 to partNo do
+
+end;
+(**************************************************************************************)
+
+begin
+//if MailListViewCanClick<>true then exit;
+
+if DoingMIME=true then exit;
+if (Button=mbLeft)then
+begin
+CheckDeleteTMPAttachment;
+DoingMIME:=true;
+HTMLmemoView.clear;
+HTMLView.text:='';
+AttachmentHTMLViewCurrentText:='';
+HTMLViewCurrentText:='';
+HTMLViewCurrentText:='';
+if Maillistview.selcount>1 then 
+begin 
+DoingMIME:=false;
+exit;
+end;
+if not (fileexists(InfoListViewCurrentDir+'.xfgMailercatch'))then
+begin 
+DoingMIME:=false;
+exit;
+end;
+
+
+
+if Maillistview.selcount=1 then
+begin
+//HTMLmemoView.clear;
+//AttachmentHTMLViewCurrentText:='';
+//AttachmentHTMLView.text:='';
+//HTMLViewCurrentText:='';
+//HTMLView.text:='';//clear;
+lst:=nil;
+AttachmentLstFoListBox:=nil;
+HTMLContentIDLst:=nil;
+AttachmentLst:=nil;
+lst:=tstringlist.create;
+AttachmentLst:=tstringlist.create;
+HTMLContentIDLst:=tstringlist.create;
+AttachmentLstFoListBox:=tstringlist.create;
+WorkMassage:=nil;
+
+
+
+if (fileexists(InfoListViewCurrentDir+'.xfgMailercatch'))then
+begin
+lst.loadfromfile(InfoListViewCurrentDir+'.xfgMailercatch');
+end;
+
+if lst.count=0 then 
+begin 
+if lst <> nil then lst.free;
+if WorkMassage<> nil then WorkMassage.free;
+if AttachmentLst<>nil then AttachmentLst.free;
+if HTMLContentIDLst<>nil then HTMLContentIDLst.free;
+DoingMIME:=false;
+exit;
+end;
+
+
+try
+
+
+AttachmentLst.add('<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">');
+AttachmentLst.add('<html>');
+AttachmentLst.add('<head>');
+AttachmentLst.add('<title>'+'Mail Attachments'+'</title>');
+AttachmentLst.add('</head>');
+AttachmentLst.add('<body>');
+AttachmentLst.add('<pre>');
+AttachmentLst.add('<font face=helvitica>');
+
+
+//HTMLmemoView.clear;
+//AttachmentHTMLViewCurrentText:='';
+//HTMLViewCurrentText:='';
+//HTMLView.text:='';//clear;
+//AttachmentHTMLView.text:='';
+//lst.loadfromfile(InfoListViewCurrentDir+'.xfgMailercatch');
+FStr:=lst[Item.index];
+DeconstructMail(FStr);
+
+WorkMassage:=tmimemess.create;  
+WorkMassage.Lines.loadfromfile(FStr);
+WorkMassage.DecodeMessage; 
+
+
+headerstr:=WorkMassage.header.Subject;
+//WorkMassage.MessagePart.Lines.assign(WorkMassage.Lines);
+
+partNo:= WorkMassage.MessagePart.GetSubPartCount;
+
+ // Write('partNo='+inttostr(partNo));
+ 
+ //EncodingCode=ME_7BIT, ME_8BIT, ME_QUOTED_PRINTABLE and ME_BASE64.
+ // If type not recognised, result is ME_7BIT.
+ //MP_TEXT, MP_MULTIPART, MP_MESSAGE and MP_BINARY
+(*
+Write
+(
+'*********************************************************'+#13#10+
+'Subject                       : '+headerstr+#13#10+ 
+'partNo                        : '+inttostr(partNo)+#13#10+ 
+'Content-Type                  : '+WorkMassage.MessagePart.Primary+'/'+WorkMassage.MessagePart.Secondary+#13#10+ 
+'Content-Transfer-Encoding     : '+WorkMassage.MessagePart.Encoding+#13#10+ 
+'Content-Disposition           : '+WorkMassage.MessagePart.Disposition+#13#10+ 
+'filename                      : '+WorkMassage.MessagePart.filename+#13#10+
+'*********************************************************'+#13#10+#13#10
+);
+*)
+
+if partNo>0 then 
+begin
+WorkMassage.MessagePart.DecomposeParts;
+ProcessMIMEPart(headerstr,WorkMassage.MessagePart,partNo);
+end;
+if partNo=0 then 
+CheckEncodingCode(headerstr,WorkMassage.MessagePart);
+
+AttachmentLst.add('</font>');
+AttachmentLst.add('</pre>');
+AttachmentLst.add('</body>');
+AttachmentLst.add('</html>');
+AttachmentHTMLViewCurrentText:=(AttachmentLst.text);
+AttachmentHTMLView.text:=(AttachmentLst.text) ;
+
+
+
+//AttachmentLst.savetofile('/xxxxxxxxxxxxxxxxxxxxxxxc');
+if  (trim(HTMLView.text)='')and (trim(HTMLmemoView.lines.text)='') then
+pc.ActivePage := ts3;
+
+if  (trim(HTMLView.text)<>'') then
+begin
+if HTMLContentIDLst.count>0 then
+begin
+FStr:=HTMLView.text;
+ProcessHTMLContentID(FStr);
+pc.ActivePage := ts2;
+end;
+end;
+DoingMIME:=false;
+
+
+//MailTEMPAttachmentFolder,InfoListViewCurrentDir, QueueFolderDir,MyLetterFolderDir,
+// PersonsFolderDir,TRASHFolderDir,OUTBOXFolderDir,INBOXFolderDir:string;
+//EDTo,EDCc,EDSubject:tedit;EDTolb,EDCclb,EDSubjectlb:tlabel;
+// HTMLmemoView,ComposememoView:tmemo;LBoxAttach:Tlistbox;
+if (InfoListViewCurrentDir=QueueFolderDir)or 
+(InfoListViewCurrentDir=MyLetterFolderDir)or
+(InfoListViewCurrentDir=OUTBOXFolderDir) then
+begin
+pc.activepage:=ts4;
+EDSubject.text:=trim(WorkMassage.header.Subject);
+EDTo.text:=trim(WorkMassage.header.tolist.text);
+EDCc.text:=trim(WorkMassage.header.CCList.text);
+ComposememoView.lines.text:=HTMLmemoView.lines.text;
+if AttachmentLstFoListBox.count=0 then LBoxAttach.items.clear else
+LBoxAttach.items.text:=(AttachmentLstFoListBox.text);
+end;
+
+
+finally
+
+DoingMIME:=false;
+end;
+if lst <> nil then lst.free;
+if WorkMassage<> nil then WorkMassage.free;
+if AttachmentLst<>nil then AttachmentLst.free;
+if AttachmentLstFoListBox<>nil then AttachmentLstFoListBox.free;
+if HTMLContentIDLst<>nil then HTMLContentIDLst.free;
+DoingMIME:=false;
+end;//if Maillistview.selcount=1 then
+DoingMIME:=false;
+end; 
+end;

@@ -1,0 +1,302 @@
+***********************************************************
+              Deploying Kylix Applications
+***********************************************************
+
+Please read this entire file before deploying Kylix app-
+lications, components, or libraries. This file is provided
+pursuant to the Borland License Terms, license.txt, and
+provides information on deploying Kylix applications.
+
+Table of Contents
+===========================================================
+
+  1.  General Application Deployment
+  2.  Components and Packages
+      2.1 Distributing Custom Packages
+      2.2 Borland Runtime Packages
+      2.3 Redistributable packages: Kylix 3 Enterprise 
+      2.4 Redistributable packages: Kylix 3 Professional 
+      2.5 Redistributable packages: Kylix 3 Open Edition
+      2.6 GPL deployment requirements
+          2.5a GPL applications using VisualCLX
+  3.  Sample Files
+      3.1 Images
+      3.2 Database files
+  4.  Kylix Utilities
+  5. Removed or modified "Redistributable" files
+
+
+1. General Application Deployment
+===========================================================
+With Kylix, there is no runtime interpreter. You need only
+deploy your application and any required packages (BPLs) 
+and runtime libraries. For some applications, you can 
+distribute a standalone executable. If you have used 
+runtime packages with your application, be sure to include 
+all required BPLs and LIBs with the distribution along with
+any symbolic links. BPLs are Borland Package Libraries and 
+will have the naming convention bplLIBRARYNAME.so. LIBs are 
+runtime libraries and will have the naming 
+convention libLIBRARYNAME.so
+
+2. Components and Packages
+===========================================================
+2.1 Distributing Custom Packages
+--------------------------------
+If you distribute Kylix development packages to other 
+developers, be sure to supply both DCP and BPL files. 
+You will also want to include DCU and DPU files as well as 
+documentation.
+
+2.2 BORLAND Runtime Packages
+----------------------------
+In accordance with the General Terms That Apply to Compiled
+Programs and Redistributables, Section 3 of the Borland 
+license terms, you may redistribute BORLAND-supplied 
+runtime packages and libraries only for the purpose of 
+executing works created with Kylix. You may not 
+modify these packages in any way. You should install the
+redistributable runtime packages in a directory that is 
+listed in the LD_LIBRARY_PATH environment variable, or 
+listed in the /etc/ld.so.conf file. 
+
+Although this software may include packages other than
+those listed below, only the packages listed below are
+redistributable.
+
+You may NOT redeploy or distribute BORLAND-supplied 
+design-time-only packages. You may not recompile or 
+redistribute any BORLAND-supplied components or libraries 
+for use by other developers except for Works that are 
+distributed under the GNU General Public License.
+
+Packages that you develop may not have the same names as
+BORLAND-supplied packages. If you distribute component
+libraries or other packages, it is recommended that you
+avoid using the default USER package name, since this
+will cause naming conflicts with packages distributed by 
+other developers who may have distributed packages with 
+the same default name.
+
+Your application will be linked against a symbolic link 
+that is different than the actual library name. The 
+symbolic links point to the appropriate package. This 
+technique was chosen to minimize deployment issues when updating
+packages. As part of your deployment you must create or deploy
+the appropriately named symbolic link to that file. In 
+the redistributable list the symbolic link name will follow 
+the actual package name in this format:
+  
+   package_name <--- symlink_name
+
+2.3 Redistributable packages: Kylix 3 Enterprise
+-----------------------------------------------------------
+If you are a licensed user of Kylix 3 Enterprise
+redistributable runtime packages and libraries include the
+following:
+
+  2.3.1 Dual-Licensed Packages
+  ------------------------------------------------------
+  bplbaseclx.so.6.9.0        <---   bplbaseclx.so.6.9
+  bpldataclx.so.6.9.0        <---   bpldataclx.so.6.9
+  bplvisualclx.so.6.9.0      <---   bplvisualclx.so.6.9
+  bplvisualdbclx.so.6.9.0    <---   bplvisualdbclx.so.6.9
+  libqt.so.2.3.0             <---   libqt.so.2
+  libqtintf-6.9.0-qt2.3.so   <---   libqtintf-6.9-qt2.3.so
+  libborqt-6.9.0-qt2.3.so    <---   libborqt-6.9-qt2.3.so
+  libborunwind.so.6.0 (LGPL) <---   libborunwind.so.6 <--- libborunwind.so
+  libsqlmy23.so.1.0          <---   libsqlmy23.so <--- libsqlmy.so
+  libsqlib.so.1.0            <---   libsqlib.so
+  libsqlpg.so.1.0            <---   libsqlpg.so
+
+
+  2.3.2 Protected Packages
+  -------------------------------------------------------
+  bplnetclx.so.6.9.0         <---   bplnetclx.so.6.9
+  bplnetdataclx.so.6.9.0     <---   bplnetdataclx.so.6.9
+  bplwebsnapclx.so.6.9.0     <---   bplwebsnapclx.so.6.9
+  bplwebdsnapclx.so.6.9.0    <---   bplwebdsnapclx.so.6.9
+  bplxmlrtl.so.6.9.0         <---   bplxmlrtl.so.6.9
+  libjs.so                   <---   libjs.borland.so
+  liborbpas45.so.1.0.0       <---   liborbpas45.so.1 <--- liborbpas45.so 
+  libsqlinf.so.1.0           <---   libsqlinf.so
+  libsqldb2.so.1.0           <---   libsqldb2.so
+  libsqlora.so.1.0           <---   libsqlora.so
+  
+ 
+  
+  2.3.2.1 ClientDataSet Redistributables (Protected Packages)
+  -------------------------------------------------------
+  libmidas.so.1.0            <---   libmidas.so.1
+  bplsoaprtl.so.6.9.0        <---   bplsoaprtl.so.6.9
+  
+ 
+  2.3.3 Other packages (not Borland Protected nor Dual-Licensed)
+  -------------------------------------------------------------
+  bplindy.so.6.9.0           <---   bplindy.so.6.9 
+  libborstl.so.1.0           <---   libborstl.so
+  libborcrtl.so.1.0          <---   libborcrtl.so.1
+
+
+
+2.4 Redistributable packages: Professional 
+------------------------------------------
+If you are a licensed user of Kylix 3 Professional,
+redistributable runtime packages and libraries include the 
+following:
+
+  2.4.1 Dual-Licensed Packages
+  ------------------------------------------------------
+  bplbaseclx.so.6.9.0        <---   bplbaseclx.so.6.9
+  bpldataclx.so.6.9.0        <---   bpldataclx.so.6.9
+  bplvisualclx.so.6.9.0      <---   bplvisualclx.so.6.9
+  bplvisualdbclx.so.6.9.0    <---   bplvisualdbclx.so.6.9
+  libqt.so.2.3.0             <---   libqt.so.2
+  libqtintf-6.9.0-qt2.3.so   <---   libqtintf-6.9-qt2.3.so
+  libborqt-6.9.0-qt2.3.so    <---   libborqt-6.9-qt2.3.so
+  libborunwind.so.6.0 (LGPL) <---   libborunwind.so.6 <--- libborunwind.so
+  libsqlmy23.so.1.0          <---   libsqlmy23.so <--- libsqlmy.so
+  libsqlib.so.1.0            <---   libsqlib.so
+  libsqlpg.so.1.0            <---   libsqlpg.so 
+  
+  2.4.2 Protected Packages
+  -------------------------------------------------------
+  bplnetclx.so.6.5.0         <---   bplnetclx.so.6.5
+  bplnetdataclx.so.6.5.0     <---   bplnetdataclx.so.6.5
+
+  2.4.2.1 ClientDataSet Redistributables (Protected Packages)
+  -------------------------------------------------------
+  libmidas.so.1.0            <---   libmidas.so.1
+  
+  2.4.3 Other packages (not Borland Protected nor Dual-Licensed)
+  -------------------------------------------------------
+  bplindy.so.6.9.0           <---   bplindy.so.6.9 
+  libborstl.so.1.0           <---   libborstl.so
+  libborcrtl.so.1.0          <---   libborcrtl.so.1
+  
+
+2.5 Redistributable packages: Open Edition
+------------------------------------------
+If you are a licensed user of Kylix 3 Open Edition,
+redistributable runtime packages and libraries include the 
+following:
+
+
+  2.5.1 GPL-Licensed Packages
+  ------------------------------------------------------
+  bplbaseclx.so.6.9.0        <---   bplbaseclx.so.6.9
+  bplvisualclx.so.6.9.0      <---   bplvisualclx.so.6.9
+  libqt.so.2.3.0             <---   libqt.so.2
+  libqtintf-6.9.0-qt2.3.so   <---   libqtintf-6.9-qt2.3.so
+  libborqt-6.9.0-qt2.3.so    <---   libborqt-6.9-qt2.3.so
+  libborunwind.so.6.0 (LGPL) <---   libborunwind.so.6 <--- libborunwind.so
+  
+  2.5.2 Other packages (not Borland Protected nor Dual-Licensed)
+  -------------------------------------------------------
+  libborstl.so.1.0           <---   libborstl.so
+  libborcrtl.so.1.0          <---   libborcrtl.so.1
+
+  
+2.6 GPL deployment requirements
+---------------------------------------
+A GPL deployed application must deploy the required runtime 
+packages for the appropriate Kylix version as detailed above. 
+However, there is an additional requirement that either the source 
+for the packages be deployed with the application or a link to the
+source is published as described in GPL license, version 2. A copy of
+the this GPL license can be found at 
+    http://www.borland.com/kylix/gpl.html.
+
+2.6a GPL applications using VisualCLX 
+---------------------------------------
+There is a dependency on the Qt libraries in VisualCLX. If you 
+distribute a GPL application that uses VisualCLX you are also
+required to either ship the source to the Qt/X11 Free Edition 
+libraries or provide this link to downloadable source:
+ftp://ftp.trolltech.com/qt/source/qt-x11-2.3.0.tar.gz. Also, 
+several of these files were patched. Patches of the diffs
+are available on the CD-ROM or in the downloadable archive 
+in the /patches/qt directory and affect the following files:
+
+from qt/src/kernel
+  qclipboard_X11.cpp in 
+  qdragobject.cpp
+  qlocalfs.cpp
+  qmime.cpp
+  qwidget_X11.cpp
+
+from qt/src/network
+  qftp.cpp   
+
+from qt/src/tools
+  qbig5codec.cpp
+  qstring.cpp  
+
+from qt/src/widgets
+  qlistview.cpp
+  qtextbrowswer.cpp
+
+3. Sample Files
+===========================================================
+3.1 Images
+-----------
+Kylix includes a library of redistributable bitmap images
+normally installed in the subdirectory:
+
+  kylix3/images
+
+3.2 Database Files
+-------------------
+Kylix includes a number of sample databases. The contents of 
+these sample databases are not redistributable.
+
+
+4. Kylix Utilities
+===========================================================
+The utility programs included with Kylix may NOT be
+redistributed with deployed applications. These utility 
+programs include, but are not limited to:
+
+  dcc
+  bc++
+  bcpp
+  ilink
+  convert 
+  dbkexe-1.9 
+  resbind
+  startkylix
+  startbcb
+  startdelphi
+  kylixpath
+  registerkylix
+  startxmlmapper
+  xmlmapper
+  bpr2mak
+  idl2pas 
+  idl2pas.jar
+  kreg
+  serverinfo
+  transdlg
+  webappdbg
+
+5. Removed or modified "Redistributable" files
+===========================================================
+BORLAND RESERVES THE RIGHT TO REMOVE OR MODIFY INDIVIDUAL
+REDISTRIBUTABLE FILES FROM THIS BORLAND SOFTWARE PRODUCT,
+AT ANY TIME PRIOR TO RELEASE OF THE PRODUCT, REGARDLESS OF
+WHETHER SUCH FILES CONTINUE TO BE LISTED AS
+"REDISTRIBUTABLE" UPON RELEASE OF THE PRODUCT. BORLAND
+SHALL HAVE NO OBLIGATION WHATSOEVER IN CONNECTION WITH ANY
+FILE WHICH IS LISTED AS "REDISTRIBUTABLE" BUT HAS BEEN
+REMOVED FROM THE PRODUCT PRIOR TO THE PRODUCT'S RELEASE.
+
+
+==================================================================
+Unless otherwise noted, all materials provided in this
+release are Copyright 1983 - 2002 by Borland Software Corporation.
+========================= END ====================================
+
+
+
+
+

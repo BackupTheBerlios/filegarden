@@ -1,0 +1,25 @@
+object Form4: TForm4
+  Left = 20
+  Top = 50
+  Width = 543
+  Height = 375
+  Caption = 'Form4'
+  Color = clBackground
+  OnClose = FormClose
+  OnCreate = FormCreate
+onMOUSEDOWN=ImageMouseDown
+  PixelsPerInch = 96
+  TextHeight = 15
+  TextWidth = 7
+autoscroll=true
+  object Image1: TImage
+    Left = 0
+    Top = 0
+    Width = 543
+    Height = 375
+    Align = alnone
+    AutoSize = True
+    Transparent = false
+onMOUSEDOWN=ImageMouseDown
+  end
+end

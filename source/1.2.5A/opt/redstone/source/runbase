@@ -1,0 +1,18 @@
+#!/bin/bash
+
+
+cd /opt/redstone/source/redstone/bin/release/RedStone_Public_Comp_01
+rm *.dpu
+dcc -B /opt/redstone/source/redstone/bin/release/RedStone_Public_Comp_01/*.dpk 
+./a
+
+cd /opt/redstone/source/redstone/bin/class/PPClass_RedStone_01
+rm *.dpu
+dcc -B /opt/redstone/source/redstone/bin/class/PPClass_RedStone_01/*.dpk 
+./a
+cd /opt/redstone/source/redstone/bin/class/PClass_Command_RedStone_01
+rm *.dpu
+dcc -B /opt/redstone/source/redstone/bin/class/PClass_Command_RedStone_01/*.dpk 
+./a
+
+

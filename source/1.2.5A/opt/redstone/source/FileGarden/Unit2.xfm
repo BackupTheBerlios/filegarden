@@ -1,0 +1,19 @@
+object Form2: TForm2
+  Left = 255
+  Top = 126
+  Width = 543
+  Height = 375
+  Caption = 'Form2'
+  Color = clBackground
+  PixelsPerInch = 96
+  TextHeight = 15
+  TextWidth = 7
+  visible=true
+  formstyle = fsnormal
+OnDestroy = FormDestroy
+  OnCreate = FormCreate
+  OnClose = FormClose
+OnResize=FormResize
+Font.Charset =fcsDefaultCharSet 
+
+end

@@ -1,0 +1,9 @@
+#!/bin/bash
+cp /opt/redstone/source/redstone/bin/class/PClass_Command_RedStone_01/*.so /opt/redstone/mainlib
+cp /opt/redstone/source/redstone/bin/class/PPClass_RedStone_01/*.so /opt/redstone/mainlib
+cp /opt/redstone/source/redstone/bin/release/RedStone_Public_Comp_01/*.so /opt/redstone/mainlib
+cp /opt/redstone/source/redstone/bin/release/Test_Comp/*.so /opt/redstone/mainlib
+cp /opt/redstone/source/FileGarden/Project1 /opt/redstone/FileGarden/FileGarden
+cp /opt/redstone/source/redstone/bin/release/Redstone_help_01/*.so /opt/redstone/mainlib
+cp /opt/redstone/source/redstone/bin/etc/command_redstone/Command_Redstone /opt/redstone/mainlib
+cp /opt/redstone/source/redstone/bin/release/template/*.so /opt/redstone/mainlib

@@ -1,0 +1,24 @@
+application/vnd.sun.xml.calc.template stcapplication/vnd.sun.xml.impress.template sti
+application/vnd.stardivision.impress sdd sdp
+application/vnd.sun.xml.draw sxdapplication/vnd.sun.xml.impress.template sti
+application/vnd.stardivision.impress sdd sdp
+application/vnd.sun.xml.draw sxdapplication/vnd.sun.xml.impress.template sti
+application/vnd.stardivision.impress sdd sdp
+application/vnd.sun.xml.draw sxd
+application/vnd.stardivision.calc sdcapplication/vnd.sun.xml.impress.template sti
+application/vnd.stardivision.impress sdd sdpapplication/vnd.sun.xml.impress.template sti
+application/vnd.stardivision.impress sdd sdp
+application/vnd.sun.xml.draw sxdapplication/vnd.sun.xml.impress.template sti
+application/vnd.stardivision.impress sdd sdp
+application/vnd.sun.xml.draw sxdapplication/vnd.sun.xml.impress.template sti
+application/vnd.stardivision.impress sdd sdp
+application/vnd.sun.xml.draw sxd
+application/vnd.sun.xml.draw sxd
+application/vnd.sun.xml.impress sxi
+application/vnd.sun.xml.impress.template stapplication/vnd.sun.xml.impress.template sti
+application/vnd.stardivision.impress sdd sdp
+application/vnd.sun.xml.draw sxdiapplication/vnd.sun.xml.impress.template sti
+application/vnd.stardivision.impress sdd sdpapplication/vnd.sun.xml.impress.template sti
+application/vnd.stardivision.impress sdd sdp
+application/vnd.sun.xml.draw sxd
+application/vnd.sun.xml.draw sxdapplication/vnd.sun.xml.impress.template sti

@@ -1,0 +1,2 @@
+#!/bin/bash
+dcc -B /opt/redstone/source/FileGarden/*dpr

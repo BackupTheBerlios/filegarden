@@ -1,0 +1,26 @@
+MStr:TMEMORYSTREAM;
+caretstart: Integer;
+
+
+MStr := TMEMORYSTREAM.Create;
+ (*************************************)
+
+MStr.LoadFromFile(datadir+'/redstone.org001');
+
+    caretstart:=xfgmemo.GetTextLen;  
+    SetLength(instr, MStr.Size);
+//STRsize:=STRsize+MStr.Size;
+   //  if length(instr)> 419200 then acreateform;
+   //  if STRsize > 419200 then acreateform; 
+ MStr.Read(Pointer(instr)^, MStr.Size);
+xfgmemo.lines.add(instr);
+ xfgmemo.SelStart:=caretstart;
+
+
+
+
+
+
+ (*************************************)
+ 
+MStr.free;

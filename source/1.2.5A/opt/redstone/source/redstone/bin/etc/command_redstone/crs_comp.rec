@@ -1,0 +1,17 @@
+[internal]
+delphi=new
+dll=new
+activex=new
+com=new
+java=new
+python=new
+tcl=new
+
+[external]
+
+[create_frame]
+main_path=F:\DELPHI\redstone\bin
+comp_name=create_frame_01.bpl
+comp_classname=tcreate_frame
+comp_type=delphi
+

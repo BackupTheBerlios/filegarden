@@ -1,0 +1,2 @@
+#!/bin/bash
+cp Command_Redstone /opt/redstone/mainlib

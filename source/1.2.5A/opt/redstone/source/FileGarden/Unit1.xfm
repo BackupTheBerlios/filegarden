@@ -1,0 +1,415 @@
+object Form1: TForm1
+  Left = 258
+  Top = 61
+  Width = 767
+  Height = 512
+  HorzScrollBar.Range = 153
+  VertScrollBar.Range = 55
+ Font.Charset =fcsDefaultCharSet 
+  Caption = 'FileGarden'
+  Color = clBackground
+  Menu = MainMenu1
+  Position = poDefaultPosOnly
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 75
+  TextHeight = 15
+  TextWidth = 7
+  formstyle = fsnormal
+
+  object Panel1: TPanel
+    Width = 153
+    Height = 432
+    Align = alLeft
+ BorderStyle=bsnone
+    BorderWidth = 0
+  
+    TabOrder = 0
+  
+    object Button1: TBitBtn
+      Left = 8
+      Top = 8
+      Width = 137
+      Height = 30
+      Cursor = crHandPoint
+      Margin =3
+      Caption = 'Select files ...'
+      Color = clbutton
+      Font.Color =clblack
+      Font.Style = []
+      Font.Height = 13
+      Font.Name = 'SANS'
+      Font.Pitch = fpVariable
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = False
+      TabOrder = 1
+      OnClick = Button1Click
+    
+    end
+    object Button2: TBitBtn
+      Left = 8
+      Top = 40
+      Width = 137
+      Height = 30
+      Cursor = crHandPoint
+      Margin =3
+      Caption = 'Save Page As ...'
+      Color = clbutton
+      Font.Color = clblack
+      Font.Height = 13
+      Font.Name = 'SANS'
+      Font.Pitch = fpVariable
+      Font.Style = []
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = False
+      TabOrder = 3
+      OnClick = Button2Click
+    
+    end
+    object Button3: TBitBtn
+      Left = 8
+      Top = 72
+      Width = 137
+      Height = 30
+      Cursor = crHandPoint
+      Margin =3
+      Caption = 'Page to PS'
+      Color = clbutton
+      Font.Color = clblack
+      Font.Height = 13
+      Font.Name = 'SANS'
+      Font.Pitch = fpVariable
+      Font.Style = []
+     ParentFont = False
+      ParentShowHint = False
+      ShowHint = False
+      TabOrder = 5
+      OnClick = Button3Click
+    
+    end
+    object Button4: TBitBtn
+      Left = 8
+      Top = 104
+      Width = 137
+      Height = 30
+      Cursor = crHandPoint
+      Caption = 'Page to PDF'
+      Color = clbutton
+      Font.Color = clblack
+      Font.Height = 13
+      Font.Name = 'SANS'
+      Font.Pitch = fpVariable
+      Font.Style = []
+    ParentFont = False
+      Margin =3
+      ParentShowHint = False
+      ShowHint = False
+      TabOrder = 7
+      OnClick = Button4Click
+    
+    end
+    object Button5: TBitBtn
+      Left = 8
+      Top = 136
+      Width = 137
+      Height = 30
+      Cursor = crHandPoint
+      Caption = 'Files to PS'
+      Color = clbutton
+      Font.Color = clblack
+      Font.Height = 13
+      Font.Name = 'SANS'
+      Font.Pitch = fpVariable
+      Font.Style = []
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = False
+      TabOrder = 9
+      OnClick = Button5Click
+    
+    end
+    object Button6: TBitBtn
+      Left = 8
+      Top = 168
+      Width = 137
+      Height = 30
+      Cursor = crHandPoint
+      Caption = 'Files to PDF'
+      Color = clbutton
+      Font.Color = clblack
+      Font.Height = 13
+      Font.Name = 'SANS'
+      Font.Pitch = fpVariable
+      Font.Style = []
+    ParentFont = False
+      ParentShowHint = False
+      ShowHint = False
+      TabOrder = 2
+      OnClick = Button6Click
+    
+    end
+    object Button7: TBitBtn
+      Left = 8
+      Top = 200
+      Width = 137
+      Height = 30
+    
+      Color = clbutton
+      Font.Color = clblack
+      Font.Height = 13
+      Font.Name = 'SANS'
+      Font.Pitch = fpVariable
+      Font.Style = []
+      ParentFont = False
+      ParentShowHint = False
+      OnClick = Button7Click
+      ShowHint = False
+      TabOrder = 4
+    end
+    object Button8: TBitBtn
+      Left = 8
+      Top = 232
+      Width = 137
+      Height = 30
+      Cursor = crHandPoint
+     Caption = 'Send to printer'
+      Color = clbutton
+      Font.Color = clblack
+      Font.Height = 13
+      Font.Name = 'SANS'
+      Font.Pitch = fpVariable
+      Font.Style = []
+      ParentFont = False
+      ParentShowHint = False
+    
+      ShowHint = False
+      TabOrder = 6
+    end
+    object Button9: TBitBtn
+      Left = 8
+      Top = 264
+      Width = 137
+      Height = 30
+      Cursor = crHandPoint
+      Margin =3
+      Caption = 'Page setup'
+      Color = clbutton
+      Font.Color = clblack
+      Font.Height = 13
+      Font.Name = 'SANS'
+      Font.Pitch = fpVariable
+      Font.Style = []
+     ParentFont = False
+      ParentShowHint = False
+      ShowHint = False
+      TabOrder = 8
+    end
+    object Button10: TBitBtn
+      Left = 8
+      Top = 296
+      Width = 137
+      Height = 30
+      Cursor = crHandPoint
+      Margin =3
+      Caption = 'Clear page'
+      Color = clbutton
+      Font.Color = clblack
+      Font.Height = 13
+      Font.Name = 'SANS'
+      Font.Pitch = fpVariable
+      Font.Style = []
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = False
+      TabOrder = 0
+      OnClick = Button10Click
+    
+    end
+    object GroupBox1: TGroupBox
+      Left = 2
+      Top = 280
+      Width = 149
+      Height = 125
+      borderstyle=bssingle
+      Align = alBottom
+      Caption = 'Mode'
+      TabOrder = 10
+      object CheckBox1: TCheckBox
+        Left = 8
+        Top = 16
+        Width = 100
+        Height = 30
+        Caption = 'Files list'
+        TabOrder = 0
+        OnClick=chkbox1OnClick
+      end
+      object CheckBox2: TCheckBox
+        Left = 8
+        Top = 40
+        Width = 100
+        Height = 30
+        Caption = 'Page header'
+        TabOrder = 1
+      end
+      object CheckBox3: TCheckBox
+        Left = 8
+        Top = 64
+        Width = 100
+        Height = 30
+        Caption = 'Quiet'
+        TabOrder = 2
+      end
+ 
+
+    end
+  end
+ 
+ object sp1:Tsplitter
+ Left = 153
+    Top = 38
+
+autosnap=true
+beveled=false
+resizestyle=rsnone
+    Color = clsilver
+    width=3
+cursor=crArrow
+end
+
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 467
+    Width = 767
+    Height = 20
+    BorderWidth = 2
+    Color = 13756906
+    Font.Color = 4737096
+    Font.Height = 10
+    Font.Name = 'SANS'
+    Font.Pitch = fpVariable
+    Font.Style = []
+    Panels = <
+      item
+      end>
+    ParentFont = False
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 0
+    Width = 767
+    Height = 38
+    Align = alTop
+
+    BorderWidth = 1
+  
+    TabOrder = 3
+    object SpeedButton1: TSpeedButton
+      name = 'SpeedButton1'
+      Left = 8
+      Top = 1
+      Width = 32
+      Height = 32
+      Hint = 'Select Files'
+      Flat = True
+      Layout = blGlyphTop
+      ParentShowHint = False
+      ShowHint = True
+      Spacing = 5
+      OnClick = SpeedButton1Click
+    end
+    object SpeedButton2: TSpeedButton
+      name = 'SpeedButton2'
+      Left = 50
+      Top = 1
+      Width = 32
+      Height = 32
+      Hint = 'Save Page AS ...'
+      Flat = True
+      Layout = blGlyphTop
+      ParentShowHint = False
+      ShowHint = True
+      Spacing = 5
+      OnClick = SpeedButton2Click
+    end
+    object SpeedButton3: TSpeedButton
+      name = 'SpeedButton3'
+      Left = 92
+      Top = 1
+      Width = 32
+      Height = 32
+      Hint = 'Save Page'
+      Flat = True
+      Layout = blGlyphTop
+      ParentShowHint = False
+      ShowHint = True
+      Spacing = 5
+      OnClick = SpeedButton3Click
+    end
+    object SpeedButton4: TSpeedButton
+      name = 'SpeedButton4'
+      Left = 134
+      Top = 1
+      Width = 32
+      Height = 32
+      Hint = 'Select Fonts'
+      Flat = True
+      Layout = blGlyphTop
+      ParentShowHint = False
+      ShowHint = True
+      Spacing = 5
+      OnClick = SpeedButton4Click
+    end
+    object SpeedButton5: TSpeedButton
+       name = 'SpeedButton5'
+     Left = 176
+      Top = 1
+      Width = 32
+      Height = 32
+      Hint = 'Clear Text'
+      Flat = True
+      Layout = blGlyphTop
+      ParentShowHint = False
+      ShowHint = True
+      Spacing = 5
+      OnClick = SpeedButton5Click
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '*'
+    Filter = 'postscript|*.ps|adobe|*.pdf|text|*.txt|all file|*'
+    FilterIndex = 4
+    Options = [ofShowHidden, ofOverwritePrompt, ofExtensionDifferent, ofPathMustExist, ofViewList]
+    Height = 0
+    Title = 'Save'
+    Width = 0
+    Left = 312
+    Top = 48
+  end
+  object MainMenu1: TMainMenu
+    AutoHotkeys = maManual
+    Color = clmaroon
+    Left = 208
+    Top = 48
+    object File1: TMenuItem
+      Caption = 'File'
+   
+      object Exit1: TMenuItem
+        Caption = 'Exit'
+        OnClick = Exit1Click
+      end
+    end
+  end
+  object FontDialog1: TFontDialog
+    Font.Color = clBlack
+    Font.Height = 12
+    Font.Name = 'Courier'
+Font.size=12
+    Font.Pitch = fpVariable
+    Font.Style = []
+    Left = 208
+    Top = 88
+  end
+
+end
