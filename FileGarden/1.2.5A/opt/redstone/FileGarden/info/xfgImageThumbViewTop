@@ -1,0 +1,7 @@
+Values :   none
+    Key :   %in = input source
+    Key :   %BUILTIN% = Built in main application item.Unconfigurable except for button image 
+
+             This item type of main application belongs to buttons on the Redstone Image ThumbView's
+             top panel
+

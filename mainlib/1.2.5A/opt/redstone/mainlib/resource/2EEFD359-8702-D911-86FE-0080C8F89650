@@ -1,0 +1,42 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=420
+FrameCaption=Convert wave file to OGG Vorbis sound file
+FrameLabel= Convert wave file to OGG Vorbis sound file
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=COMMANDER
+ShowAfter=Commander
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Wave format=combo=false="Strip wave before conversion"|"Don't strip wave before conversion"
+Ogg Vorbis quality=combo=true="0 -- Lowest quality"|"1"|"2"|"3"|"4 -- Default quality"|"5"|"6"|"7"|"8"|"9"|"10 -- Highest quality"
+View messages=checkbox=true=%RunMessage%
+
+[VALUE]
+cmd=%View messages%%Wave format%
+
+[DefaultValue]
+Ogg Vorbis quality=4 -- Default quality
+
+[ActualValue]
+0 -- Lowest quality=0
+10 -- Highest quality=10
+4 -- Default quality=4
+Strip wave before conversion=echo %in | shntool cat -nh -nr | oggenc - -r -o %out.ogg -q %Ogg Vorbis quality% &
+Don't strip wave before conversion=oggenc %in -r -o %out.ogg -q %Ogg Vorbis quality% &
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+

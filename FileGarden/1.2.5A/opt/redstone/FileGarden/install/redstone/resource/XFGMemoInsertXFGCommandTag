@@ -1,0 +1,73 @@
+[Command]
+Execute Editor lines=%XFGMemoInsertExecuteThisCommand%
+Selection as File location=%XFGMemoInsertExecuteThisCommandToFileManager%
+Selection as Editor link=%XFGMemoInsertExecuteThisCommandToEditor%
+Selection as File link=me -u root %XFGMemoInsertExecuteThisCommand%
+Selection as HTML link=dillo %XFGMemoInsertExecuteThisCommand%
+Selection as PDF link=acroread %XFGMemoInsertExecuteThisCommand%
+Selection as Postscript link=gv %XFGMemoInsertExecuteThisCommand%
+Selection as DVI link=tkdvi %XFGMemoInsertExecuteThisCommand%
+Selection as Image link=display %XFGMemoInsertExecuteThisCommandMultiple%
+Selection as ImageMagick link=gimp %XFGMemoInsertExecuteThisCommandMultiple%
+Selection as Sound link=xmms -ep %XFGMemoInsertExecuteThisCommand%
+Selection as Enqueued Video link=xine -g -Z --no-logo --no-splash --loop=loop %XFGMemoInsertExecuteThisCommand% -pq --session playlist=first,play
+Selection as Multiple Video link=xine -g --no-logo --no-splash -G +%XFGMemoInsertExecuteThisCommandGetInteger%+%XFGMemoInsertExecuteThisCommandGetInteger% --loop=loop %XFGMemoInsertExecuteThisCommandMultiple%
+Selection as HTML link [ Opera ]=opera %XFGMemoInsertExecuteThisCommand%
+
+[xfgOptionsSidePanel]
+Save memo=[HOME]/redstone/FileGarden/image/saveas.png
+Memo=[HOME]/redstone/FileGarden/image/me.png
+Apply settings=[HOME]/redstone/FileGarden/image/floppy.png
+Close=[HOME]/redstone/FileGarden/image/exit.png
+(*********************************************************************)
+
+[Sample]
+Selection as Video link=xine -g -Z --no-logo --no-splash --loop=loop --enqueue %XFGMemoInsertExecuteThisCommand% --session session=0, mrl= ,playlist=first,play
+Verbatim lines=\begin{alltt}%XFGMemoInsertNewLine%%XFGMemoInsertWithNoMultiLine%%XFGMemoInsertNewLine%\end{alltt}
+Horizontal line=\hline%XFGMemoInsertNewLine%%XFGMemoInsertWithNoMultiLine%
+Horizontal rule=\rule{\textwidth}{0.5pt}%XFGMemoInsertNewLine%%XFGMemoInsertWithNoMultiLine%
+Add Caption=\caption{%XFGMemoInsertWithLine%}
+Part=\part{%XFGMemoInsertWithLine%}
+Chapter=\chapter{%XFGMemoInsertWithLine%}
+Larger={\LARGE{%XFGMemoInsertWithLine%}}
+Largest={\huge{%XFGMemoInsertWithLine%}}
+Huge={\Huge{%XFGMemoInsertWithLine%}}
+Bold=\textbf{%XFGMemoInsertWithLine%}
+Magenta=\textcolor{magenta}{%XFGMemoInsertWithLine%}
+Medium=\textmd{%XFGMemoInsertWithLine%}
+Center=\begin{center}%XFGMemoInsertWithNoMultiLine%\end{center}
+Left=\begin{flushleft}%XFGMemoInsertWithNoMultiLine%\end{flushleft}
+Right=\begin{flushright}%XFGMemoInsertWithNoMultiLine%\end{flushright}
+Flush left=\raggedleft%XFGMemoInsertWithLine%
+Flush center=\centering%XFGMemoInsertWithLine%
+Double frame text box=\fbox{\fbox{\parbox{10cm}{\sloppy %XFGMemoInsertWithNoMultiLine%}}}
+Item list=\begin{itemize}%XFGMemoInsertNewLine%\setlength{\rightmargin}{0pt}%XFGMemoInsertNewLine%\setlength{\itemsep}{-2.5ex}%XFGMemoInsertNewLine%%XFGMemoInsertWithLineAppendLeft@\item %%XFGMemoInsertNewLine%\end{itemize}
+Number list=\begin{enumerate}%XFGMemoInsertNewLine%\setlength{\rightmargin}{0pt}%XFGMemoInsertNewLine%\setlength{\itemsep}{-2.5ex}%XFGMemoInsertNewLine%%XFGMemoInsertWithLineAppendLeft@\item %%XFGMemoInsertNewLine%\end{enumerate}
+Description list=\begin{description}%XFGMemoInsertNewLine%\setlength{\rightmargin}{0pt}%XFGMemoInsertNewLine%\setlength{\itemsep}{-2.5ex}%XFGMemoInsertNewLine%\setlength{\rightmargin}{0pt}%XFGMemoInsertNewLine%\setlength{\itemsep}{-2.5ex}%XFGMemoInsertNewLine%%XFGMemoInsertWithLineAppendLeft@\item[] %%XFGMemoInsertNewLine%\end{description}
+Make title=%XFGMemoInsertNewLine%\title{ }%XFGMemoInsertNewLine%\author{ }%XFGMemoInsertNewLine%\maketitle
+Title footnote=\thanks{%XFGMemoInsertWithNoMultiLine%}
+Title split=%XFGMemoInsertNewLine%\and%XFGMemoInsertNewLine%
+Make index=%\and%XFGMemoInsertNewLine%\printindex%XFGMemoInsertNewLine%
+add index=\index{%XFGMemoInsertWithNoMultiLine%}
+add sub index=\index{xxx!%XFGMemoInsertWithNoMultiLine%}
+add italic index=\index{%XFGMemoInsertWithNoMultiLine%@\texsl{%XFGMemoInsertWithNoMultiLine%}}
+add bold index=\index{%XFGMemoInsertWithNoMultiLine%@\texbf{%XFGMemoInsertWithNoMultiLine%}}
+add italic number index=\index{%XFGMemoInsertWithNoMultiLine%|textsl}
+add bold number index=\index{%XFGMemoInsertWithNoMultiLine%|textbf}
+(*****************************************************************************)
+2 colums=\begin{multicols}{2}%XFGMemoInsertNewLine%%XFGMemoInsertWithNoMultiLine%%XFGMemoInsertNewLine%\ldots%XFGMemoInsertNewLine%\end{multicols}
+3 colums=\begin{multicols}{3}%XFGMemoInsertNewLine%%XFGMemoInsertWithNoMultiLine%%XFGMemoInsertNewLine%\ldots%XFGMemoInsertNewLine%\end{multicols}
+4 colums=\begin{multicols}{4}%XFGMemoInsertNewLine%%XFGMemoInsertWithNoMultiLine%%XFGMemoInsertNewLine%\ldots%XFGMemoInsertNewLine%\end{multicols}
+5 colums=\begin{multicols}{5}%XFGMemoInsertNewLine%%XFGMemoInsertWithNoMultiLine%%XFGMemoInsertNewLine%\ldots%XFGMemoInsertNewLine%\end{multicols}
+6 colums=\begin{multicols}{6}%XFGMemoInsertNewLine%%XFGMemoInsertWithNoMultiLine%%XFGMemoInsertNewLine%\ldots%XFGMemoInsertNewLine%\end{multicols}
+7 colums=\begin{multicols}{7}%XFGMemoInsertNewLine%%XFGMemoInsertWithNoMultiLine%%XFGMemoInsertNewLine%\ldots%XFGMemoInsertNewLine%\end{multicols}
+8 colums=\begin{multicols}{8}%XFGMemoInsertNewLine%%XFGMemoInsertWithNoMultiLine%%XFGMemoInsertNewLine%\ldots%XFGMemoInsertNewLine%\end{multicols}
+9 colums=\begin{multicols}{9}%XFGMemoInsertNewLine%%XFGMemoInsertWithNoMultiLine%%XFGMemoInsertNewLine%\ldots%XFGMemoInsertNewLine%\end{multicols}
+(*****************************************************************************)
+LaTeX=\LaTeX{}
+TeX=\TeX{}
+Trademark=\texttrademark
+Registered=\textregistered
+Copyrighted=\copyright
+(*********************************************************************)
+

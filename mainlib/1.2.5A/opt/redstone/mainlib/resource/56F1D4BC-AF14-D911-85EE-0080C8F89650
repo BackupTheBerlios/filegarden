@@ -1,0 +1,41 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Convert Flac to Wave
+FrameLabel= Convert Flac to Wave
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=Commander
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Wave format=combo=false="Write wave header"|"Raw (no wave header)"
+Start from N seconds=edit=00
+End at N seconds=edit=00
+View messages=checkbox=true=%RunMessage%
+
+[VALUE]
+cmd=%View messages%flac -F %Wave format% --skip=00:%Start from N seconds%.00 --until=+00:%End at N seconds%.00 %in -o %out.wav &
+
+[DefaultValue]
+Start from N seconds=00
+End at N seconds=00
+
+[ActualValue]
+Write wave header=--decode
+Raw (no wave header)=--decode --endian=little --sign=signed --force-raw-format
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+

@@ -1,0 +1,41 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Convert CD track to OGG Vorbis sound file
+FrameLabel= Convert CD track to OGG Vorbis sound file
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=COMMANDER
+ShowAfter=Commander
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Extract num of seconds=edit=none
+Ogg Vorbis quality=combo=true="0 -- Lowest quality"|"1"|"2"|"3"|"4 -- Default quality"|"5"|"6"|"7"|"8"|"9"|"10 -- Highest quality"
+View messages=checkbox=true=%RunMessage%
+
+[VALUE]
+cmd=%View messages%cdda2wav %Extract num of seconds% -D %GetCustomCommand%GetPlayCDROM -x -H -t %GetCustomCommand%GetCaption -O wav - | oggenc - -o track%GetCustomCommand%GetCaption.ogg -q %Ogg Vorbis quality% & 
+
+[DefaultValue]
+Ogg Vorbis quality=4 -- Default quality
+
+[ActualValue]
+Extract num of seconds=-d %insert-here%
+0 -- Lowest quality=0
+10 -- Highest quality=10
+4 -- Default quality=4
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+

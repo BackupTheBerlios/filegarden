@@ -1,0 +1,30 @@
+\begin{wrapfigure}{r}{5cm}
+%%\begin{wrapfigure}[8]{l}{10cm}
+\epsfig{file=example,width=5cm,angle=0}
+\caption{"Edit this for your picture caption"}
+%%
+%%  eg. if your picture is " /home/user1/example.esp " then insert " example " only
+%%  Must use the menuitem " Convert to EPS " to convert your picture to EPS first
+%%  into the same directory as this TeX file
+%%
+%%  width = the final height of your picture scale-down to or scale-up to in the TeX file
+%%  angle  = you can tilt your picture with this value in degree
+%%
+%%
+%%  \begin{wrapfigure}[number]{position}{width} 
+%%     <figure> etc.  
+%%    \caption{ <caption> }
+%%  \end{wrapfigure}
+%%
+%%  Here the arguments are
+%%    [number]:  fix the number of narrow text lines at the side of the figure. 
+%%               e.g., like [15]. But usually skip this part [..] at all 
+%%               like    \begin{wrapfigure}{position}{width} 
+%%               since the number is automatically calculated. 
+%%  {position}:  {r} or {l}, to place the figure at the right or left side.
+%%                or {c},  to place the figure at the center with no wrapping.
+%%     {width}:  width (with unit) of the figure, like {10cm}.
+%%
+\end{wrapfigure}
+%%\vspace{5cm} 
+%XFGMemoInsertWithLine%

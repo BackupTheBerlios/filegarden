@@ -1,0 +1,34 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Convert MP3 to Wave
+FrameLabel= Convert MP3 to Wave
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=Commander
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Don't write wave header=checkbox=false=-t
+
+[VALUE]
+cmd=lame --decode -h -b 128 %Don't write wave header% %in -o %out.wav &
+
+[DefaultValue]
+
+[ActualValue]
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+

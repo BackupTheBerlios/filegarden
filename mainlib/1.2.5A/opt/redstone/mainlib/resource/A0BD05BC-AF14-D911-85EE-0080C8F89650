@@ -1,0 +1,42 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Convert OGG to Wave
+FrameLabel= Convert OGG to Wave
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=Commander
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Wave format=combo=false="Write wave header"|"Raw (no wave header)"
+bits_per_sample=combo=false="8"|"16"
+Set endianness for 16-bit output=combo=false="little-endian"|"big-endian"
+View messages=checkbox=true=%RunMessage%
+
+[VALUE]
+cmd=%View messages%%Wave format%
+
+[DefaultValue]
+bits_per_sample=16
+
+[ActualValue]
+little-endian=0
+big-endian=1
+Write wave header=oggdec %in -o %out.wav -b %bits_per_sample% -e %Set endianness for 16-bit output%
+Raw (no wave header)=oggdec %in -o %out.wav --raw=1 -b %bits_per_sample% -e %Set endianness for 16-bit output%
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+

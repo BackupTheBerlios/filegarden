@@ -1,0 +1,66 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Convert DVI to Postscript
+FrameLabel= Convert DVI to Postscript
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=Commander
+ShowAfter=Commander
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Output filename part=edit=new
+Extract pages=edit=none
+Extract page range=edit=none
+Landscape mode=checkbox=false=-t landscape
+Document paper=combo=false="letter"|"legal"|"ledger"|"a4"|"a3"
+Only odd pages=checkbox=false=-A
+Only even pages=checkbox=false=-B
+Create number of whole copies=edit=none
+Number of pages per section=edit=none
+Print crop marks=checkbox=false=-k
+Turns off structured comments=checkbox=false=-N
+Start numbering on page=edit=none
+Quite mode=checkbox=false=-q
+Reverse order=checkbox=false=-r
+View messages=checkbox=false=%RunMessage%
+
+[VALUE]
+cmd=%View messages%dvips -V %Number of pages per section% %Reverse order% -R %Quite mode% %Start numbering on page% %Extract pages% %Extract page range% %Create number of whole copies% -o %out%Output filename part%.ps %in &
+
+[DefaultValue]
+Document paper=a4
+
+[ActualValue]
+letter=-t letter
+legal=-t legal
+ledger=-t ledger
+a4=-t a4
+a3=-t a3
+Extract page range=-pp %insert-here%
+Extract pages=-pp %insert-here%
+Number of pages per section=-i -S %insert-here%
+Start numbering on page=-p %insert-here%
+Create number of whole copies=-C %insert-here% 
+
+[Hint]
+Extract pages=eg. 2-25 #13#10 This will extract from page no 2 to page no 25
+Extract page range=eg. 1,3,5,10,12,14 #13#10 This will extract page no 1,3,5,10,12 and 14 only
+
+[AlertLabel]
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+
+

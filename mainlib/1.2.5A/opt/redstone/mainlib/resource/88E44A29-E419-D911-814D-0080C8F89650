@@ -1,0 +1,88 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Save Editor text as LaTeX
+FrameLabel= Save Editor text as LaTeX
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=COMMANDER
+ShowAfter=Commander
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Output filename part=edit=new
+Document paper=combo=false="letter"|"legal"|"ledger"|"a4"|"a3"
+Document class=combo=false="article"|"book"|"cv"|"report"|"seminar"|"letter"
+Page style=combo=false="plain"|"headings"|"empty"
+Landscape orientation=checkbox=false=landscape
+Font=combo=false="pslatex"|"times"|"ae"|"palatino"|"helvet"|"avant"|"newcent"|"bookman"
+Font face if Verbatimised=combo=false="Times"|"Palatino"|"Helvetica"|"Avant Garde"|"Schoolbook"|"Bookman"
+Font size=combo=false="10"|"11"|"12"
+2 colums=checkbox=false=twocolumn
+Write document header=checkbox=false=; echo "\maketitle" >> %Output filename part%.tex
+Document title header=edit=none
+Document author name header=edit=none
+First page is document header=checkbox=false=; echo "\newpage" >> %Output filename part%.tex
+Line space=combo=true="1"|"1.5"|"2"|"2.5"|"3"|"3.5"|"4"
+Top margin in mm=combo=true="5"|"10"|"15"|"20"|"25"|"30"|"35"|"40"|"45"|"50"
+Bottom margin in mm=combo=true="5"|"10"|"15"|"20"|"25"|"30"|"35"|"40"|"45"|"50"
+Right margin in mm=combo=true="5"|"10"|"15"|"20"|"25"|"30"|"35"|"40"|"45"|"50"
+Left margin in mm=combo=true="5"|"10"|"15"|"20"|"25"|"30"|"35"|"40"|"45"|"50"
+Delete Latex temporary files=checkbox=true=; rm -f %Output filename part%.log %Output filename part%.aux
+Output Dvi=checkbox=false=2DVI
+View messages=checkbox=true=%RunMessage%
+
+
+[AlertLabel]
+Output filename part=1
+Document paper=1
+Document class=1
+Landscape orientation=1
+Font=1
+Font size=1
+Top margin in mm=1
+Bottom margin in mm=1
+Right margin in mm=1
+Left margin in mm=1
+Page style=1
+
+
+[VALUE]
+cmd=%View messages%%GetCustomCommand%GetResourceFile@506F2182-EA27-D911-9FF8-0080C8F89650
+
+[DefaultValue]
+Font size=12
+Line space=1
+Document paper=a4
+Top margin in mm=10
+Bottom margin in mm=15
+Right margin in mm=10
+Left margin in mm=15
+
+[ActualValue]
+2DVI=; latex -interaction=nonstopmode %Output filename part%.tex 
+letter=letterpaper
+legal=legalpaper
+ledger=executivepaper
+a4=a4paper
+a3=a3paper
+Times=ptm
+Palatino=ppl
+Helvetica=phv
+Avant Garde=pag
+Schoolbook=pnc
+Bookman=pbk
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+cat "%in" >> %out.tex ; 

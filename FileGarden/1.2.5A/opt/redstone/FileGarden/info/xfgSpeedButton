@@ -1,0 +1,9 @@
+Values :   none
+    Key :   %in = input source
+    Key :   %BUILTIN% = Built in main application item.Unconfigurable except for button image 
+
+             The item type of main application belongs to buttons on the main application's top panel
+             example : To open the selected file or files from the file manager with Mozilla
+                    
+                                 mozilla %in
+

@@ -1,0 +1,63 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Extract / Convert PDF files
+FrameLabel= Extract / Convert PDF files
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=200
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=COMMANDER
+ShowAfter=COMMANDER
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Output format=combo=false="Postscript"|"PDF"
+Paper size=combo=false="a4"|"a3"|"legal"|"ledger"|"letter"|"a5"|"b3"|"b4"|"b5"|"a2"|"a1"|"b2"|"b1"|"a0"
+Start page number=edit=none
+Last page number=edit=none
+Size to crop box=checkbox=false=-dUseCropBox 
+Scale to fit paper=checkbox=false=-dPDFFitPage
+PDF password=edit=none
+View message=checkbox=true=xterm -title "Convert Postscript to PDF" %Hold message window% -e 
+Hold message window=checkbox=false=-hold
+
+[VALUE]
+cmd=%View message% %Output format%
+
+[DefaultValue]
+
+[ActualValue]
+Postscript=gs %Start page number% %Last page number% -dASCII85EncodePages=false -dLanguageLevel=1 -dNOPAUSE -dBATCH -sDEVICE=pswrite -sOutputFile=%out.ps %in -c quit &
+PDF=gs %Scale to fit paper% %Start page number% %Last page number% -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sPAPERSIZE=%Paper size% -sOutputFile=%out.pdf %in -c quit &
+Start page number=-d%none%
+Last page number=-d%none%
+PDF password=-sPDFPassword=%none%
+
+[Sample]
+
+Extract num of seconds=-d%insert-here%
+Extract num of seconds=-d%none%
+gs -q -dNOPAUSE -dBATCH -dMaxBitmap=50000000 -sDEVICE=pdfwrite -dTextAlphaBits=4 -dGraphicsAlphaBits=4 
+-sPAPERSIZE=a4 -r72 -sOutputFile=%out.pdf %in -c  -c quit
+-dDOINTERPOLATE 
+-dTextAlphaBits=1 2 4 
+
+-rXRESxYRES 
+
+
+-dGraphicsAlphaBits=1 2 4  
+-dNOPLATFONTS 
+
+
+
+
+for pdf2ps
+-dNOTRANSPARENCY 
+-dFirstPage and -dLastPage
+
+
+

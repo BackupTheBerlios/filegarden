@@ -1,0 +1,136 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Create LaTeX fancy header
+FrameLabel= Create LaTeX fancy header
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=NONE
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Left side header on Odd page=edit=none
+Left side header on Even page=edit=none
+Center header on Odd page=edit=none
+Center header on Even page=edit=none
+Right side header on Odd page=edit=none
+Right side header on Even page=edit=none
+Left side footer on Odd page=edit=none
+Left side footer on Even page=edit=none
+Center footer on Odd page=edit=none
+Center footer on Even page=edit=none
+Right side footer on Odd page=edit=none
+Right side footer on Even page=edit=none
+
+Page number on Top of Odd page=combo=false="none"
+|"Top left side current page no. on Odd page"
+|"Top left side current page no. - total page no. on Odd page"
+|"Top center current page no. on Odd page"
+|"Top center current page no. - total page no. on Odd page"
+|"Top right side current page no. on Odd page"
+|"Top right side current page no. - total page no. on Odd page"
+
+Page number on Top of Even page=combo=false="none"
+|"Top left side current page no. on Even page"
+|"Top left side current page no. - total page no. on Even page"
+|"Top center current page no. on Even page"
+|"Top center current page no. - total page no. on Even page"
+|"Top right side current page no. on Even page"
+|"Top right side current page no. - total page no. on Even page"
+
+Page number on Bottom of Odd page=combo=false="none"
+|"Bottom left side current page no. on Odd page"
+|"Bottom left side current page no. - total page no. on Odd page"
+|"Bottom center current page no. on Odd page"
+|"Bottom center current page no. - total page no. on Odd page"
+|"Bottom right side current page no. on Odd page"
+|"Bottom right side current page no. - total page no. on Odd page"
+
+Page number on Bottom of Even page=combo=false="none"
+|"Bottom left side current page no. on Even page"
+|"Bottom left side current page no. - total page no. on Even page"
+|"Bottom center current page no. on Even page"
+|"Bottom center current page no. - total page no. on Even page"
+|"Bottom right side current page no. on Even page"
+|"Bottom right side current page no. - total page no. on Even page"
+
+[ActualValue]
+none=%none%
+Top left side current page no. on Odd page=\lhead[]{\thepage}
+Top left side current page no. - total page no. on Odd page=\lhead[]{\thepage\ of \pageref{LastPage}}
+Top center current page no. on Odd page=\chead[]{\thepage}
+Top center current page no. - total page no. on Odd page=\chead[]{\thepage\ of \pageref{LastPage}}
+Top right side current page no. on Odd page=\rhead[]{\thepage}
+Top right side current page no. - total page no. on Odd page=\rhead[]{\thepage\ of \pageref{LastPage}}
+
+Top left side current page no. on Even page=\lhead[\thepage]{}
+Top left side current page no. - total page no. on Even page=\lhead[\thepage\ of \pageref{LastPage}]{}
+Top center current page no. on Even page=\chead[\thepage]{}
+Top center current page no. - total page no. on Even page=\chead[\thepage\ of \pageref{LastPage}]{}
+Top right side current page no. on Even page=\rhead[\thepage]{}
+Top right side current page no. - total page no. on Even page=\rhead[]{}
+
+Bottom left side current page no. on Odd page=\lfoot[]{\thepage}
+Bottom left side current page no. - total page no. on Odd page=\lfoot[]{\thepage\ of \pageref{LastPage}}
+Bottom center current page no. on Odd page=\cfoot[]{\thepage}
+Bottom center current page no. - total page no. on Odd page=\cfoot[]{\thepage\ of \pageref{LastPage}}
+Bottom right side current page no. on Odd page=\rfoot[]{\thepage}
+Bottom right side current page no. - total page no. on Odd page=\rfoot[]{\thepage\ of \pageref{LastPage}}
+
+Bottom left side current page no. on Even page=\lfoot[\thepage]{}
+Bottom left side current page no. - total page no. on Even page=\lfoot[\thepage\ of \pageref{LastPage}]{}
+Bottom center current page no. on Even page=\cfoot[\thepage]{}
+Bottom center current page no. - total page no. on Even page=\cfoot[\thepage\ of \pageref{LastPage}]{}
+Bottom right side current page no. on Even page=\rfoot[\thepage]{}
+Bottom right side current page no. - total page no. on Even page=\rfoot[\thepage\ of \pageref{LastPage}]{}
+
+Document paper=combo=false="letter"|"legal"|"ledger"|"a4"|"a3"
+Document class=combo=false="article"|"book"|"cv"|"report"|"seminar"|"letter"
+Landscape orientation=checkbox=false=landscape
+Page style=combo=false="plain"|"fancy"|"headings"|"empty"
+Font=combo=false="times"|"ae"|"pslatex"|"palatino"|"helvet"|"avant"|"newcent"|"bookman"
+Font size=combo=false="10"|"11"|"12"
+Write document header=checkbox=false=\maketitle
+Document title header=edit=none
+Document author name header=edit=none
+First page is document header=checkbox=false=\newpage
+Line space=combo=true="1"|"1.5"|"2"|"2.5"|"3"|"3.5"|"4"
+Top margin in mm=combo=true="5"|"10"|"15"|"20"|"25"|"30"|"35"|"40"|"45"|"50"
+Bottom margin in mm=combo=true="5"|"10"|"15"|"20"|"25"|"30"|"35"|"40"|"45"|"50"
+Right margin in mm=combo=true="5"|"10"|"15"|"20"|"25"|"30"|"35"|"40"|"45"|"50"
+Left margin in mm=combo=true="5"|"10"|"15"|"20"|"25"|"30"|"35"|"40"|"45"|"50"
+
+[VALUE]
+cmd=none
+
+[DefaultValue]
+Font size=12
+Line space=1
+Document paper=a4
+Top margin in mm=10
+Bottom margin in mm=15
+Right margin in mm=10
+Left margin in mm=15
+
+[ActualValue]
+letter=letterpaper
+legal=legalpaper
+ledger=executivepaper
+a4=a4paper
+a3=a3paper
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+View message=combo=false="Run with Xterm"|"Don't run with Xterm"
+

@@ -1,0 +1,109 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Create LaTeX format
+FrameLabel= Create LaTeX format
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=NONE
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Document paper=combo=false="letter"|"legal"|"ledger"|"a4"|"a3"
+Document class=combo=false="article"|"book"|"cv"|"report"|"seminar"|"letter"
+Landscape orientation=checkbox=false=landscape
+Font=combo=false="pslatex"|"times"|"ae"|"palatino"|"helvet"|"avant"|"newcent"|"bookman"
+Font size=combo=false="10"|"11"|"12"
+Write document header=checkbox=false=\maketitle
+Document title header=edit=none
+Document author name header=edit=none
+First page is document header=checkbox=false=\newpage
+First page empty header/footer=checkbox=false=\thispagestyle{empty}
+Line space=combo=true="1"|"1.5"|"2"|"2.5"|"3"|"3.5"|"4"
+Top margin in mm=combo=true="5"|"10"|"15"|"20"|"25"|"30"|"35"|"40"|"45"|"50"
+Bottom margin in mm=combo=true="5"|"10"|"15"|"20"|"25"|"30"|"35"|"40"|"45"|"50"
+Right margin in mm=combo=true="5"|"10"|"15"|"20"|"25"|"30"|"35"|"40"|"45"|"50"
+Left margin in mm=combo=true="5"|"10"|"15"|"20"|"25"|"30"|"35"|"40"|"45"|"50"
+Page style=combo=false="plain"|"fancy"|"headings"|"empty"
+Header ruler width in mm=edit=0
+Footer ruler width in mm=edit=0
+Left side header on Odd page=edit=none
+Left side header on Even page=edit=none
+Center header on Odd page=edit=none
+Center header on Even page=edit=none
+Right side header on Odd page=edit=none
+Right side header on Even page=edit=none
+Left side footer on Odd page=edit=none
+Left side footer on Even page=edit=none
+Center footer on Odd page=edit=none
+Center footer on Even page=edit=none
+Right side footer on Odd page=edit=none
+Right side footer on Even page=edit=none
+Page number on Top=checkbox=false=\thepage
+Page number on Top center=checkbox=false=\thepage
+Page number at Bottom=checkbox=false=\thepage
+Page number at Bottom center=checkbox=true=\thepage
+
+[AlertLabel]
+Document paper=1
+Document class=1
+Landscape orientation=1
+Font=1
+Font size=1
+Top margin in mm=1
+Bottom margin in mm=1
+Right margin in mm=1
+Left margin in mm=1
+Page style=1
+Document title header=1
+Document author name header=1
+
+[VALUE]
+cmd=%XFGMemoInsertBody%
+
+[DefaultValue]
+Font size=12
+Line space=1
+Document paper=a4
+Top margin in mm=10
+Bottom margin in mm=15
+Right margin in mm=20
+Left margin in mm=20
+Page style=fancy
+
+[ActualValue]
+letter=letterpaper
+legal=legalpaper
+ledger=executivepaper
+a4=a4paper
+a3=a3paper
+none=%none%
+Left side header on Odd page=\lhead[%Left side header on Even page%]{%Left side header on Odd page%}
+Center header on Odd page=\chead[%Center header on Even page%]{%Center header on Odd page%}
+Right side header on Odd page=\rhead[%Right side header on Even page%]{%Right side header on Odd page%}
+Left side footer on Odd page=\lfoot[%Left side footer on Even page%]{%Left side footer on Odd page%}
+Center footer on Odd page=\cfoot[%Center footer on Even page%]{%Center footer on Odd page%}
+Right side footer on Odd page=\rfoot[%Right side footer on Even page%]{%Right side footer on Odd page%}
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+View message=combo=false="Run with Xterm"|"Don't run with Xterm"
+
+Page number on Top left=checkbox=false=\thepage
+Page number on Top center=checkbox=false=\thepage
+Page number on Top right=checkbox=false=\thepage
+Page number on Bottom left=checkbox=false=\thepage
+Page number on Bottom center=checkbox=true=\thepage
+Page number on Bottom right=checkbox=false=\thepage
+

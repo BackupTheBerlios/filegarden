@@ -1,0 +1,45 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Convert CD track to Flac sound file
+FrameLabel= Convert CD track to Flac sound file
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=COMMANDER
+ShowAfter=Commander
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Extract num of seconds=edit=none
+Flac compression level=combo=true="0 -- Fastest compression"|"1"|"2"|"3"|"4"|"5 -- Default quality"|"6"|"7"|"8 -- Highest compression"
+View messages=checkbox=true=%RunMessage%
+
+[VALUE]
+cmd=%View messages%cdda2wav %Extract num of seconds% -D %GetCustomCommand%GetPlayCDROM -x -H -t %GetCustomCommand%GetCaption -O wav - | flac - -%Flac compression level% -o track%GetCustomCommand%GetCaption.flac &
+
+[DefaultValue]
+Flac compression level=5 -- Default quality
+
+[ActualValue]
+Extract num of seconds=-d %insert-here%
+0 -- Fastest compression=0
+8 -- Highest compression=8
+5 -- Default quality=5
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+cmd=%View messages%cdda2wav %Extract num of seconds% -D %GetCustomCommand%GetPlayCDROM -x -H 
+-t %GetCustomCommand%GetCaption -O wav - | cat | shntool cat -nh -nr 
+| flac - --bps=16 --sample-rate=44100 
+--channels=2 --force-raw-format --endian=little --sign=signed -F -V -%Flac compression level% -o track%GetCustomCommand%GetCaption.flac &
+

@@ -1,0 +1,840 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<HTML>
+<HEAD>
+<title> LaTeX source editor,PDF creater,Postscript,Video encoder/decoder,audio encoder/decoder,file manager,Enscript frontend,image thumbnail viewer,batch image processing,booklet printing,text editor</title>
+</HEAD>
+<STYLE>
+H2{white-space:pre;background:#C0E0E0}
+H3{white-space:pre;background:#F0F0F0}
+</STYLE>
+<BODY bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<p align="right"><a href="http://www.anybrowser.org/campaign/"><img src="newany10.gif" width="graphic-width-in-pixels" height="graphic-height-in-pixels" alt="Viewable With Any Browser" border="0"></a></p>
+<PRE>
+
+
+<font face=COURIER size=8><B>FileGarden1.2.4F.release3</B></font>
+
+
+<HR><font face=COURIER size=3.5>
+<B>Usage and condition</B>
+I have included a Borland license text,GPL text from Borland.
+This program is free software; you can redistribute it and/or modify it under 
+the terms of the GNU General Public License as published by the Free Software 
+Foundation; either version 2 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the GNU General Public License for more details. You 
+should have received a copy of the GNU General Public License along with this 
+program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, 
+Suite 330, Boston, MA, 02111-1307, USA. 
+</font><HR>
+<A NAME="Table of content"><H2>Table of content : </H2></A><font face=HELVETICA size=3 color=#333333>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+ <B>A.</B> <A HREF="#Download">Download</A>
+
+ <B>1.</B> <A HREF="#1">Installation and usage</A>
+
+    <B>1.1.</B> <A HREF="#1.1">How to install XFG</A>
+
+    <B>1.2.</B> <A HREF="#1.2">Working with the Main window </A>
+
+         <B>1.2.1.</B> Working with file listing on the editor
+
+         <B>1.2.2.</B> Files Copy , Move , Delete and Create symbolic links speed button commands
+
+         <B>1.2.3.</B> The recognition of file mimes type from file listing on the editor
+
+         <B>1.2.4.</B> Commands that might cause us some regrets
+
+    <B>1.3.</B> <A HREF="#1.3">Working with the File manager </A>
+
+         <B>1.3.1.</B>  Embed file listing onto the editor from the file manager
+
+         <B>1.3.2.</B>  Embed directory listing onto the editor from the file manager
+
+         <B>1.3.3.</B>  Try to expand a directory from the icon view hang XFG
+
+    <B>1.4.</B> <A HREF="#1.4">Working with the File manager Popup menu</A> 
+
+    <B>1.5.</B> <A HREF="#1.5">Working with the Thumbnail veiwer </A>
+
+         <B>1.5.1.</B>  How to invoke Thumbnail veiwer
+
+         <B>1.5.2.</B>  Selecting and unselecting images
+
+         <B>1.5.3.</B>  Viewing images on the image viewer
+
+         <B>1.5.4.</B>  Files Copy , Move , Delete and Create symbolic links speed button commands
+
+    <B>1.6.</B> <A HREF="#1.6">Working with the Image viewer </A>
+
+         <B>1.6.1.</B>  Using the image viewer 
+
+    <B>1.7.</B> <A HREF="#1.7">Playing VCD , CD music and media files</A>
+
+         <B>1.7.1.</B>  Playing VCD
+
+         <B>1.7.2.</B>  Playing CD music
+
+         <B>1.7.3.</B>  Playing media files
+
+    <B>1.8.</B> <A HREF="#1.8">Basic video and sound editing</A>
+
+         <B>1.8.1.</B>  Video editing
+
+         <B>1.8.2.</B>  Sound editing
+
+    <B>1.9.</B> <A HREF="#1.9">Basic LaTeX editing</A>
+
+         <B>1.9.1.</B>  Basic work flow of LaTeX editing with XFG
+
+         <B>1.9.2.</B>  Locations of LaTeX formating configuration files
+
+         <B>1.9.3.</B>  <A HREF="#1.9.3">Walk-through step by step examples for basic LaTeX editing with XFG</A>
+
+              <B>1.9.3.a</B>  <A HREF="#1.9.3">Creating DVI</A>
+ 
+              <B>1.9.3.b</B>  <A HREF="#1.9.3">Creating Postscript</A>
+
+              <B>1.9.3.c</B>  <A HREF="#1.9.3">Creating PDF with links and thumbnails</A>
+
+ <B>2.</B> <A HREF="#2">About the default file viewing programs for XFG</A>
+
+ <B>3.</B> <A HREF="#3">Programs that are required to run XFG</A>
+
+ <B>4.</B> <A HREF="#4">Locations of configuration files for scripting of XFG</A>
+
+ <B>5.</B> <A HREF="#5">How to change the default file viewing programs for XFG</A>
+
+ <B>6.</B> <A HREF="#6">How to configure the Doc Bench menu item</A>
+
+----------------
+
+ <B>B.</B> <A HREF="#Errors,bugs and solutions">Errors,bugs and solutions</A>
+
+ <B>C.</B> <A HREF="#How to contact the developer">How to contact the developer</A>
+
+ <B>D.</B> <A HREF="#license">About the images and license used by XFG</A>
+</font>
+----------------
+<font face=courier size=3 color=#333333>
+<font face=COURIER size=3.5>
+Suggestion and advice are welcome from anybody.Don't hesitate.
+Any new features suggested will be consider seriously as long as
+it is within my ability.Any questions and error reporting will be
+noted in this help file.
+</font>
+<H2><A NAME="Download">Section A. Download</H2>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+      <b>Binaries download : </b> <a href="http://prdownloads.sourceforge.net/redstone/FileGarden1.2.4F.release3.tar.gz?download">FileGarden1.2.4F.release3.tar.gz</a>  <B>note</B>:base runtime libraries is required if FileGarden had <b>NOT</b> been installed before.
+
+<b>Required base libraries : </b> <A HREF="http://prdownloads.sourceforge.net/redstone/borland-runtime-lib.tar.gz?download">All in one</a>  <B>note</B>:Only need to be installed once.
+
+        <b>Source download : </b> <a href="http://prdownloads.sourceforge.net/redstone/FileGarden1.2.4F.release3-SOURCE.tar.gz?download">FileGarden1.2.4F.release3-SOURCE.tar.gz</a>
+
+     <b>Software Home page : </b> <a href="http://redstone.sourceforge.net/">http://redstone.sourceforge.net/</a>
+
+  <b>Software Project site : </b> <a href="http://sourceforge.net/projects/redstone/">Sourceforge</a>
+
+        <b>Help on Install : </b> <a href="install.html">Installation and usage files</a>
+ 
+           <b>Screen shots : </b> <a href="all-screenshot.jpg">All screen shots with FileGarden thumbnail-viewer itself</a>
+
+         <b>Latest version : </b> 1.2.4F.release2
+
+           <b>release date : </b> 4 - 11 - 2004
+
+        <b>Computing links : </b> <a href="computing.html">Computing</a>
+
+     <b>My other Home page : </b> <a href="http://web.singnet.com.sg/~alred/">My other Home page ( Non-software )</a>
+
+                  <b>email : </b> <a href="mailto:alred2@lycos.com">alred2@lycos.com</a>
+
+<font face=COURIER size=3.5>
+<B>Important</B> : The help file will be updated quite often.
+            As of version FileGarden1.2.4A , 
+            Every minor updates and patches will be release by replacing this package without 
+            replacing the version number.There will be new version releases when there are major
+            features upgrade or major bug fixes.So if you encounter any bugs and errors in the
+            program , then you should try to download only this package and install again.You 
+            don't need to download the runtime package.
+            Check the release date for this package on the download page.
+</font>
+
+<H2><A NAME="1">Section 1. Installation and usage</H2>
+<H3><A NAME="1.1">1.1.How to install XFG</H3>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+<B>note :</B> Try to follow the file directory structure for first time installation :
+
+<B>Step 1.</B> Login as root,Uncompress &quot;filegarden1.2.xx.tar.gz&quot;  and &quot;borland-runtime-lib.tar.gz&quot;
+        into &quot; /opt &quot; under the root directory .Note that you need not install 
+        &quot;borland-runtime-lib.tar.gz&quot; if you FileGarden was already installed on youe machine before,
+        and you HAVE NOT DELETED these directories : 
+      
+
+        /opt/
+          - redstone/
+                 - FileGarden/
+                 - mainlib/
+                 
+   
+       <B>FileGarden was design in a way that you can install a copy over an older/previous copy.
+       You need only delete the directory &quot; ~/redstone &quot; if you want to.</B>
+       <B>If you already have a working XFG installed,then rename or delete file
+       " [your HOME]/redstone/FileGarden/xfg.conf " and go directly to step 8.</B>           
+
+<B>Step 2.</B> Put line this into /etc/ld.so.conf
+    
+ 
+        /opt/redstone/mainlib
+
+
+<B>Step 3.</B> Type <font color=brown>ldconfig</font> in your terminal and press enter
+
+<B>Step 4.</B> Put line this into your login startup script
+
+        example :  ~/.bash_profile
+
+      <font color=brown>  export LD_LIBRARY_PATH=/opt/redstone/mainlib</font>
+
+<B>Step 5.</B> Create a symlink from &quot; /opt/redstone/FileGarden/filegarden-install &quot;
+        to &quot; /usr/bin/filegarden-install &quot;
+  
+        eg.<font color=brown>  ln -s /opt/redstone/FileGarden/filegarden-install /usr/bin/</font>
+  
+<B>Step 6.</B> Logout your linux session( ** not X session ** ) and login again
+
+<B>Step 7.</B> Login as normal user , type &quot; filegarden-install &quot;
+        in your terminal and press enter.This will install the program into 
+        your home directory. eg. &quot; ~/redstone/FileGarden &quot;
+        Watch for errors in your terminal and send me an email if problems
+        with libraries not found , runtime error , segmentation faults etc
+
+<B>Step 8.</B> Execute the command &quot;<font color=brown> ~/redstone/FileGarden/FileGarden &quot;</font> from your terminal.
+  
+        The above procedure should work , email me if you encounter any 
+        problem.
+        NOTE :<A HREF="http://www.efg2.com/Lab/Library/Kylix/deployment.htm"><img src="link.png"> A very good place to start with for Kylix problems ...</A>
+
+
+
+<H2><A NAME="1.2">1.2.Working with the Main window </H2>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+<H3>1.2.1.Working with file listing on the editor</H3>
+If XFG show an error dialog box stating " <B>Error loading files</B> ",then you should make
+sure the " <B>File list</B> " mode check-box at the lower left corner of the main window is 
+correctly checked or unchecked.
+Most the menu item commands work with the " <B>File list</B> " mode check-box checked,which
+means the content of the currently active editor contains file listing,even the file 
+listing was paseted or embeded by doubled-clicking of file manager file item onto an
+active editor which already contained text previously opened.XFG will always try to
+parse the whole content and search for any occurence of file listing ( the file name
+with full path must be on a whole new line by itself ) and forward the found file 
+listing to the calling menu item command.There is advantage and disadvantage for this
+feature,so be careful and know what you are doing before you execute any menu item 
+command.
+
+<H3>1.2.2.Files Copy , Move , Delete and Create symbolic links speed button commands </H3>
+These file commands are done by the following source and destination relations :
+
+[file command]  <B>from</B>  [file listing on the editor]  <B>to</B>  [active file manager directory] 
+
+We set the [active file manager directory] by clicking on either left-hand side <B>icon 
+view container</B> or the right-hand side <B>detail file listing container</B>.
+
+<H3>1.2.3.The recognition of file mimes type from file listing on the editor</H3>
+XFG will not try to recognise the file mimes type from file listing on the editor.
+Every file is a file forward to the menu item command.So if you forward a postscript 
+file to " <B>ImageMagick</B> " menu item command for file conversion to JEPG format,it listerns
+to you.That is a sound feature.
+But if you forward a postscript file to " <B>Ghostscript</B> " menu item command for file
+conversion to postscript format,it listerns to you.That is not a well thought of feature.
+
+<H3>1.2.4.Commands that might cause us some regrets :</H3>
+Speed buttons for " <B>Delete</B> " , " <B>Copy</B> " , " <B>Move</B> " and " <B>Create symbolic link</B> "
+Be very careful with these command,you must know what you are doing.
+
+<H2><A NAME="1.3">1.3.Working with the File manager </H2>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+<H3>1.3.1.Embed file listing onto the editor from the file manager</H3>
+Make sure the " <B>Toggle file list mode</B> " speed button,the third one from the upper 
+right-hand corner of the file manager is toggled.If " <B>File list mode</B> " is enabled,
+the button image will show an opened folder.If " <B>File list mode</B> " is not enabled,
+the button image will show a closed folder.At the same time the " <B>File list</B> " mode 
+check-box at the lower left-hand conrner of the main window corresponds to the toggle
+states of the " <B>Toggle file list mode</B> " speed button.
+
+<B>note :</B> If " <B>File list</B> " mode is off,the content of the file item will then
+       be paseted onto the editor or appended if the editor is not empty.
+
+<H3>1.3.2.Embed directory listing onto the editor from the file manager</H3>
+By double-clicking on file item within the file manager,if it is a file,full path plus
+the file name will be embed onto the editor.If it is a directory,the directory will 
+just be expanded.To embed directory listing,click on the " <B>To editor</B> " speed button on 
+the upper left-hend corner of the file manager with the " <B>Toggle file list mode</B> " 
+speed button set to " <B>File list</B> " mode.
+
+<H3>1.3.3.Try to expand a directory from the icon view hang XFG</H3>
+Trying to expand a directory with more then 500 but less than 1000 files count is slow
+from the <B>icon view</B>.If the files count count is more than 1000,then the directory will be
+expanded onto the faster(but still slow) <B>detail file listing</B> which is on the right-hand side 
+of the file manager.
+
+<H2><A NAME="1.4">1.4.Working with the File manager popup menu</H2>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+<H2><A NAME="1.5">1.5.Working with the Thumbnail veiwer </H2>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+<H3>1.5.1.How to invoke Thumbnail veiwer</H3>
+By cklicking on the top or bottom "<B> View image thumbnails </B>" speed button from the file
+manager.
+
+<H3>1.5.2.Selecting and unselecting images</H3>
+Single-click to select single or multiple images
+Double-click to unselect all selected images.
+
+<H3>1.5.3.Viewing images on the image viewer</H3>
+Right-click on any image from the thumbnail viewer to view the selected image on the
+image viewer.
+
+<H3>1.5.4.Files Copy , Move , Delete and Create symbolic links speed button commands</H3>
+These file commands are done by the following source and destination relations :
+
+[file command]  <B>from</B>  [image thumbnail viewer]  <B>to</B>  [active file manager directory] 
+
+We set the [active file manager directory] by clicking on either left-hand side <B>icon 
+view container</B> or the right-hand side <B>detail file listing container</B>.
+
+<H2><A NAME="1.6">1.6.Working with the Image viewer </H2>
+<H3>1.6.1.Using the image viewer</H3>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+Left-click to go forward to the next image
+Right-click to go backward to the previous image
+
+<H2><A NAME="1.7">1.7.Playing VCD , CD music and media files </H2>
+<H3>1.7.1.Playing VCD</H3>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+You can access the menuitem from the main program menu or the file manager popup menu
+
+Main menu --> Video Tools --> Play VCD
+or
+file manager popup menu --> Play Multimedia ... --> Play VCD
+
+XFG will try to locate and play the first cdrom found with a vcd inserted,
+the order of locating cdrom is :
+
+/dev/cdrom
+/dev/cdrom1
+/dev/cdrom2
+/dev/cdrom3
+/dev/scd0
+/dev/scd1
+/dev/scd2
+/dev/scd3
+/dev/scd4
+/dev/scd5
+/dev/scd6
+
+<B>note</B>:You need XINE and XINE-UI to play VCD 
+     You can get them from <a href="http://freshmeat.net/projects/xine/">http://freshmeat.net/projects/xine/</a>
+     EMAIL me if you want to play VCD with other program.I will EMAIL you a menuitem.
+
+<H3>1.7.2.Playing CD music</H3>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+You can access the menuitem from the main program menu or the file manager popup menu
+
+Main menu --> Sound Tools --> Play MusicCD
+or
+file manager popup menu --> Play Multimedia ... --> Play MusicCD
+
+XFG will try to locate and play the first cdrom found with a music cd inserted,
+the order of locating cdrom is :
+
+/dev/cdrom
+/dev/cdrom1
+/dev/cdrom2
+/dev/cdrom3
+/dev/scd0
+/dev/scd1
+/dev/scd2
+/dev/scd3
+/dev/scd4
+/dev/scd5
+/dev/scd6
+
+<B>note</B>:You need cdplay to play music cd in XFG
+
+<H3>1.7.3.Playing media files</H3>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+You can access the menuitem from the main program menu or the file manager popup menu
+
+Playing media files by file manager selections of files or from the editor file list.
+Media format supported according to the programs used , eg.XINE and XMMS
+
+<B>note</B>:You need XINE / XINE-UI and XMMS to play media files 
+     You can get XINE from <a href="http://freshmeat.net/projects/xine/">http://freshmeat.net/projects/xine/</a>
+     You can get XMMS from <a href="http://www.xmms.org/download.php">http://www.xmms.org/download.php</a>
+     EMAIL me if you want to play media files with other program.I will EMAIL you a menuitem.
+
+<H2><A NAME="1.8">1.8.Basic video and sound editing </H2>
+<H3>1.8.1.Video editing</H3>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+You can access the menuitem " Video tools " from the main program menu or the file manager popup menu
+The menuitem " Convert image " and " Create background canvas " from " ImageMagick " main menuitem
+can help in create images for Mpeg output.The " Rename " menuitem can help in organising and numbering
+multiple image files.
+
+XFG uses external video encoding / decoding tools to achieve video editing capabability.
+They must be installed before you can edit any video files.
+
+Download locations for external video tools :
+
+Mplayer / Mencoder: Download from <a href="http://www.mplayerhq.hu/homepage/design7/dload.html">http://www.mplayerhq.hu/homepage/design7/dload.html</a>
+      Mjpeg tools : Download from <a href="http://sourceforge.net/projects/mjpeg">http://sourceforge.net/projects/mjpeg</a>
+
+All the video processing run in the background.
+Currently there is no progress indictor for video processing built in XFG.
+If you are going to do a lengthy video processing job , it is better for you to run XFG from
+a command shell so you can watch what is going on behind XFG.
+
+<H3>1.8.2.Sound editing</H3>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+You can access the menuitem " Sound tools "  from the main program menu or the file manager popup menu
+can help in create images for Mpeg output.The " Rename " menuitem can help in organising and numbering
+multiple image files.The menuitem " Multiplex Mpeg video / audio " from " Video tools " can be used for
+creating a Mpeg movie.
+ 
+XFG uses external sound encoding / decoding tools to achieve sound editing capabability.
+They must be installed before you can edit any video files.
+
+ shntool : Download from <a href="http://freshmeat.net/projects/shntool/">http://freshmeat.net/projects/shntool/</a>
+    Flac : Download from <a href="http://flac.sourceforge.net/download.html">http://flac.sourceforge.net/download.html</a>
+OggVobis : Download from <a href="http://www.vorbis.com/download.psp">http://www.vorbis.com/download.psp</a>
+    Lame : Download from <a href="http://lame.sourceforge.net/using.html">http://lame.sourceforge.net/using.html</a>
+
+All the sound processing run in the background.
+Currently there is no progress indictor for sound processing built in XFG.
+If you are going to do a lengthy sound processing job , it is better for you to run XFG from
+a command shell so you can watch what is going on behind XFG.
+
+<H2><A NAME="1.9">1.8.Basic LaTeX editing </H2>
+<H3>1.9.1.Basic work flow of LaTeX editing with XFG</H3>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+Email me , alred2@lycos.com , problems,suggestion,corrections of mistakes.
+
+<B>For small document :</B>
+
+                   Input text into editor
+                             |
+
+             Format editor text to LaTeX format
+
+                             |   
+        
+                     Save to dvi format
+
+                             |   
+        
+              Convert dvi to postscript or PDF
+
+                             |    
+       
+       Convert postscript to booklet postscript for printing
+
+
+<B>For big document :</B>
+
+                 Format editor to LaTeX format
+                             |
+
+Insert multiple LaTeX command " \input{filename.tex} " within the document body of LaTeX
+ 
+                             |
+
+                     Save to dvi format
+
+                             |
+
+               Convert dvi to postscript or PDF
+
+                             |
+
+      Convert postscript to booklet postscript for printing
+
+
+<H3>1.9.2.Locations of LaTeX formating configuration files</H3>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+Email me , alred2@lycos.com , problems,suggestion,corrections of mistakes.
+
+XFG uses configurations files to perform formating and insertion of TeX tag into the editor.
+For the time being,they are very simple.They can be edited for your more advance LaTeX work.
+
+The directory location of these files are in " /opt/redstone/mainlib/resource "
+If you edit these files,please save your configurations into  
+" [your home directory]/redstone/resource " <B>with exactly the same filename</B>.
+XFG will try to search in your home directory for configuration file first,if not found
+,then search in XFG base directory.
+
+
+<font color=brown>/opt/redstone/mainlib/resource/XFGMemoInsertTeXFormat</font> = For formating editor text /selection into TeX
+
+<font color=brown>/opt/redstone/mainlib/resource/XFGMemoInsertTeXFormatScan</font> = Use by XFGMemoInsertTeXFormat to scan for illegal characters
+
+<font color=brown>/opt/redstone/mainlib/resource/XFGMemoInsertTeXTag</font> = For insertion of TeX tags use by the menuitems
+
+<font color=brown>/opt/redstone/mainlib/resource/XFGMemoInsertTeXLeftFlowPictureTag</font> = TeX for left side text flow picture
+
+<font color=brown>/opt/redstone/mainlib/resource/XFGMemoInsertTeXCenterPictureTag</font> = TeX for insertion of picture
+
+<font color=brown>/opt/redstone/mainlib/resource/XFGMemoInsertTeXRightFlowPictureTag</font> = TeX for right side text flow picture
+
+
+The file XFGMemoInsertTeXTag really works together with xfg.conf (the main XFG configuration)
+When you click on an menuitem,xfg.conf will search for reactions from XFGMemoInsertTeXTag to insert 
+the LaTeX tag into the editor.
+
+<B>XFG parameter values are enclosed between %xxxxx%</B>
+They can be replaced but not those that start with %XFGMemoInsert... , %PROC%...
+The response of XFG if required values not found are undefined.
+Email me , alred2@lycos.com , your problems,suggestion,corrections.
+
+<H3><A NAME="1.9.3">1.9.3.Walk-through step by step examples for basic LaTeX editing with XFG</H3>
+Email me , alred2@lycos.com , problems,suggestion,corrections of mistakes.
+
+<H3><A NAME="1.9.3.a">1.9.3.a.Creating DVI</A></H3>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+step 1.Make sure the <font color=brown>" File list "</font> checkbox is <B>unchecked</B>.
+       Double-clicked on a text file from the filemanager.This will open the 
+       text file onto the editor.
+
+step 2.Click on the editor's popup-menuitem <font color=brown>" Insert --> LaTeX page format "</font>
+       There will be three dialog box showing the LaTeX page formating options.
+       Click OK for the first and second options dialog.
+       For the third options dialog,choose <font color=brown>" \\ "</font> with the <font color=brown>" Add line break to end of every lines "</font>
+       combo box.The text on the editor will be formatted into LaTeX.For this example,we don't 
+       have to do any LaTeX editing on the formatted text.
+
+step 3.Go to the filemanager,open or create the desired directory where you want the formatted
+       LaTeX file to be saved to.From the editor,save the LaTeX formatted text.The file will be
+       saved with the filename of <font color=brown>" xxx.tex "</font>.
+       From now on,we will work on the choosen directory,which is the currently focused directly
+       pane in the filemanager.LaTeX need to have all the needed files in a known location.
+
+step 4.From the editor,make sure the <font color=brown>" File list "</font> checkbox is <B>checked</B>.
+       Create a new memo tab page by clicking on the <font color=brown>" New page "</font> speed-button.
+       Double-clicked on a saved LaTeX file from the filemanager.This will output just the 
+       saved LaTeX filename with full path onto the editor.
+
+step 5.From the main menu,click on <font color=brown>" Page tools ---> Convert LaTeX files to DVI "</font>
+       The menu command will run " latex " on the choosen TeX files and save the processed
+       file into <font color=brown>" xxx.dvi "</font> along with some other file needed by " latex " for further 
+       advance processing.
+
+step 6.Go to the filemanager and select the DVI file and open it with xdvi with the 
+       filemanager's popup menuitem <font color=brown>" View DVI "</font>
+       
+<B>note</B> : If you can find those TeX or DVI files which are supposed to be there,
+       click on the <font color=brown>" Refresh "</font> button on top of the filemanager.
+
+step 7.Now we have two tab memo pages on the editor and the filename of the LaTeX together
+       with full path is on the second one,without doing anything,go to step 1 of the 
+       next section below " <B>Creating Postscript with LaTeX using XFG</B> "
+
+<H3>1.9.3.b.Creating Postscript</H3>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+.
+step 1.From the editor,make sure the <font color=brown>" File list "</font> checkbox is <B>checked</B>.
+       Create a new memo tab page by clicking on the <font color=brown>" New page "</font> speed-button.
+       From the filemanager double-clicked on the DVI file that we had just created.
+       This will output just the DVI filename with full path onto the editor.
+
+step 2.From the main menu,click on <font color=brown>" Page tools ---> Convert DVI to Postscript "</font>
+       The menu command will run " dvips " on the choosen DVI files and save the processed
+       file into <font color=brown>" xxxnew.ps "</font>.
+
+step 3.Go to the filemanager and select the Postscript file and open it with the 
+       filemanager's popup menuitem <font color=brown>" View PS "</font>
+
+<B>note</B> : If you can find those TeX or DVI files which are supposed to be there,
+       click on the <font color=brown>" Refresh "</font> button on top of the filemanager.
+
+step 4.Now we have three tab memo pages on the editor,go to step 1 of the 
+       next section below " <B>Creating PDF with links and thumbnails</B> "
+
+<H3>1.9.3.c.Creating PDF with links and thumbnails</H3>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+step 1.From the editor,make sure the <font color=brown>" File list "</font> checkbox is <B>checked</B>.
+       Choose the tab memo page which shows only the filename of the <B>LaTeX</B>
+       file.
+
+step 2.From the main menu,click on <font color=brown>" Page tools ---> Convert LaTeX files to PDF (pdfTeX) "</font>
+       The menu command will run " pdftex " on the choosen LaTeX files and save the LaTeX
+       file into <font color=brown>" xxx.pdf "</font>.
+
+<B>note 1.</B> : If you can find those TeX or DVI files which are supposed to be there,
+          click on the <font color=brown>" Refresh "</font> button on top of the filemanager.
+
+step 3.Go to the filemanager and select the Postscript file and open it with the 
+       filemanager's popup menuitem <font color=brown>" Open others... --->  View PDF with Acroread "</font>
+
+<B>note 2.</B> : If you want a pdf file with hyper links,you need edit the LaTeX file with 
+          TOC (table of content) for TeX sectionings,lists of figures,tables,indexing etc.
+          Some of the basic TOC,sectionings,indexing and lists of figures/picture are provided
+          with this software.You might need to run the main menu item
+          <font color=brown>" Page tools ---> Make LaTeX index "</font> to processed the LaTeX index.
+
+Email me , alred2@lycos.com , problems,suggestion,corrections of mistakes.
+
+<H2><A NAME="2">Section 2. About the default file viewing programs for XFG</H2>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+The default file viewing program that comes with this program are
+
+   Jasspa's MicroEmacs       ---&gt; a very fast textfile viewer , <a href="http://www.jasspa.com/">http://www.jasspa.com/</A>
+   gsview                    ---&gt; a postscript and pdf viewer , <a href="http://www.cs.wisc.edu/~ghost/gsview/">http://www.cs.wisc.edu/~ghost/gsview/</A>
+   dillo                     ---&gt; a very fast web browser , <a href="http://freshmeat.net/projects/dillo/">http://freshmeat.net/projects/dillo/</A>
+   imagemagick               ---&gt; an image browser , <a href="http://imagemagick.sourceforge.net/">http://imagemagick.sourceforge.net/</A>
+  
+   Please read <A HREF="#5">section 5</A> if you want to change these default settings.
+
+<H2><A NAME="3">Section 3. Programs that are required to run XFG</H2>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+These are those programs that MUST be installed before you can run FileGarden
+
+   netpnm                    ---&gt; an image conversion utilities , <a href="http://netpbm.sourceforge.net/">http://netpbm.sourceforge.net/</A>
+   imagemagick               ---&gt; an image browser , <a href="http://imagemagick.sourceforge.net/">http://imagemagick.sourceforge.net/</A>
+   ghostscript               ---&gt; postscript and pdf worker , <a href="http://www.cs.wisc.edu/~ghost/doc/AFPL/">http://www.cs.wisc.edu/~ghost/doc/AFPL/</A>
+   psnup,psbook,psselect ... ---&gt; comes pre-install with most linux system
+   tar and zip               ---&gt; comes pre-install with most linux system
+   
+   FileGarden relies heavily on these programs , without them FileGarden is not needed.Thanks to the
+   developers of these programs.The images use in this sofware are taken from RedHat Linux 9 distribution.
+
+<H2><A NAME="4">Section 4. Locations of configuration files for scripting of XFG</H2>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+Read the configuration file and compare it to the program,s interface
+
+   You should be able to figure it out structure of the file :
+  
+   <font color=brown>~/redstone/FileGarden/xfg.conf</font>           --------------&gt; for the main program
+   <font color=brown>/opt/redstone/mainlib/resource/*</font>         --------------&gt; scripts  for  external
+                                                            commandline programs GUI
+   <font color=brown>/opt/redstone/mainlib/resource/GUIDS</font>     --------------&gt; unique  IDs  for scripts naming
+                                                            
+
+   <B>note</B> : try to be case-sensitive and neat with configurations
+          enscript must be installed to run the program and the 
+          page setup dialog
+
+<H2><A NAME="5">Section 5. How to change the default file viewing programs for XFG</H2>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+To change defaults settings or add new file viewing programs:
+
+    <B>Step 1.</B> Open the file   /your home directory/redstone/FileGarden/xfg.conf 
+    
+    <B>Step 2.</B> Search for the section :
+    
+<font color=brown>
+           [MenuViewWith]
+            View text file=me -u root $in &amp;
+            View PS=gsview %in &amp;
+            View PDF=gsview %in &amp;
+            View HTML=dillo %in &amp;
+            View Image=display %in &amp;
+            View with Gimp=gimp $in &amp;
+            View with XFig=xfig $in &amp;
+</font>            
+    <B>Step 3.</B> To change to your favorites viewer
+            example : if your text viewer is abiword
+       
+            replace <font color=brown> View text file=me -u root $in &amp;</font>           
+            with <font color=brown> View text file=abiword $in &amp;</font>      
+         
+    <B>Step 4.</B> To add new file viewer
+            example : if you want to play sounds or cd music and your palyer is xmms
+       
+       
+            add new values  :    <font color=brown> I want to play this music=xmms %in &amp;</font>    
+                       or  <font color=brown> Lets nuke the world=xmms %in &amp;</font>    
+       
+            under the same section [MenuViewWith]
+         
+
+      <B>note</B> : be careful with the variables in this file 
+              eg : <font color=brown>$in,$out,%in,%out,!in,!out,%xxxx% ,%PROC%xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</font>
+              wrong or missing variables can breaks everything,including your hardware!
+
+<H2><A NAME="6">Section 6. How to configure the Doc Bench menu item</H2>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+
+The Doc Bench menu item is a container for storage of documents.
+The menu item works by pointing itself to the directory location referenced
+by in the configuration file &quot; ~/redstone/FileGarden/xfg.conf &quot;.It will show 
+all the files within that directory on the menu.You can view or execute the 
+file by directly clicking on the menu item.Output will either be onto the editor
+or fork an external helper program.
+
+<B>Step 1</B>
+Below is the section inside the &quot; ~/redstone/FileGarden/xfg.conf &quot;
+You must configure these sections to point to your documents directory.
+XFG was package with the author's  documents directory configuration.
+
+<font color=brown>
+.................
+.................
+.................
+
+[Doc Bench]
+help=%VCLEXTERNAL%
+Component info=%VCLEXTERNAL%
+---seperator1=none
+Linux HowTo=%JustExecuteThisAndDoNothingPlease%howto
+Linux HowTo-Single=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/html-single-HOWTO
+Man Page=%CREATENEW%
+
+[Man Page]
+Man 0p=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man0p
+Man 1=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man1
+Man 1p=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man1p
+Man 2=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man2
+Man 3=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man3
+Man 3p=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man3p
+Man 4=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man4
+Man 5=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man5
+Man 6=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man6
+Man 7=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man7
+Man 8=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man8
+
+[Doc BenchImage]
+help=/root/redstone/FileGarden/image/gdict-21.png
+Component info=/root/redstone/FileGarden/image/screen_green.png
+Linux HowTo=/root/redstone/FileGarden/image/gdict-21.png
+Linux HowTo-Single=/root/redstone/FileGarden/image/gdict-21.png
+Man Page=/root/redstone/FileGarden/image/gdict-21.png
+
+.................
+.................
+.................
+
+</font>  
+
+<B>Step 2</B>
+Configure the section of <font color=brown>[Man Page]</font> :
+
+if your man page location is in &quot; /usr/share/man &quot; and these are the directory that you
+intend to show : 
+
+   /usr/share/man
+               /man1
+               /man2
+               /man3
+               /man4
+               /man5
+               /man6
+               /man7
+               /man8
+               /man9
+
+               
+<B>Step 3</B>
+then you should replace the entire section of <font color=brown>[Man Page]</font> with this 
+
+<font color=brown>
+.................
+.................
+.................
+
+
+[Man Page]
+man1=%ExpandDirForDocumentation%/usr/share/man/man1
+man2=%ExpandDirForDocumentation%/usr/share/man/man2
+man3=%ExpandDirForDocumentation%/usr/share/man/man3
+man4=%ExpandDirForDocumentation%/usr/share/man/man4
+man5=%ExpandDirForDocumentation%/usr/share/man/man5
+man6=%ExpandDirForDocumentation%/usr/share/man/man6
+man7=%ExpandDirForDocumentation%/usr/share/man/man7
+man8=%ExpandDirForDocumentation%/usr/share/man/man8
+man9=%ExpandDirForDocumentation%/usr/share/man/man9
+
+.................
+.................
+.................
+
+</font>  
+
+The variable of <font color=brown>%ExpandDirForDocumentation%</font>  is case sensitive 
+The Doc Bench currently support document file in these formats :
+
+html           --- extensions registered in section of <font color=brown>[xfgTextEXT]</font> in xfg.conf
+man            --- extensions registered in section of <font color=brown>[xfgManEXT]</font> in xfg.conf
+text           --- extensions registered in section of <font color=brown>[xfgTextEXT]</font> in xfg.conf
+postscript     --- extensions registered in section of <font color=brown>[xfgPSEXT]</font> in xfg.conf
+pdf            --- extensions registered in section of <font color=brown>[xfgPSEXT]</font> in xfg.conf
+images format  --- extensions registered in section of <font color=brown>[xfgImageEXT]</font> in xfg.conf
+sound format   --- extensions registered in section of <font color=brown>[xfgSoundEXT]</font> in xfg.conf
+
+note : for sound format , extensions registered but not execution of sounds.
+       Must be fully tested before implementation.Same to video format.
+
+<H2><A NAME="Errors,bugs and solutions">Section B. Errors,bugs and solutions</H2>
+Please email me as much errors,bugs and informations as possible if you can.
+
+<H2><A NAME="How to contact the developer">Section C. How to contact the developer</H2>
+Email : alred@singnet.com.sg
+
+<H2><A NAME="license">Section D. About the images and license used by XFG</H2>
+<a href="index.html"><img src="back2main.png" alt="Back to main" border="0"></a> <a href="#Table of content"><img src="TOC.png" alt="Back to table of content" border="0"></a>
+<font face=COURIER size=3.5>
+<HR>
+This program is free software; you can redistribute it and/or modify it under 
+the terms of the GNU General Public License as published by the Free Software 
+Foundation; either version 2 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE. See the GNU General Public License for more details. You 
+should have received a copy of the GNU General Public License along with this 
+program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, 
+Suite 330, Boston, MA, 02111-1307, USA. 
+
+The images use in this sofware are taken from RedHat Linux 9 distribution.
+ImageMagik , Ghostscript , gsview and netpnm are being used by this sofware.
+Kylix Open Edition ,Kylix vcl component technology are being used by this sofware. 
+I have included a Borland license text,GPL text from Borland.please read it and
+send me some clues about it.Installation issues can also be found in the deploy 
+text file included.  
+
+I am not responsible for any damage and any hazards of any kinds caused
+by this software in execution and installalion.
+You are free to download  and use this software at your own risk. 
+If you  like  this  sofware  ,  please send in donations in the forms of 
+postcards,junks,antique computers or money of any amount.
+
+Email me , alred2@lycos.com , your response,suggestion,corrections.
+
+thankyou
+</font>
+</font>
+</PRE>
+<p align="right"><a href="http://www.anybrowser.org/campaign/"><img src="newany10.gif" width="graphic-width-in-pixels" height="graphic-height-in-pixels" alt="Viewable With Any Browser" border="0"></a></p>
+
+</BODY>
+</HTML>

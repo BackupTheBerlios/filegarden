@@ -1,0 +1,38 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=420
+FrameCaption=Wave tools ...
+FrameLabel= Wave tools ...
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=COMMANDER
+ShowAfter=Commander
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Wave tools=combo=false="Strip wave header"
+View messages=checkbox=true=%RunMessage%
+
+[VALUE]
+cmd=%View messages%%Wave tools%
+
+[DefaultValue]
+Start from N seconds=00
+End at N seconds=00
+
+[ActualValue]
+Strip wave header=echo %in | shntool cat -nh -nr > %out-strip.wav
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+

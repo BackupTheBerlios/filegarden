@@ -1,0 +1,89 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=430
+FrameCaption=Create contact print
+FrameLabel=Create contact print : 
+LabelWidth=170
+LabelImage=/root/redstone/FileGarden/image/image-32.png
+InputFrom=NONE
+REFRESH=NONE
+ShowAfter=COMMANDER
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Background color=combo=true="black"|"red"|"blue"|"yellow"|"green"|"brown"|"grey"
+Image resize width=combo=true="100"|"120"|"140"|"150"
+Image resize height=combo=true="100"|"120"|"140"|"150"
+Thumbnail across no.=combo=true="5"|"10"|"15"
+Thumbnail vertical no.=combo=true="5"|"10"|"15"
+Thumbnail horizontal space=combo=true="0"|"5"|"10"|"15"
+Thumbnail vertical space=combo=true="0"|"5"|"10"|"15"
+Thumbnail frame width=combo=true="10"|"20"|"30"|"50"
+Thumbnail frame height=combo=true="10"|"20"|"30"|"50"
+Thumbnail outer bevel width=combo=true="2"|"5"|"10"|"15"
+Thumbnail outer bevel height=combo=true="2"|"5"|"10"|"15"
+Thumbnail bordercolor=combo=true="black"|"red"|"blue"|"yellow"|"green"|"brown"|"grey"
+Thumbnail show shadow=checkbox=true=-shadow
+SaveAs filename=edit=contact
+SaveAs image type=combo=false="JPG"|"BMP"|"DCM"|"DCX"|"DIB"|"FAX"|"FITS"|"G3"|"GIF"|"GIF87"|"GRAY"|"ICM"|"ICO"|"ICON"|"JPEG"|"LOGO"|"MIFF"|"MONO"|"PALM"|"PBM"|"PCD"|"PCDS"|"PCL"|"PCT"|"PCX"|"PDB"|"PGM"|"PICT"|"PM"|"PNG"|"PNM"|"PPM"|"PSD"|"RAS"|"SGI"|"SUN"|"SVG"|"TGA"|"TIF"|"TIFF"|"UIL"|"XPM"|"WMF"|"WPG"|"X"|"XBM"|"XCF"|"XWD"
+
+[VALUE]
+cmd=/usr/bin/montage -background %Background color% -tile %Thumbnail across no.%x%Thumbnail vertical no.% -geometry "%Image resize width%x%Image resize height%+%Thumbnail horizontal space%+%Thumbnail vertical space%>"-bordercolor %Thumbnail bordercolor% -frame %Thumbnail frame width%x%Thumbnail frame height%+%Thumbnail outer bevel width%+%Thumbnail outer bevel height% %Thumbnail show shadow% &in &out%SaveAs filename%.%SaveAs image type%
+
+
+[SSVALUE]
+/usr/bin/montage -tile 5 -geometry 100x100+0+0 -bordercolor black -label "" -frame 10x10+5+5 -shadow &in &out%QInputDLG%
+
+[ActualValue]
+BMP=bmp
+DCM=dcm
+DCX=dcx
+DIB=dib
+FAX=fax
+FITS=fits
+G3=g3
+GIF=gif
+GIF87=gif87
+GRAY=gray
+ICM=icm
+ICO=ico
+ICON=icon
+JPEG=jpg
+JPG=jpg
+LOGO=logo
+MIFF=miff
+MONO=mono
+PALM=palm
+PBM=pbm
+PCD=pcd
+PCDS=pcds
+PCL=pcl
+PCT=pct
+PCX=pcx
+PDB=pdb
+PGM=pgm
+PICT=pict
+PM=pm
+PNG=png
+PNM=pnm
+PPM=ppm
+PSD=psd
+RAS=ras
+SGI=sgi
+SUN=sun
+SVG=svg
+TGA=tga
+TIF=tif
+TIFF=tiff
+UIL=uil
+XPM=xpm
+WMF=wmf
+WPG=wpg
+X=x
+XBM=xbm
+XCF=xcf
+XWD=xwd
+

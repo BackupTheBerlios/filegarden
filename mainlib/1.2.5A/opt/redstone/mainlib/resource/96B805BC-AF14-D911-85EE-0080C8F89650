@@ -1,0 +1,64 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Encode Wave files to movie audio ...
+FrameLabel= Encode Wave files to movie audio ...
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=NONE
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Output name=edit=none
+Output type=combo=false="VCD PAL (Mpeg movie)"|"VCD NTSC (Mpeg movie)"|"VCD SECAM (Mpeg movie)"|"VCD FILM (Mpeg movie)"|"SVCD PAL (Mpeg movie)"|"SVCD NTSC (Mpeg movie)"|"SVCD SECAM (Mpeg movie)"|"SVCD FILM (Mpeg movie)"|"Software PAL (Mpeg movie)"|"Software NTSC (Mpeg movie)"|"Software SECAM (Mpeg movie)"|"Software FILM (Mpeg movie)"|"Software PAL (Mpeg movie)"|"Broadband 600K (Mpeg movie)"|"Broadband 384K (Mpeg movie)"|"Narrowband 128K (Mpeg movie)"
+
+[VALUE]
+cmd=%RunMessage%%Output type%
+
+[DefaultValue]
+
+[ActualValue]
+VCD PAL (Mpeg movie)=mp2enc -b 224 -r 44100 -s -o %out%Output name%.mpa < %in &
+VCD NTSC (Mpeg movie)=mp2enc -b 224 -r 44100 -s -o &out%Output name%.mpa < %in &
+VCD SECAM (Mpeg movie)=mp2enc -b 224 -r 44100 -s -o &out%Output name%.mpa < %in &
+VCD FILM (Mpeg movie)=mp2enc -b 224 -r 44100 -s -o &out%Output name%.mpa < %in &
+SVCD PAL (Mpeg movie)=mp2enc -b 224 -r 44100 -s -o &out%Output name%.mpa < %in &
+SVCD NTSC (Mpeg movie)=mp2enc -b 224 -r 44100 -s -o &out%Output name%.mpa < &in &
+SVCD SECAM (Mpeg movie)=mp2enc -b 224 -r 44100 -s -o &out%Output name%.mpa < &in &
+SVCD FILM (Mpeg movie)=mp2enc -b 224 -r 44100 -s -o &out%Output name%.mpa < &in &
+Software PAL (Mpeg movie)=mp2enc -b 112 -r 44100 -s -o &out%Output name%.mpa < &in &
+Software NTSC (Mpeg movie)=mp2enc -b 112 -r 44100 -s -o &out%Output name%.mpa < &in &
+Software SECAM (Mpeg movie)=mp2enc -b 112 -r 44100 -s -o &out%Output name%.mpa < &in &
+Software FILM (Mpeg movie)=mp2enc -b 112 -r 44100 -s -o &out%Output name%.mpa < &in &
+Broadband 600K (Mpeg movie)=mp2enc -b 96 -r 44100 -s -o &out%Output name%.mpa < &in &
+Broadband 384K (Mpeg movie)=mp2enc -b 32 -r 44100 -s -o &out%Output name%.mpa < &in &
+Narrowband 128K (Mpeg movie)=mp2enc -b 32 -r 44100 -m -o &out%Output name%.mpa < &in &
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+VCD PAL (Mpeg movie)=
+VCD NTSC (Mpeg movie)=
+VCD SECAM (Mpeg movie)=
+VCD FILM (Mpeg movie)=
+SVCD PAL (Mpeg movie)=
+SVCD NTSC (Mpeg movie)=
+SVCD SECAM (Mpeg movie)=
+SVCD FILM (Mpeg movie)=
+Software PAL (Mpeg movie)=
+Software NTSC (Mpeg movie)=
+Software SECAM (Mpeg movie)=
+Software FILM (Mpeg movie)=
+Broadband 600K (Mpeg movie)=
+Broadband 384K (Mpeg movie)=
+Narrowband 128K (Mpeg movie)=

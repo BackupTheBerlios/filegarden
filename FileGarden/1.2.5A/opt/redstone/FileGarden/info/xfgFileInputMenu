@@ -1,0 +1,8 @@
+Values :   none
+    Key :   %in = input source
+    Key :   %BUILTIN% = Built in xfgFileCommander item.Unconfigurable except for menu image 
+
+             The item type of xfgFileInputMenu belongs to items on the file manager's popupmenu
+             example : To open the selected file or files from the file manager with Mozilla
+                    
+                                 mozilla %in

@@ -1,0 +1,87 @@
+[Main]
+DEBUG=1
+ComponentCallingName=Mail Implant
+
+[Mail Folder]
+Persons=[HOME]/redstone/mytable/Mail/Persons/
+My Letter=[HOME]/redstone/mytable/Mail/My Letter/
+Queue=[HOME]/redstone/mytable/Mail/Queue/
+InBox=[HOME]/redstone/mytable/Mail/InBox/
+OutBox=[HOME]/redstone/mytable/Mail/OutBox/
+Trash=[HOME]/redstone/mytable/Mail/Trash/
+MailTEMPAttachmentFolder=[HOME]/redstone/mytable/Mail/MailTEMPAttachmentFolder/
+
+[Mail Setting]
+KeepMailOnServer=1
+Email=
+Organization=
+Username=
+SmtpTargetPort=25
+PopTargetPort=110
+SmtpServer=
+PopServer=
+
+[Mail Contact]
+
+[Color]
+ListView_BGColor=$00E6E6E6
+ListView_FGColor=8940896
+ListView_FontName=helvetica
+ListView_FontSize=11
+
+[MaillistviewPopup]
+Reply=
+-=
+Delete=
+Delete All=
+Clear Thrash=
+-=
+Send Now=
+Move to My Letter=
+Copy To Folder ...=
+Compose New=
+-=
+View Source=
+
+[ComposeNewAttachPopup]
+Attach New ...=
+Remove=
+-=
+Remove All=
+
+[ComposeNewMemoPopup]
+Queue=
+Send Now=
+-=
+Save=
+-=
+Save to My Letter=
+Save New Mail As ...=
+Compose New=
+-=
+Undo=
+Redo=
+-=
+Cut=
+Copy=
+Paste=
+-=
+Clear Selection=
+Clear All=
+Select All=
+
+[DumpToVCL]
+As New Text Email=ComposememoView
+As Email Attachment=LBoxAttach
+Editor text as Email Text=ComposememoView
+
+[DumpToVCLNeedFileExists]
+As Email Attachment=1
+
+[DumpToVCLNeedExpandFilelist]
+As New Text Email=1
+
+[DumpToVCLControlParent]
+ComposememoView=MailPanelMessage
+LBoxAttach=MailPanelMessage
+

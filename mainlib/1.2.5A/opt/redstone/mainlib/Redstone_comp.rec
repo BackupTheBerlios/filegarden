@@ -1,0 +1,42 @@
+[Show directory tree]
+main_path=/opt/redstone/mainlib
+comp_name=Redstone_input_frame_01.so
+comp_classname=tRedstone_input_frame
+comp_type=delphi
+
+[install]
+main_path=/opt/redstone/mainlib
+comp_name=Redstone_install_01.so
+comp_classname=tRedstone_install
+comp_type=delphi
+
+[Component info]
+main_path=/opt/redstone/mainlib
+comp_name=aaa_01.so
+comp_classname=taaa
+comp_type=delphi
+
+[Search tool]
+main_path=/opt/redstone/mainlib
+comp_name=Redstone_findfiles_01.so
+comp_classname=tRedstone_findfiles
+comp_type=delphi
+
+[Page setup]
+main_path=/opt/redstone/mainlib
+comp_name=Redstone_pagesetup_01.so
+comp_classname=tRedstone_pagesetup
+comp_type=delphi
+
+[Send to printer]
+main_path=/opt/redstone/mainlib
+comp_name=Redstone_sendtoprinter_01.so
+comp_classname=tRedstone_sendtoprinter
+comp_type=delphi
+
+[help]
+main_path=/opt/redstone/mainlib
+comp_name=Redstone_help_01.so
+comp_classname=tRedstone_help
+comp_type=delphi
+

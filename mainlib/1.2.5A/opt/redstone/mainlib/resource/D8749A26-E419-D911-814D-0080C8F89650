@@ -1,0 +1,43 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=450
+FrameCaption=Join multiple Mjepg AVI files ...
+FrameLabel= Join multiple Mjepg AVI files ...
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=NONE
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Output name=edit=none
+Output Format=combo=false="Raw Yuv"|"Mjepg AVI"
+
+[VALUE]
+cmd=%Output Format%
+
+[DefaultValue]
+Output Format=Mjepg AVI
+
+[ActualValue]
+Raw Yuv=echo "#!/bin/bash" > %GetCustomCommand%GetGuids && echo "lav2yuv &in > &out%Output name%.avi " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Join multiple Mjepg AVI files ..." -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+Mjepg AVI=echo "#!/bin/bash" > %GetCustomCommand%GetGuids && echo "lav2yuv &in | mencoder - -o &out%Output name%-mjpeg.avi -ovc lavc -lavcopts vcodec=mjpeg -oac copy " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Join multiple Mjepg AVI files ..." -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+
+[Sample]
+lav2yuv &in > &out%Output name%.avi &=
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+
+echo "#!/bin/bash" > %GetCustomCommand%GetGuids && echo "mencoder %Output name%.avi -o %out%Output name%-mjpeg.avi -ovc lavc -lavcopts vcodec=mjpeg -oac copy  -ss %Start from N seconds% -endpos %End at N seconds% -fps %Extraction frame rate ( fps )% -ofps %Extraction frame rate ( fps )% -ss %Start from N seconds% -endpos %End at N seconds% -af volume=%Output AVI audio volume%dB -vf scale=352:240,framestep=%Renders only every N frame%,hue=%Video hue%:%Video color saturation%,eq=%Video brightness%:%Video contrast%,hqdn3d=%Apply denoise filter to video%,%Mirror video%%Rotate video%noise=%Add luma noise to video%h:%Add chroma noise to video%h,smartblur=%Apply blur filter strength to video%:%Blur filter value%:%Blur filter threshold%,harddup,pp=%Horizontal deblocking%%Vertical deblocking%%Deringing%%Linear blend deinterlacer%%Linear interpolating deinterlace%%Cubic interpolating deinterlacer%%Median deinterlacer%%ffmpeg deinterlacer%   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Extract VCD to Mjpeg AVI" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+
+Mjepg AVI=echo "#!/bin/bash" > %GetCustomCommand%GetGuids && echo "lav2yuv &in > %Output name%.avi " >> %GetCustomCommand%GetGuids && echo "mencoder %Output name%.avi -o &out%Output name%-mjpeg.avi -ovc lavc -lavcopts vcodec=mjpeg -oac copy " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Join multiple Mjepg AVI files ..." -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+

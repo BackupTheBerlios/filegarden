@@ -1,0 +1,8 @@
+Values :   none
+    Key :   %BUILTIN% = Built in xfgFileCommander item.Unconfigurable except for file extension image
+
+             Choose add new item to add a new file extension without the 'DOT' and configure it's 
+             default image.FileGarden only honored the extension after the LAST DOT of a given 
+             filename.The File and Folder item represent the global default image for folder and 
+             regular files
+Important :  Image file must be BIGGER then or EQUAL to 25x25 pixels size.

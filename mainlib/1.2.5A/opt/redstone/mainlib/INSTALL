@@ -1,0 +1,47 @@
+Try to follow the directory structure for first time installation :
+
+If you download filegardenx.x.x.tar.gz or filegarden-sourcex.x.x.tar.gz
+then you must unpack them from the parent-root directory of your disk eg. /
+
+If you get your files or directories from CVS then copy them to the directory
+structure defined below accordingly.
+
+/opt/
+   - redstone/
+            - etc-source/         ------>  not needed if you don't want to compile third parties lib
+            - FileGarden/         ------>  needed for execution binaries
+            - mainlib/            ------>  needed for compiled runtime libraries
+            - source/             ------>  not needed if you don't want to compile filegarden
+
+
+Step 2. Put line this into /etc/ld.so.conf
+    
+        /opt/redstone/mainlib
+
+Step 3. Type ldconfig in your terminal and press enter
+
+Step 4. Put line this into your login startup script
+
+        example :  ~/.bash_profile
+
+        export LD_LIBRARY_PATH=/opt/redstone/mainlib
+
+Step 5. Create a symlink from " /opt/redstone/FileGarden/filegarden-install "
+        to " /usr/bin/filegarden-install "
+  
+        eg.  ln -s /opt/redstone/FileGarden/filegarden-install /usr/bin/
+  
+Step 6. Logout your linux session( ** not X session ** ) and login again
+
+Step 7. Login as normal user , type " filegarden-install "
+        in your terminal and press enter.This will install the program into 
+        your home directory. eg. " ~/redstone/FileGarden "
+        Watch for errors in your terminal and send me an email if problems
+        with libraries not found , runtime error , segmentation faults etc
+
+Step 8. Execute the command " ~/redstone/FileGarden/FileGarden " from your terminal.
+  
+        The above procedure should work , email me if you encounter any 
+        problem.
+
+EMAIL : alred2@lycos.com

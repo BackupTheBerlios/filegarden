@@ -1,0 +1,34 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Extract Wave from AVI / Mpeg ...
+FrameLabel= Extract Wave from AVI / Mpeg ...
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=NONE
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Start from N seconds=edit=none 
+End at N seconds=edit=none 
+Don't write wave header=checkbox=false=no
+View messages=checkbox=true=%RunMessage%
+
+[VALUE]
+cmd=%RunMessage%mencoder %in -oac copy -ss %Start from N seconds% -endpos %End at N seconds% -ovc raw -o %outstream.avi && mplayer %outstream.avi -vo null -vc dummy -ao pcm -%Don't write wave header%waveheader -aofile %out.wav && rm %outstream.avi &
+
+[DefaultValue]
+
+
+[ActualValue]
+
+[Sample]
+Input AVI file=edit=%FileOpenEdit%=none 
+Save new Wave file as=edit=%FileSaveEdit%=new.wav
+

@@ -1,0 +1,33 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Extract Wave from AVI ...
+FrameLabel= Extract Wave from AVI ...
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=NONE
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Scratch disk location=edit=%diropenedit%=none 
+Start from N seconds=edit=none 
+End at N seconds=edit=none 
+Don't write wave header=checkbox=false=no
+
+[VALUE]
+cmd=cd %Scratch disk location% && mencoder %in -oac copy -ss %Start from N seconds% -endpos %End at N seconds% -ovc raw -o %Scratch disk location%/%GetCustomCommand%GetGuidsToBeDeleted.avi && mplayer %Scratch disk location%/%GetCustomCommand%GetGuidsToBeDeleted.avi -vo null -vc dummy -ao pcm -%Don't write wave header%waveheader -aofile %out.wav && rm %Scratch disk location%/%GetCustomCommand%GetGuidsToBeDeleted.avi &
+
+[DefaultValue]
+
+
+[ActualValue]
+
+[Sample]
+Input AVI file=edit=%FileOpenEdit%=none 
+Save new Wave file as=edit=%FileSaveEdit%=new.wav

@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<body bgcolor=white><base font face=Helvetica>
+<pre>
+<font size=4 face=Helvetica>
+<b><font size=10>"Command" menuitem</font></b>
+<b><font size=10>"SystemInfo" menuitem</font></b>
+
+<img src="capturedS.jpg">
+
+
+Step 1 : Click "Command" or "SystemInfo" menuitem and choose a command
+         to display it output on the editor.
+
+<font size=3 color=red>note : The current directory of the xfgcommander is the current 
+       directory of the saving location for all files saved.They will be highlighted
+       after you close a dialog or executed a menu command.</font>
+
+----------------------------------------------------------------------
+<b><font size=6>To insert new "Command" command menuitem by manual editing</font></b>
+
+Step 1 : Shutdown FileGarden.
+Step 2 : Edit the file " /opt/redstone/FileGarden/xfg.conf "
+
+<font size=3 color=red>note : File path might not be the same as your installation.
+       There is no way to edit this file when FileGarden is running.</font>
+
+----------------------------------------------------------------------
+example 1 : To add in " ls -a / " into the "Command"  or the "SystemInfo" 
+            menuitem
+
+<font size=3 color=darkgreen>
+...
+...
+...
+[Command]
+list=ls -a /
+netstat=netstat -anp
+ps=ps -aux
+free=free -m
+-=
+...
+...
+...
+</font>
+
+<font size=3 color=red>note : to insert a seperator use " - "  </font>
+
+----------------------------------------------------------------------
+example 2 : To add in image icon for the menuitem 
+
+<font size=3 color=darkgreen>
+...
+...
+...
+[CommandImage]
+list=/opt/redstone/FileGarden/image/system.png
+netstat=/opt/redstone/FileGarden/image/system.png
+ps=/opt/redstone/FileGarden/image/system.png
+free=/opt/redstone/FileGarden/image/system.png
+...
+...
+...
+
+</font>
+
+</font>
+</pre>
+</body></html>

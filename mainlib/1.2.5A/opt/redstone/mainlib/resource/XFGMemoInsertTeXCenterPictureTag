@@ -1,0 +1,15 @@
+\begin{figure}[!h]
+\begin{center}
+\epsfig{file=example,width=10cm,angle=0}
+\caption{"Edit this for your picture caption"}
+\end{center}
+\end{figure}
+%%
+%%  eg. if your picture is " /home/user1/example.esp " then insert " example " only
+%%  Must use the menuitem " Convert to EPS " to convert your picture to EPS first
+%%  into the same directory as this TeX file
+%%
+%%  width = the final height of your picture scale-down to or scale-up to in the TeX file
+%%  angle  = you can tilt your picture with this value in degree
+%%
+%XFGMemoInsertWithLine%

@@ -1,0 +1,45 @@
+%%%PROC%F2722182-EA27-D911-9FF8-0080C8F89650
+\=\textbackslash{}
+
+}=\}
+
+{=\{
+
+_=\_
+
+]={]}
+
+[={[}
+
+*={*}
+
+&=\&
+
+^=\textasciicircum{}
+
+%=\%
+
+$=\$
+
+#=\#
+
+~=\textasciitilde{}
+
+%Add line break to end of every lines with%
+
+%Double-spaced input text%=1
+
+%Multiple Horizontal spaces options%
+
+xxx%XFGFormatScanAddToHead%=
+
+xxx%XFGFormatScanAddToFoot%=
+
+xxx%XFGFormatScanDoubleSpace%=1
+
+xxx%XFGFormatScanStripEmptyLineSpace%=1
+
+xxx%XFGFormatScanInsertRight%=\\
+
+xxx%XFGFormatScanInsertLeft%=
+

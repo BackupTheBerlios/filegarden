@@ -1,0 +1,24 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=500
+FrameCaption=Testing Custom Dialog
+FrameLabel=Testing Custom Dialog : 
+LabelImage=/root/redstone/FileGarden/image/image-32.png
+LabelWidth=150
+InputFrom=NONE
+REFRESH=EDITOR
+ShowAfter=COMMANDER
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Warning=edit=Do not type anything
+Tile=combo=true="5"|"6"|"7"|"8"|"9"|"10"
+Border Color=combo=false="black"|"red"|"blue"|"green"|"yellow"|"grey"
+Geometry=combo=false="100x100+10+10"|"100x100+10+10"|"100x100+10+10"|"100x100+10+10"
+
+
+[VALUE]
+cmd=/usr/bin/montage -tile %Tile% -bordercolor %Border Color% -geometry %Geometry% &in &outcontact.png

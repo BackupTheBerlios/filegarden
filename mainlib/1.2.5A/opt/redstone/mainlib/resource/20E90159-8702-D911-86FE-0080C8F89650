@@ -1,0 +1,47 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Convert AVI to images ...
+FrameLabel= Convert AVI to images ...
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=Commander
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Output image type=combo=false="jpeg"|"pgm"|"png"|"tga"
+Scale image size=combo=false="160x120 (minimal small screen)"|"256x192 (small screen)"|"352x240 (NTSC quarter screen)"|"352x288 (PAL quarter screen)"|"720x480 (standard NTSC)"|"720x576 (standard PAL)"|"640x480 (square pixel NTSC)"|"768x576 (square pixel PAL)"
+
+[VALUE]
+cmd=mkdir -p %out && cd %out && echo "#!/bin/bash" > %GetCustomCommand%GetGuids && echo "mplayer %in -vf %Scale image size% -vo %Output image type% -nosound   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Convert AVI to images" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+
+
+[DefaultValue]
+Scale image size=640x480 (square pixel NTSC)
+
+[ActualValue]
+160x120 (minimal small screen)=scale=160:120
+256x192 (small screen)=scale=256:192
+352x240 (NTSC quarter screen)=scale=352:240
+352x288 (PAL quarter screen)=scale=352:288
+720x480 (standard NTSC)=scale=720:480
+720x576 (standard PAL)=scale=720:576
+640x480 (square pixel NTSC)=scale=640:480
+768x576 (square pixel PAL)=scale=768:576  
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+cd %Output directory% && mplayer %Input AVI file% -vo %Output image type% -nosound &
+Input AVI file=edit=%FileOpenEdit%=none 
+Output directory=edit=%diropenedit%=none 

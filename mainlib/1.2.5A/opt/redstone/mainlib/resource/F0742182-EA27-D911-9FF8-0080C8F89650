@@ -1,0 +1,36 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=470
+FrameCaption=Choose LaTeX format output options
+FrameLabel= Choose LaTeX format output options
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=NONE
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Verbatimised input text options=combo=false="Verbatimised input text"|"Do Not Verbatimised input text"
+Font face if Verbatimised=combo=false="Times"|"Palatino"|"Helvetica"|"Avant Garde"|"Schoolbook"|"Bookman"
+
+[VALUE]
+cmd=%Verbatimised input text options%  
+
+[DefaultValue]
+Verbatimised input text options=Do Not Verbatimised input text
+
+[ActualValue]
+Verbatimised input text=\begin{alltt}%XFGMemoInsertNewLine%{\fontfamily{%Font face if Verbatimised%}\selectfont%XFGMemoInsertNewLine%%XFGMemoInsertBody%%XFGMemoInsertNewLine%}%XFGMemoInsertNewLine%\end{alltt}
+Times=ptm
+Palatino=ppl
+Helvetica=phv
+Avant Garde=pag
+Schoolbook=pnc
+Bookman=pbk
+Do Not Verbatimised input text=%XFGMemoInsertBody%
+

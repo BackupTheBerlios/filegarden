@@ -1,0 +1,35 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=550
+FrameCaption=LaTeX scan text options
+FrameLabel= LaTeX scan text options
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=230
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=NONE
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Double-spaced input text=checkbox=false=%XFGFormatScanDoubleSpace%
+Multiple Horizontal spaces options=combo=false="Multiple horizontal spaces to single space"|"Respect multiple horizontal spaces"
+Add line break to end of every lines with=combo=false="none"|"\\"|"\newline"|"\linebreak[4]"
+
+
+[VALUE]
+cmd=%XFGMemoInsertBody%
+
+[DefaultValue]
+Multiple Horizontal spaces options=Multiple horizontal spaces to single space
+
+[ActualValue]
+\\=%XFGFormatScanInsertRight%=\\
+\newline=%XFGFormatScanInsertRight%=\newline
+\linebreak[4]=%XFGFormatScanInsertRight%=\linebreak[4]
+Multiple horizontal spaces to single space=%none%
+Respect multiple horizontal spaces=%XFGFormatScanInsertSpace%=\%XFGFormatScanInsertSpace%
+none=%none%

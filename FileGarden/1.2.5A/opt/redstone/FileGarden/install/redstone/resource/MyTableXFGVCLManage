@@ -1,0 +1,134 @@
+[Quick FileManage]
+Mail File=1
+Music File=1
+PDF File=1
+Picture File=1
+Postscript File=1
+Scripts File=1
+LinuxWork File=1
+Software File=1
+Video File=1
+Web File=1
+Quick File=1
+
+[Quick FolderManage]
+Mail Folder=1
+Music Folder=1
+PDF Folder=1
+Picture Folder=1
+Postscript Folder=1
+Scripts Folder=1
+LinuxWork Folder=1
+Software Folder=1
+Video Folder=1
+Web Folder=1
+Quick Folder=1
+
+[Quick MountManage]
+Quick Mount=1
+Floppy=1
+Unmount Floppy=1
+CDROM 1=1
+Unmount CDROM 1=1
+CDROM 2=1
+Unmount CDROM 2=1
+HDE3=1
+Unmount HDE3=1
+-----------------seperator2222=1
+
+[Quick ProgramsManage]
+Quick Programs=1
+Opera=1
+FTP=1
+EMAIL=1
+NEWS=1
+VIDEO=1
+SOUND=1
+Mozilla=1
+Xterm here=1
+
+[Quick ScriptManage]
+Quick Script=1
+
+[Mail FileManage]
+Mail File=1
+
+[Music FileManage]
+Music File=1
+
+[PDF FileManage]
+PDF File=1
+
+[Picture FileManage]
+Picture File=1
+
+[Postscript FileManage]
+Postscript File=1
+
+[Scripts FileManage]
+Scripts File=1
+
+[LinuxWork FileManage]
+LinuxWork File=1
+
+[Software FileManage]
+Software File=1
+
+[Video FileManage]
+Video File=1
+
+[Web FileManage]
+Web File=1
+
+[Mail FolderManage]
+Mail Folder=1
+
+[Music FolderManage]
+Music Folder=1
+
+[PDF FolderManage]
+PDF Folder=1
+
+[Picture FolderManage]
+Picture Folder=1
+/usr/share/icons/=1
+/usr/share/pixmaps/=1
+/usr/share/images/=1
+
+[Postscript FolderManage]
+Postscript Folder=1
+
+[Scripts FolderManage]
+Scripts Folder=1
+
+[LinuxWork FolderManage]
+LinuxWork Folder=1
+
+[Software FolderManage]
+Software Folder=1
+
+[Video FolderManage]
+Video Folder=1
+
+[Web FolderManage]
+Web Folder=1
+
+[My TableManage]
+Quick File=1
+Quick Folder=1
+Quick Mount=1
+Quick Programs=1
+Quick Script=1
+
+[defaultviewfile]
+LinuxWork File=1
+Scripts File=1
+Postscript File=1
+PDF File=1
+Web File=1
+Mail File=1
+Picture File=1
+Music File=1
+Video File=1
+Software File=1
+

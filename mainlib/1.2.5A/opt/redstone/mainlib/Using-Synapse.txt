@@ -1,0 +1,10 @@
+This library " Redstone_mail_implant_01.so " was developed
+using synapse tcp library which was not developed by the
+author of FileGarden.
+
+You can reach synapse website : http://www.ararat.cz/synapse/
+You can contact synapse author : geby@volny.cz
+
+I have enclose synapse licence in the same directory as this text.
+The synapse tcp library was compiled as a runtime library and was 
+installed at location : /opt/redstone/mainlib/synapse.so

@@ -1,0 +1,233 @@
+[Main]
+DEBUG=false
+MenuImage=
+DeleteAlwaysOn=
+RenameAlwaysOn=
+AddNewAlwaysOn=
+ParentDelete=0
+ParentRename=0
+ParentAddNew=0
+Add new ...Image=
+Manage ...Image=
+FileItemImage=[HOME]/redstone/FileGarden/image/document2-favorites.png
+DirItemImage=[HOME]/redstone/FileGarden/image/folder_favorites.png
+QuickFolderImage=[HOME]/redstone/FileGarden/image/folder_favorites.png
+QuickExecImage=[HOME]/redstone/FileGarden/image/exec_favorites.png
+
+[Setup]
+Add new ...=1
+Manage ...=1
+
+[MenuTypeIsItems]
+Quick File=1
+Quick Folder=1
+Quick Mount=0
+Quick Programs=0
+Quick Script=1
+
+[MenuTypeIsTerminal]
+Quick Script=1
+
+[Quick MountDialog]
+Name=Enter menu name for the command
+Command=Enter command to execute ...
+
+[Quick ProgramsDialog]
+Name=Enter menu name for the command
+Command=Enter command to execute ...
+
+[MenuDialog]
+Name=Enter New My Table Label ...
+Command=none
+
+[SubMenuDialog]
+Name=Enter New Label ...
+Command=none
+
+[Menu]
+Quick File=%CREATENEW%
+Quick Folder=%CREATENEW%
+Quick Mount=%CREATENEW%
+Quick Programs=%CREATENEW%
+Quick Script=%CREATENEW%
+
+[MenuImage]
+Quick File=[HOME]/redstone/FileGarden/image/document2-favorites.png
+Quick Folder=[HOME]/redstone/FileGarden/image/folder_favorites.png
+Quick Mount=[HOME]/redstone/FileGarden/image/blockdev-favorites.png
+Quick Programs=[HOME]/redstone/FileGarden/image/app-favorites.png
+Quick Script=[HOME]/redstone/FileGarden/image/exec_favorites.png
+
+[Mail Folder]
+
+[LinuxWork Folder]
+[HOME]/ROOTDOC/etc/desktopDOC=[HOME]/ROOTDOC/etc/desktopDOC
+
+[Music Folder]
+
+[PDF Folder]
+/000/=/000/
+
+[Picture Folder]
+/usr/share/icons/=/usr/share/icons/
+/usr/share/pixmaps/=/usr/share/pixmaps/
+/usr/share/images/=/usr/share/images/
+
+[Postscript Folder]
+
+[Scripts Folder]
+
+[Web Folder]
+
+[Mail File]
+
+[xfgOptionsSidePanel]
+Save memo=[HOME]/redstone/FileGarden/image/saveas.png
+Memo=[HOME]/redstone/FileGarden/image/me.png
+Backup=[HOME]/redstone/FileGarden/image/find.png
+Apply settings=[HOME]/redstone/FileGarden/image/floppy.png
+Close=[HOME]/redstone/FileGarden/image/exit.png
+
+[xfgMainButtonImage]
+xfgMainButton=[HOME]/redstone/FileGarden/image/button.xpm
+Reload configurations=[HOME]/redstone/FileGarden/image/gnome-settings-21.png
+
+[Picture FolderImage]
+/usr/share/icons/=[HOME]/redstone/FileGarden/image/folder_favorites.png
+/usr/share/pixmaps/=[HOME]/redstone/FileGarden/image/folder_favorites.png
+/usr/share/images/=[HOME]/redstone/FileGarden/image/folder_favorites.png
+
+[LinuxWork FolderImage]
+
+[Web FolderImage]
+
+[Software Folder]
+
+[Software FolderImage]
+
+[Music FolderImage]
+
+[Scripts File]
+
+[Scripts FileImage]
+
+[Video FolderImage]
+
+[Video Folder]
+
+[Quick File]
+LinuxWork File=%CREATENEW%
+Scripts File=%CREATENEW%
+Postscript File=%CREATENEW%
+PDF File=%CREATENEW%
+Web File=%CREATENEW%
+Mail File=%CREATENEW%
+Picture File=%CREATENEW%
+Music File=%CREATENEW%
+Video File=%CREATENEW%
+Software File=%CREATENEW%
+
+[Quick FileImage]
+LinuxWork File=[HOME]/redstone/FileGarden/image/document2-favorites.png
+Scripts File=[HOME]/redstone/FileGarden/image/document2-favorites.png
+Postscript File=[HOME]/redstone/FileGarden/image/document2-favorites.png
+PDF File=[HOME]/redstone/FileGarden/image/document2-favorites.png
+Web File=[HOME]/redstone/FileGarden/image/document2-favorites.png
+Mail File=[HOME]/redstone/FileGarden/image/document2-favorites.png
+Picture File=[HOME]/redstone/FileGarden/image/document2-favorites.png
+Music File=[HOME]/redstone/FileGarden/image/document2-favorites.png
+Video File=[HOME]/redstone/FileGarden/image/document2-favorites.png
+Software File=[HOME]/redstone/FileGarden/image/document2-favorites.png
+
+[Quick Programs]
+Opera=opera
+Mozilla=mozilla
+FTP=gftp
+EMAIL=sylpheed
+NEWS=pan
+VIDEO=xine
+SOUND=xmms
+Xterm here=xterm
+
+[Quick ProgramsImage]
+Opera=[HOME]/redstone/FileGarden/image/app-favorites.png
+Mozilla=[HOME]/redstone/FileGarden/image/app-favorites.png
+FTP=[HOME]/redstone/FileGarden/image/app-favorites.png
+EMAIL=[HOME]/redstone/FileGarden/image/app-favorites.png
+NEWS=[HOME]/redstone/FileGarden/image/app-favorites.png
+VIDEO=[HOME]/redstone/FileGarden/image/app-favorites.png
+SOUND=[HOME]/redstone/FileGarden/image/app-favorites.png
+Xterm here=[HOME]/redstone/FileGarden/image/app-favorites.png
+
+[Quick Folder]
+LinuxWork Folder=%CREATENEW%
+Scripts Folder=%CREATENEW%
+Postscript Folder=%CREATENEW%
+PDF Folder=%CREATENEW%
+Web Folder=%CREATENEW%
+Mail Folder=%CREATENEW%
+Picture Folder=%CREATENEW%
+Music Folder=%CREATENEW%
+Video Folder=%CREATENEW%
+Software Folder=%CREATENEW%
+
+[Quick FolderImage]
+LinuxWork Folder=[HOME]/redstone/FileGarden/image/folder_favorites.png
+Scripts Folder=[HOME]/redstone/FileGarden/image/folder_favorites.png
+Postscript Folder=[HOME]/redstone/FileGarden/image/folder_favorites.png
+PDF Folder=[HOME]/redstone/FileGarden/image/folder_favorites.png
+Web Folder=[HOME]/redstone/FileGarden/image/folder_favorites.png
+Mail Folder=[HOME]/redstone/FileGarden/image/folder_favorites.png
+Picture Folder=[HOME]/redstone/FileGarden/image/folder_favorites.png
+Music Folder=[HOME]/redstone/FileGarden/image/folder_favorites.png
+Video Folder=[HOME]/redstone/FileGarden/image/folder_favorites.png
+Software Folder=[HOME]/redstone/FileGarden/image/folder_favorites.png
+
+[Quick Script]
+
+[Quick ScriptImage]
+
+[PDF FolderImage]
+
+[Quick Mount]
+HDE3=mount /dev/hde3 /mnt/rw-01
+Unmount HDE3=umount /dev/hde3
+-----------------seperator2222=none
+Floppy=mount /dev/fd0
+Unmount Floppy=umount /dev/fd0
+CDROM 1=mount /dev/cdrom
+Unmount CDROM 1=umount /dev/cdrom
+CDROM 2=mount /dev/cdrom1
+Unmount CDROM 2=umount /dev/cdrom1
+
+[Quick MountImage]
+HDE3=[HOME]/redstone/FileGarden/image/blockdev-favorites.png
+Unmount HDE3=[HOME]/redstone/FileGarden/image/blockdev-favorites.png
+-----------------seperator2222=none
+Floppy=[HOME]/redstone/FileGarden/image/blockdev-favorites.png
+Unmount Floppy=[HOME]/redstone/FileGarden/image/blockdev-favorites.png
+CDROM 1=[HOME]/redstone/FileGarden/image/blockdev-favorites.png
+Unmount CDROM 1=[HOME]/redstone/FileGarden/image/blockdev-favorites.png
+CDROM 2=[HOME]/redstone/FileGarden/image/blockdev-favorites.png
+Unmount CDROM 2=[HOME]/redstone/FileGarden/image/blockdev-favorites.png
+
+[Video FileImage]
+
+[Video File]
+
+[LinuxWork File]
+
+[LinuxWork FileImage]
+
+[defaultviewfile]
+LinuxWork File=1
+Scripts File=1
+Postscript File=1
+PDF File=1
+Web File=1
+Mail File=1
+Picture File=1
+Music File=1
+Video File=1
+Software File=1
+

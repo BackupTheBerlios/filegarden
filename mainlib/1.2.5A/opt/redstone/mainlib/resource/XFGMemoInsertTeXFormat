@@ -1,0 +1,83 @@
+%%%PROC%FCE34A29-E419-D911-814D-0080C8F89650
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined % We're not running pdftex
+\documentclass[dvips,%Font size%pt,twosided]{%Document class%}
+%%\documentclass[12pt,twosided,openany]{book}
+%%\documentclass[12pt,twosided,titlepage]{book}
+%%\documentclass[12pt,twosided,notitlepage]{book}
+\pdffalse
+\else
+\documentclass[pdftex,%Font size%pt,twosided,openany]{%Document class%}
+\usepackage{thumbpdf}
+\pdfoutput=1
+\pdftrue
+\pdfcompresslevel=9
+\fi
+
+%%\title{%XFGMemoInsertFormatHeading%}
+\title{%Document title header%}
+\author{%Document author name header%}
+\usepackage{geometry}
+\geometry{verbose,%Landscape orientation%,%Document paper%,tmargin=%Top margin in mm%mm,bmargin=%Bottom margin in mm%mm,lmargin=%Left margin in mm%mm,rmargin=%Right margin in mm%mm}
+\usepackage{makeidx}
+\makeindex
+\usepackage{setspace}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{fancyhdr}
+\pagestyle{%Page style%}
+\usepackage{lastpage}
+\fancyhead{}
+\fancyfoot{}
+\lhead[%Left side header on Even page%]{%Page number on Top% %Left side header on Odd page%}
+\chead[%Center header on Even page% %Page number on Top center%]{%Center header on Odd page% %Page number on Top center%}
+\rhead[%Right side header on Even page%  %Page number on Top%]{%Right side header on Odd page%}
+\lfoot[%Left side footer on Even page%]{%Page number at Bottom% %Left side footer on Odd page%}
+\cfoot[%Center footer on Even page% %Page number at Bottom center%]{%Center footer on Odd page% %Page number at Bottom center%}
+\rfoot[%Right side footer on Even page% %Page number at Bottom%]{%Right side footer on Odd page%}
+\renewcommand{\headrulewidth}{%Header ruler width in mm%mm}
+\renewcommand{\footrulewidth}{%Footer ruler width in mm%mm}
+\usepackage{%Font%}
+\usepackage{pifont}
+\usepackage{alltt} 
+\usepackage{ulem}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\setlength\parskip{0sp}
+\setlength\parindent{0pt}
+\setlength{\columnseprule}{0.00mm}
+\setlength{\columnsep}{20pt}
+\setstretch{%Line space%}
+
+
+\ifx\pdfoutput\undefined % We're not running pdftex
+\RequirePackage[plainpages=false]{hyperref}
+\usepackage{color}
+\usepackage{epsfig}
+\else
+\RequirePackage[pdftex,
+plainpages=false,
+pdftitle={%Document title header%},
+pdfauthor={%Document author name header%},
+pdfsubject={%Document title header%},
+pdfkeywords={},
+pdfpagemode={UseOutlines},
+bookmarks,bookmarksopen,hyperfootnotes,hyperindex,backref,nesting,
+pdfstartview={FitH},
+colorlinks,linkcolor={blue},citecolor={blue},
+urlcolor={red},
+]{hyperref}
+\def\pdfBorderAttrs{/Border [0 0 0] } % No border arround Links
+\usepackage[pdftex]{epsfig}
+\fi
+
+
+\begin{document}
+%Write document header%
+%First page empty header/footer%
+%First page is document header%
+%XFGMemoBREAKStart%
+%%%PROC%F0742182-EA27-D911-9FF8-0080C8F89650
+%XFGMemoBREAKEnd%
+\end{document}

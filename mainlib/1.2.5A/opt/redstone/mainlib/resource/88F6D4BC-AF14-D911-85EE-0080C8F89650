@@ -1,0 +1,55 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Multiplex MPEG video / audio to movie files ...
+FrameLabel= Multiplex MPEG video / audio to movie files ...
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=NONE
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Output name=edit=none
+Choose audio (Mp2) file=edit=%FileOpenEdit%
+Choose video (Mpeg 1/2) file=edit=%FileOpenEdit%
+With audio=checkbox=true=%Choose audio (Mp2) file%
+Output type=combo=false="VCD (Mpeg movie)"|"SVCD (Mpeg movie)"|"Software (Mpeg movie)"
+
+[VALUE]
+cmd=%Output type%
+
+[DefaultValue]
+
+[ActualValue]
+VCD (Mpeg movie)=echo "#!/bin/bash" > %GetCustomCommand%GetGuids && echo "mplex -f 1 -V -b 46 -s 2324 %Choose video (Mpeg 1/2) file% %With audio% -o %Output name%.mpg   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Multiplex MPEG video / audio to VCD Mpeg movie files" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+SVCD (Mpeg movie)=echo "#!/bin/bash" > %GetCustomCommand%GetGuids && echo "mplex -f 4 -V -b 230 -s 2324 %Choose video (Mpeg 1/2) file% %With audio% -o %Output name%.mpg   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Multiplex MPEG video / audio to SVCD Mpeg movie files" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+Software (Mpeg movie)=echo "#!/bin/bash" > %GetCustomCommand%GetGuids && echo "mplex -f 3 -V -b 5000 -s 2048 %Choose video (Mpeg 1/2) file% %With audio% -o %Output name%.mpg   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Multiplex MPEG video / audio to Sofware Mpeg movie files" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+VCD PAL (Mpeg movie)=
+VCD NTSC (Mpeg movie)=
+VCD SECAM (Mpeg movie)=
+VCD FILM (Mpeg movie)=
+SVCD PAL (Mpeg movie)=
+SVCD NTSC (Mpeg movie)=
+SVCD SECAM (Mpeg movie)=
+SVCD FILM (Mpeg movie)=
+Software PAL (Mpeg movie)=
+Software NTSC (Mpeg movie)=
+Software SECAM (Mpeg movie)=
+Software FILM (Mpeg movie)=
+Broadband 600K (Mpeg movie)=
+Broadband 384K (Mpeg movie)=
+Narrowband 128K (Mpeg movie)=

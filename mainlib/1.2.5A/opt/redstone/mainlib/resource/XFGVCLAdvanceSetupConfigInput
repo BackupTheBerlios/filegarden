@@ -1,0 +1,8 @@
+[ConfigInput]
+FileGarden Application Configuration=[HOME]/redstone/FileGarden/xfg.conf
+My Table Advance Configuration=[HOME]/redstone/resource/xfgFileInputMenuOnMyTable
+
+[ConfigDefault]
+FileGarden Application Configuration=/opt/redstone/FileGarden/data_conf
+My Table Advance Configuration=/opt/redstone/FileGarden/install/redstone/resource/xfgFileInputMenuOnMyTable
+

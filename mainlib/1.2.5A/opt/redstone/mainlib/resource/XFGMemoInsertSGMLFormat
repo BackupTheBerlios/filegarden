@@ -1,0 +1,12 @@
+<!doctype linuxdoc system>
+<article>
+<title>First Example (example1)
+<author>David S.Lawyer 
+<sect> %XFGMemoInsertFormatHeading%
+<verb>
+%XFGMemoBREAKStart%
+%XFGMemoFormatScanSGML%
+%XFGMemoBREAKEnd%
+</verb> 
+</article>
+

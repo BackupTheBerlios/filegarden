@@ -1,0 +1,7 @@
+#!/bin/sh
+/opt/redstone/mainlib/Command_Redstone install /opt/redstone/FileGarden/FileGarden -ns
+
+##!/bin/sh
+#exec ~/redstone/FileGarden/FileGarden -ns "$@"
+#exec /opt/redstone/FileGarden/FileGarden -ns
+

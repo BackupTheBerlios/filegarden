@@ -1,0 +1,14 @@
+[XFGVCLManagePropertiesFile]
+Program setup=[HOME]/redstone/FileGarden/xfg.conf
+Quick Manage=[HOME]/redstone/resource/xfgFileInputMenuOnMyTable
+My TableManage=[HOME]/redstone/resource/xfgFileInputMenuOnMyTable
+Main Quick Button Setup=[HOME]/redstone/FileGarden/xfg.conf
+File Manager Open File Setup=[HOME]/redstone/FileGarden/xfg.conf
+
+[Getdefaultviewfile]
+Program setup=[HOME]/redstone/resource/MainXFGVCLManage
+Quick Manage=[HOME]/redstone/resource/MyTableXFGVCLManage
+My TableManage=[HOME]/redstone/resource/MyTableXFGVCLManage
+Main Quick Button Setup=[HOME]/redstone/resource/MainQuickButtonXFGVCLManage
+File Manager Open File Setup=[HOME]/redstone/resource/FileManagerOpenFileSetupXFGVCLManage
+

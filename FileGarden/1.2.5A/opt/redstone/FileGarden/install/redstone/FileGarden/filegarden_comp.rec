@@ -1,0 +1,139 @@
+[create_frame]
+main_path=/opt/redstone/mainlib
+comp_name=create_frame_01.so
+comp_classname=tcreate_frame
+comp_type=delphi
+
+[help]
+main_path=/opt/redstone/mainlib
+comp_name=Redstone_help_01.so
+comp_classname=tRedstone_help
+comp_type=delphi
+
+[template]
+main_path=/opt/redstone/mainlib
+comp_name=template_01.so
+comp_classname=ttemplate
+comp_type=delphi
+comp_input=editor
+
+[script]
+main_path=/opt/redstone/mainlib
+comp_name=Redstone_script_01.so
+comp_classname=tRedstone_script
+comp_type=delphi
+
+[install]
+main_path=/opt/redstone/mainlib
+comp_name=Redstone_install_01.so
+comp_classname=tRedstone_install
+comp_type=delphi
+
+[Program setup]
+main_path=/opt/redstone/mainlib
+comp_name=Redstone_vclscrp_01.so
+comp_classname=tRedstone_vclscrp
+comp_type=delphi
+
+[Page setup]
+main_path=/opt/redstone/mainlib
+comp_name=Redstone_pagesetup_01.so
+comp_classname=tRedstone_pagesetup
+comp_type=delphi
+
+[Menu setup]
+main_path=/opt/redstone/mainlib
+comp_name=Redstone_menusetup_01.so
+comp_classname=tRedstone_menusetup
+comp_type=delphi
+
+[Search tool]
+main_path=/opt/redstone/mainlib
+comp_name=Redstone_findfiles_01.so
+comp_classname=tRedstone_findfiles
+comp_type=delphi
+
+[Send to printer]
+main_path=/opt/redstone/mainlib
+comp_name=Redstone_sendtoprinter_01.so
+comp_classname=tRedstone_sendtoprinter
+comp_type=delphi
+
+[Component info]
+main_path=/opt/redstone/mainlib
+comp_name=aaa_01.so
+comp_classname=taaa
+comp_type=delphi
+
+[FileManager FileView default]
+main_path=/opt/redstone/mainlib
+comp_name=XFG_default_view_file_01.so
+comp_classname=tXFG_default_view_file
+comp_type=delphi
+
+[Manage FileManager FileView]
+main_path=/opt/redstone/mainlib
+comp_name=XFG_default_view_file_01.so
+comp_classname=tXFG_default_view_file
+comp_type=delphi
+
+[Manage Editor FileView]
+main_path=/opt/redstone/mainlib
+comp_name=XFG_default_view_editor_01.so
+comp_classname=tXFG_default_view_editor
+comp_type=delphi
+
+[Editor FileView default]
+main_path=/opt/redstone/mainlib
+comp_name=XFG_default_view_editor_01.so
+comp_classname=tXFG_default_view_editor
+comp_type=delphi
+
+[DOC Bench FileView default]
+main_path=/opt/redstone/mainlib
+comp_name=XFG_default_view_docbench_01.so
+comp_classname=tXFG_default_view_docbench
+comp_type=delphi
+
+[FileManager Interface]
+main_path=/opt/redstone/mainlib
+comp_name=XFG_default_filemanager_01.so
+comp_classname=tXFG_default_filemanager
+comp_type=delphi
+
+[FileGarden Application Configuration]
+main_path=/opt/redstone/mainlib
+comp_name=XFG_advance_setup_01.so
+comp_classname=tXFG_advance_setup
+comp_type=delphi
+
+[My TableManage]
+main_path=/opt/redstone/mainlib
+comp_name=Redstone_vclscrp_01.so
+comp_classname=tRedstone_vclscrp
+comp_type=delphi
+
+[Main Quick Button Setup]
+main_path=/opt/redstone/mainlib
+comp_name=Redstone_vclscrp_01.so
+comp_classname=tRedstone_vclscrp
+comp_type=delphi
+
+[File Manager Open File Setup]
+main_path=/opt/redstone/mainlib
+comp_name=Redstone_vclscrp_01.so
+comp_classname=tRedstone_vclscrp
+comp_type=delphi
+
+[My Table Advance Configuration]
+main_path=/opt/redstone/mainlib
+comp_name=XFG_advance_setup_01.so
+comp_classname=tXFG_advance_setup
+comp_type=delphi
+
+[Mail Implant]
+main_path=/opt/redstone/mainlib
+comp_name=Redstone_mail_implant_01.so
+comp_classname=tRedstone_mail_implant
+comp_type=delphi
+

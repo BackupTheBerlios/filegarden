@@ -1,0 +1,39 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Convert MP3 to Flac sound file
+FrameLabel= Convert MP3 to Flac sound file
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=Commander
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Flac compression level=combo=true="0 -- Fastest compression"|"1"|"2"|"3"|"4"|"5 -- Default quality"|"6"|"7"|"8 -- Highest compression"
+
+[VALUE]
+cmd=lame --decode -h -b 128 -t %in - | flac -F -V -%Flac compression level% --bps=16 --sample-rate=44100 --channels=2 --endian=little --sign=signed -o %out.flac --force-raw-format - &
+
+[DefaultValue]
+Flac compression level=5 -- Default quality
+
+[ActualValue]
+0 -- Fastest compression=0
+8 -- Highest compression=8
+5 -- Default quality=5
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+
+

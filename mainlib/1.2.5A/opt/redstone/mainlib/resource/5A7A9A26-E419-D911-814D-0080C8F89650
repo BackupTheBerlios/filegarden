@@ -1,0 +1,62 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Convert Postscript files to PDF
+FrameLabel= Convert Postscript files to PDF
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=200
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=COMMANDER
+ShowAfter=COMMANDER
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Paper size=combo=false="a4"|"a3"|"legal"|"ledger"|"letter"|"a5"|"b3"|"b4"|"b5"|"a2"|"a1"|"b2"|"b1"|"a0"
+Text quality=combo=false="1"|"2"|"4"
+Image quality=combo=false="1"|"2"|"4"
+X Resolution=combo=true="72"|"96"|"150"|"300"|"600"|"750"|"1200"
+Y Resolution=combo=true="72"|"96"|"150"|"300"|"600"|"750"|"1200"
+Do interpolation on images=checkbox=true=-dDOINTERPOLATE
+No platform font=checkbox=true=-dNOPLATFONTS
+View message=checkbox=true=xterm -title "Convert Postscript to PDF" %Hold message window% -e 
+Hold message window=checkbox=false=-hold
+
+[VALUE]
+cmd=%View message% gs -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dTextAlphaBits=%Text quality% -dGraphicsAlphaBits=%Image quality% %Do interpolation on images% %No platform font% -sPAPERSIZE=%Paper size% -r%X Resolution%x%Y Resolution% -sOutputFile=%out.pdf %in -c quit &
+
+[DefaultValue]
+Text quality=4
+Image quality=4
+Y Resolution=72
+X Resolution=72
+
+[ActualValue]
+
+[Sample]
+Extract num of seconds=edit=none
+Extract num of seconds=-d %insert-here%
+Extract num of seconds=-d %none%
+gs -q -dNOPAUSE -dBATCH -dMaxBitmap=50000000 -sDEVICE=pdfwrite -dTextAlphaBits=4 -dGraphicsAlphaBits=4 
+-sPAPERSIZE=a4 -r72 -sOutputFile=%out.pdf %in -c  -c quit
+-dDOINTERPOLATE 
+-dTextAlphaBits=1 2 4 
+
+-rXRESxYRES 
+
+
+-dGraphicsAlphaBits=1 2 4  
+-dNOPLATFONTS 
+
+
+
+
+for pdf2ps
+-dNOTRANSPARENCY 
+-dFirstPage and -dLastPage
+
+
+

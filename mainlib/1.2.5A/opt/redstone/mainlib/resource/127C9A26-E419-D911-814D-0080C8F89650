@@ -1,0 +1,77 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Create background canvas ...
+FrameLabel= Create background canvas ...
+LabelImage=/root/redstone/FileGarden/image/image-32.png
+LabelWidth=170
+InputFrom=NONE
+StripPathFromInputFileNames=0
+REFRESH=NONE
+ShowAfter=COMMANDER
+version=none
+SInputFrom=DETACH : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Canvas size=combo=true="160x120"|"256x192"|"352x240"|"640x480"|"720x480"|"768x576"
+Background color=combo=true="black"|"red"|"blue"|"yellow"|"green"|"brown"|"grey"
+
+[VALUE]
+cmd=/usr/bin/montage -background %Background color% -geometry "%Canvas size%>" -bordercolor black -label "" %in %out
+
+[DefaultValue]
+Canvas size=352x240
+Interlace type=None
+Image type=TrueColor
+
+[ActualValue]
+BMP=bmp
+DCM=dcm
+DCX=dcx
+DIB=dib
+FAX=fax
+FITS=fits
+G3=g3
+GIF=gif
+GIF87=gif87
+GRAY=gray
+ICM=icm
+ICO=ico
+ICON=icon
+JPEG=jpg
+JPG=jpg
+LOGO=logo
+MIFF=miff
+MONO=mono
+PALM=palm
+PBM=pbm
+PCD=pcd
+PCDS=pcds
+PCL=pcl
+PCT=pct
+PCX=pcx
+PDB=pdb
+PGM=pgm
+PICT=pict
+PM=pm
+PNG=png
+PNM=pnm
+PPM=ppm
+PSD=psd
+RAS=ras
+SGI=sgi
+SUN=sun
+SVG=svg
+TGA=tga
+TIF=tif
+TIFF=tiff
+UIL=uil
+XPM=xpm
+WMF=wmf
+WPG=wpg
+X=x
+XBM=xbm
+XCF=xcf
+XWD=xwd

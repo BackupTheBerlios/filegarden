@@ -1,0 +1,41 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Extract multiple CD tracks
+FrameLabel= Extract multiple CD tracks
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=COMMANDER
+ShowAfter=Commander
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Start track num=edit=1
+End track num=edit=none
+View messages=checkbox=true=%RunMessage%
+
+[VALUE]
+cmd=%View messages%cdda2wav -D %GetCustomCommand%GetPlayCDROM -x -H -t %Start track num%%End track num% -O wav
+ 
+[DefaultValue]
+Start track num=1
+
+[ActualValue]
+Extract num of seconds=-d %insert-here%
+Start track num=%insert-here%
+End track num=+%insert-here%
+insert-loop=%Start track num%-%End track num%
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+

@@ -1,0 +1,34 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Create TAR Achieves
+FrameLabel= Create new TAR achieve
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=Commander
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Achieve symlink target=checkbox=false=--dereference
+Don't strip leading slash=checkbox=true=-P
+Preserve permissions=checkbox=true=-p
+Preserve Owner=checkbox=true=--same-owner
+Save new tar file as=edit=%FileSaveEdit%=new.tar
+
+[VALUE]
+cmd=tar %Preserve Owner% %Achieve symlink target% %Preserve permissions% %Don't strip leading slash% -cf &out%Save new tar file as% &in
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/

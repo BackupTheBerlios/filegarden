@@ -1,0 +1,2848 @@
+[xfgMain]
+type=application
+owner=FileGarden1.2.5A
+SlideInterval=4
+Top=0
+Left=0
+Width=800
+Height=570
+userEXEDIR=[HOME]
+userCONFDIR=[HOME]/redstone/FileGarden
+userCONFNAME=xfg.conf
+splash=[HOME]/redstone/FileGarden/image/splash.jpg
+WMIconSize=17
+DEBUG=false
+OVERWRITE=false
+Filemanager_IconView_BGColor=$00E6E6E6
+Filemanager_IconView_FGColor=4473924
+Filemanager_IconView_FontName=lucida
+Filemanager_IconView_FontSize=11
+Filemanager_ListView_BGColor=$00E6E6E6
+Filemanager_ListView_FGColor=8940896
+Filemanager_ListView_FontName=helvetica
+Filemanager_ListView_FontSize=11
+Always_Use_RecycleBin=0
+Always_List_File_OnDoubleClick=1
+ApplicationStyle=6
+comments=dsWindows, dsMotif, dsMotifPlus, dsCDE, dsQtSGI, dsPlatinum, dsSystemDefault
+comment1=1    ,    2   ,       3    ,   4  ,    5   ,     6     ,       7
+
+[xfgRunVCLBeforeCreate]
+
+[xfgRunVCLAfterCreate]
+
+[xfgRunVCLBeforeDestroy]
+
+[xfgFilelistRefresh]
+Unpack tar=1
+Unpack gzip=1
+Unpack bz2=1
+Unpack zip=1
+
+[xfgMainBringToFront]
+1=1
+
+[xfgUserDir]
+redstone=1
+redstone/FileGarden=1
+redstone/FileGarden/image=1
+redstone/FileGarden/image/Mail=1
+redstone/FileGarden/image/folder-yellow=1
+redstone/FileGarden/image/folder-green=1
+redstone/FileGarden/data=1
+redstone/FileGarden/install=1
+redstone/mytable=1
+redstone/resource=1
+
+[xfgInstallUpdateConf]
+data_conf=[HOME]/redstone/FileGarden/xfg.conf
+install/redstone/resource/xfgFileInputMenuOnMyTable=[HOME]/redstone/resource/xfgFileInputMenuOnMyTable
+install/redstone/resource/FileManagerOpenFileSetupXFGVCLManage=[HOME]/redstone/resource/FileManagerOpenFileSetupXFGVCLManage
+install/redstone/resource/MainQuickButtonXFGVCLManage=[HOME]/redstone/resource/MainQuickButtonXFGVCLManage
+install/redstone/resource/MyTableXFGVCLManage=[HOME]/redstone/resource/MyTableXFGVCLManage
+
+[xfgMIME]
+pagetopostcript=ps
+pagetopdf=pdf
+
+[xfgOptionsSidePanel]
+Save memo=[HOME]/redstone/FileGarden/image/saveas.png
+Memo=[HOME]/redstone/FileGarden/image/me.png
+Update preview=[HOME]/redstone/FileGarden/image/find.png
+Apply settings=[HOME]/redstone/FileGarden/image/floppy.png
+Close=[HOME]/redstone/FileGarden/image/exit.png
+
+[xfgPrintBooklet]
+menuvcl=Save &Editor text as booklet
+pagetopostcript2booklet=false
+pagetopostcript=false
+pagetopostcript2bookletimg=[HOME]/redstone/FileGarden/image/contents.png
+pagetopostcriptimg=[HOME]/redstone/FileGarden/image/postscript-32.png
+
+[xfgMainButton]
+pagetopdf=gs -sDEVICE=pdfwrite -q -dBATCH -sPAPERSIZE=a4 -dNOPAUSE -r300 -sOutputFile=%out %in
+pagetopostcript=enscript --font=Helvetica@12 --ul-font=Palatino-Bold@130 --header-font=NewCenturySchlbk-Bold@18 --columns=1 --media=A4 --word-wrap --mark-wrapped-lines=none --header='  | $% of $=' --nup=1 --margins=40:20:20:30 --file-align=1 --no-header --portrait --underlay='Confidential' --ul-style=filled --ul-position=+40+60 --ul-gray=1 --ul-angle=60 --highlight-bars=2 --highlight-bar-gray=1  --output=%out %in
+Send to printer=%VCLINTERNAL%
+
+[xfgMainButtonImage]
+xfgMainButton=[HOME]/redstone/FileGarden/image/button.xpm
+xfgFileInputToEditor=[HOME]/redstone/FileGarden/image/forward.png
+Reload configurations=[HOME]/redstone/FileGarden/image/gnome-settings-21.png
+button1=[HOME]/redstone/FileGarden/image/redhat-file-manager.png
+button2=[HOME]/redstone/FileGarden/image/saveas.png
+button3=[HOME]/redstone/FileGarden/image/postscript-32.png
+button4=[HOME]/redstone/FileGarden/image/pdf-32.png
+button5=1
+button6=1
+button7=1
+button8=[HOME]/redstone/FileGarden/image/print.png
+button9=[HOME]/redstone/FileGarden/image/print-preview-24.png
+button10=[HOME]/redstone/FileGarden/image/clear.png
+
+[xfgMainMenuImage]
+xfgMainMenu=[HOME]/redstone/FileGarden/image/menu.xpm
+xfgrealtaskrunnow=[HOME]/redstone/FileGarden/image/gnome-monitor.png
+xfgrealtaskpleasekill=[HOME]/redstone/FileGarden/image/kill.png
+
+[xfgImageThumbViewTop]
+Show file commander=%BUILTIN%
+Copy to file commander=%BUILTIN%
+Move to file commander=%BUILTIN%
+Delete=%BUILTIN%
+Configure slides show=%BUILTIN%
+Start slides show=%BUILTIN%
+Editor Mode=%BUILTIN%
+
+[xfgImageThumbViewTopImage]
+Show file commander=[HOME]/redstone/FileGarden/image/redhat-file-manager.png
+Select all=[HOME]/redstone/FileGarden/image/selectall-32.png
+Copy to file commander=[HOME]/redstone/FileGarden/image/copy.png
+Move to file commander=[HOME]/redstone/FileGarden/image/cut.png
+Delete=[HOME]/redstone/FileGarden/image/file_broken.png
+Editor Mode=[HOME]/redstone/FileGarden/image/folder_blue.png
+Configure slides show=[HOME]/redstone/FileGarden/image/slidesetup-32.png
+Start slides show=[HOME]/redstone/FileGarden/image/slidestart-32.png
+Stop slides show=[HOME]/redstone/FileGarden/image/slidestop-32.png
+
+[xfgMainMenu]
+Options=1
+Command=shell
+SystemInfo=shell
+Utilities Tools=1
+ImageMagick=shellfile
+netpnm=shellfile
+Page Tools=shellfile
+Sound Tools=1
+Video Tools=1
+Doc Bench=1
+
+[Execute selection as ...]
+Manage Editor FileView=%VCLINTERNAL%
+----seperator00=1
+Selection as File location=%WorkShellFile%
+Selection as Editor link=%WorkShellFile%
+----seperator00=1
+Selection as File link=%WorkShellFile%
+Selection as HTML link=%WorkShellFile%
+Selection as HTML link [ Opera ]=%WorkShellFile%
+Selection as PDF link=%WorkShellFile%
+Selection as Postscript link=%WorkShellFile%
+Selection as DVI link=%WorkShellFile%
+Selection as Image link=%WorkShellFile%
+Selection as Sound link=%WorkShellFile%
+Selection as Enqueued Video link=%WorkShellFile%
+Selection as Multiple Video link=%WorkShellFile%
+
+[Execute selection as ...Image]
+Manage Editor FileView=[HOME]/redstone/FileGarden/image/gnome-settings-21.png
+Selection as File link=[HOME]/redstone/FileGarden/image/me-21.png
+Selection as HTML link [ Opera ]=[HOME]/redstone/FileGarden/image/www-21.png
+Selection as HTML link=[HOME]/redstone/FileGarden/image/www-21.png
+Selection as PDF link=[HOME]/redstone/FileGarden/image/acroread-21.png
+Selection as Postscript link=[HOME]/redstone/FileGarden/image/gsview-21.png
+Selection as DVI link=[HOME]/redstone/FileGarden/image/dvi-25.png
+Selection as Image link=[HOME]/redstone/FileGarden/image/image-21.png
+Selection as Sound link=[HOME]/redstone/FileGarden/image/sound-file-21.png
+Selection as Enqueued Video link=[HOME]/redstone/FileGarden/image/video-21.png
+Selection as Multiple Video link=[HOME]/redstone/FileGarden/image/video-21.png
+
+[xfgMemoMenu]
+Execute selection as ...=%CREATENEW%
+Execute Editor lines=%WorkShellFile%
+Editor text as Email Text=%DumpToVCL%
+----seperator00=1
+Undo=%BUILTIN%
+Redo=%BUILTIN%
+------seperator25=1
+Format ...=%CREATENEW%
+Insert ...=%CREATENEW%
+-------seperator2=1
+Cut=%BUILTIN%
+Copy=%BUILTIN%
+Paste=%BUILTIN%
+---seperator21=1
+Select all=%BUILTIN%
+
+[xfgMemoMenuHasSelection]
+Selection as HTML link [ Opera ]=1
+Selection as File location=1
+Selection as Editor link=1
+Selection as File link=1
+Selection as HTML link=1
+Selection as PDF link=1
+Selection as Postscript link=1
+Selection as DVI link=1
+Selection as Image link=1
+Selection as Sound link=1
+Selection as Multiple Video link=1
+Selection as Enqueued Video link=1
+Strip all space=1
+Verbatim lines=1
+2 colums=1
+3 colums=1
+4 colums=1
+5 colums=1
+6 colums=1
+7 colums=1
+8 colums=1
+TeX scan selection=1
+No frame Box=1
+No frame Left justified Box=1
+No frame Right justified Box=1
+No frame Streched Box=1
+Frame Box=1
+Frame Left justified Box=1
+Frame Right justified Box=1
+Frame Streched Box=1
+Top Raised box=1
+Bottom Raised box=1
+Verticle Centered text box=1
+Verticle Top aligned text box=1
+Verticle Bottom aligned text box=1
+Double frame text box=1
+Treat Selection as Footnotes=1
+Marginal text=1
+Item list=1
+Number list=1
+Description list=1
+Treat lines as bibtem Key=1
+add index=1
+add sub index=1
+add italic index=1
+add bold index=1
+add italic number index=1
+add bold number index=1
+To TOC as Section=1
+To TOC as SubSection=1
+To TOC as SubSubSection=1
+Add to TOC content=1
+To LOF as Section=1
+To LOF as SubSection=1
+To LOF as SubSubSection=1
+Add to LOF content=1
+To LOT as Section=1
+To LOT as SubSection=1
+To LOT as SubSubSection=1
+Add to LOT content=1
+Section=1
+SubSection=1
+SubSubSection=1
+Section*=1
+SubSection*=1
+SubSubSection*=1
+Paragraph=1
+SubParagraph=1
+Part=1
+Chapter=1
+Tiny=1
+Smallest=1
+Smaller=1
+Small=1
+Large=1
+Larger=1
+Largest=1
+Huge=1
+Bold=1
+Italic=1
+Slant=1
+Small cap=1
+Red=1
+Green=1
+Blue=1
+Yellow=1
+Cyan=1
+Magenta=1
+Medium=1
+Center=1
+Left=1
+Right=1
+Flush left=1
+Flush center=1
+Flush right=1
+No ident=1
+TypeWriter font=1
+under-bar=1
+under-waveline=1
+under-line=1
+strike-out=1
+Add Line break=1
+Superscript=1
+Circled text=1
+Roman font=1
+Sans serif font=1
+Document font=1
+emphasis=1
+upright=1
+Times=1
+Palatino=1
+Helvetica=1
+Avant Garde=1
+Schoolbook=1
+Bookman=1
+
+[xfgMemoMenuHasLineText]
+Wrap=1
+Insert line number=1
+Add text from the start=1
+Add text at the end=1
+Trim Left for number of characters=1
+Trim Right for number of characters=1
+Trim Left from first ocurrence of words=1
+Trim Right from first ocurrence of words=1
+Columnise at row=1
+Columnise to Nth colum=1
+Columnise at delimiter=1
+Trim left side space=1
+Trim right side space=1
+Strip Colum=1
+Insert line spacing=1
+Strip empty lines=1
+Trim control newline=1
+Execute Editor lines=1
+
+[xfgMemoMenuNoSelection]
+Picture=1
+New page break=1
+Horizontal line=1
+Make title=1
+Start verbatim=1
+End verbatim=1
+HTML page format=1
+SGML page format=1
+LaTeX page format=1
+
+[xfgMemoMenuUpdateTabCaption]
+HTML page format=.html
+SGML page format=.sgml
+LaTeX page format=.tex
+
+[xfgMemoMenuImage]
+Execute selection as ...=[HOME]/redstone/FileGarden/image/app-favorites.png
+Editor text as Email Text=[HOME]/redstone/FileGarden/image/Mail/mail-get-16.png
+Execute Editor lines=[HOME]/redstone/FileGarden/image/gnome-monitor.png
+
+[Format ...]
+Wrap=%GetCustomCommand%DoXFGMemoWrap
+Insert line number=%GetCustomCommand%DoXFGMemoLineNumbering
+Add text from the start=%GetCustomCommand%DoXFGMemoAppendLeftWith
+Add text at the end=%GetCustomCommand%DoXFGMemoAppendRightWith
+Trim Left for number of characters=%GetCustomCommand%DoXFGMemoDeleteLeftStrings
+Trim Right for number of characters=%GetCustomCommand%DoXFGMemoDeleteRightStrings
+Trim Left from first ocurrence of words=%GetCustomCommand%DoXFGMemoFromStartStrDeleteLeftStrings
+Trim Right from first ocurrence of words=%GetCustomCommand%DoXFGMemoFromStartStrDeleteRightStrings
+Columnise at row=%GetCustomCommand%DoXFGMemoColumniseRow
+Columnise to Nth colum=%GetCustomCommand%DoXFGMemoColumniseColum
+Columnise at delimiter=%GetCustomCommand%DoXFGMemoColumniseAtDelimiter
+Trim left side space=%GetCustomCommand%DoXFGMemoAlignLeft
+Trim right side space=%GetCustomCommand%DoXFGMemoStripRightSpace
+Strip all space=%GetCustomCommand%DoXFGMemoStripSpace
+Strip Colum=%GetCustomCommand%DoXFGMemoDecolumnise
+Insert line spacing=%GetCustomCommand%DoXFGMemoAddLineSpacing
+Strip empty lines=%GetCustomCommand%DoXFGMemoStripEmptyLine
+Trim control newline=%GetCustomCommand%DoXFGMemoTrimControlNewLine
+
+[Insert ...Image]
+LaTeX page format=[HOME]/redstone/FileGarden/image/TeX-21.jpg
+TeX tag ...=[HOME]/redstone/FileGarden/image/TeX-21.jpg
+
+[Insert ...]
+HTML page format=%GetCustomCommand%XFGMemoInsertFormat%XFGMemoInsertHTMLFormat
+SGML page format=%GetCustomCommand%XFGMemoInsertFormat%XFGMemoInsertSGMLFormat
+LaTeX page format=%GetCustomCommand%XFGMemoInsertFormat%XFGMemoInsertTeXFormat
+-------seperator2=1
+HTML editor tag ...=%CREATENEW%
+SGML editor tag ...=%CREATENEW%
+LaTeX editor tag ...=%CREATENEW%
+----------seperator22=1
+ls currentdir=%GetCustomCommand%XFGMemoInsert%ls -a
+echo=%GetCustomCommand%XFGMemoInsert%echo "XFG FileGarden1.2.4D"
+
+[HTML tag ...]
+To be implemented=1
+
+[SGML tag ...]
+To be implemented=1
+
+[Insert picture]
+Center picture=%GetCustomCommand%XFGMemoInsertAtLine%GetFile%XFGMemoInsertTeXCenterPictureTag
+Text flow on right=%GetCustomCommand%XFGMemoInsertAtLine%GetFile%XFGMemoInsertTeXRightFlowPictureTag
+Text flow on left=%GetCustomCommand%XFGMemoInsertAtLine%GetFile%XFGMemoInsertTeXLeftFlowPictureTag
+
+[Add columns]
+2 colums=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+3 colums=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+4 colums=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+5 colums=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+6 colums=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+7 colums=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+8 colums=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[Sectioning]
+Part=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Chapter=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Section=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+SubSection=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+SubSubSection=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Section*=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+SubSection*=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+SubSubSection*=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Paragraph=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+SubParagraph=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[LaTeX character]
+Simple=%ExpandDirForDocumentation%/opt/redstone/mainlib/resource/TeXSF/
+
+[Insert LaTeX character]
+Simple=%ExpandDirForDocumentation%/opt/redstone/mainlib/resource/TeXSF/
+Dingbats=%CREATENEW%
+
+[Simple]
+LaTeX=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+TeX=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+Trademark=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+Registered=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+Copyrighted=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+
+[Dingbats]
+Dingbats1=%ExpandDirForDocumentation%/opt/redstone/mainlib/resource/Dingbats1/
+Dingbats2=%ExpandDirForDocumentation%/opt/redstone/mainlib/resource/Dingbats2/
+
+[Dingbats1]
+001=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+002=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+003=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+004=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+005=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+006=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+007=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+008=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+009=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+010=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+011=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+012=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+013=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+014=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+015=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+016=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+017=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+018=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+019=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+020=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+021=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+022=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+023=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+024=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+025=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+026=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+027=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+028=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+029=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+030=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+031=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+032=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+033=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+034=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+035=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+036=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+037=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+038=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+039=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+040=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+041=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+042=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+043=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+044=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+045=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+046=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+047=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+048=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+049=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+050=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+051=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+052=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+053=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+054=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+055=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+056=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+057=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+058=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+059=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+060=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+061=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+062=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+063=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+064=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+065=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+066=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+067=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+068=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+069=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+070=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+071=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+072=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+073=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+074=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+075=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+076=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+077=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+078=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+079=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+080=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+081=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+082=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+083=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+084=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+085=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+086=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+087=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+088=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+089=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+090=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+091=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+092=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+093=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+094=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+095=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+
+[Dingbats2]
+096=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+097=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+098=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+099=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+100=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+101=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+102=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+103=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+104=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+105=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+106=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+107=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+108=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+109=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+110=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+111=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+112=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+113=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+114=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+115=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+116=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+117=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+118=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+119=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+120=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+121=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+122=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+123=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+124=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+125=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+126=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+127=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+128=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+129=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+130=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+131=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+132=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+133=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+134=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+135=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+136=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+137=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+138=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+139=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+140=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+141=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+142=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+143=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+144=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+145=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+146=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+147=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+148=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+149=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+150=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+151=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+152=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+153=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+154=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+155=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+156=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+157=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+158=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+159=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+160=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+161=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+162=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+163=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+164=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+165=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+166=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+167=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+168=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+169=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+170=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+171=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+172=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+173=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+174=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+175=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+176=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+177=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+178=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+179=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+180=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+181=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+182=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+183=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+184=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+185=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+186=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+187=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+
+[Edit font face]
+Times=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Palatino=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Helvetica=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Avant Garde=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Schoolbook=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Bookman=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[Edit font size]
+Tiny=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Smallest=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Smaller=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Small=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Large=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Larger=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Largest=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Huge=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[Edit font style]
+TypeWriter font=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Superscript=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Circled text=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Roman font=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Sans serif font=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Document font=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+emphasis=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+upright=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+under-bar=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+under-line=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+under-waveline=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+strike-out=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Medium=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Bold=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Italic=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Slant=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Small cap=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+No ident=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[Edit font color]
+Red=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Green=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Blue=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Yellow=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Cyan=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Magenta=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[TeX Text alignment]
+Left=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Center=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Right=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Special others=%CREATENEW%
+
+[Special others]
+Flush left=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Flush center=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Flush right=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[Page Tools]
+HTML editor tag ...=%CREATENEW%
+SGML editor tag ...=%CREATENEW%
+LaTeX editor tag ...=%CREATENEW%
+------seperator112=1
+Save &Editor text as booklet=%VCLINTERNAL%
+Save &Postscript files as booklet=%PROC%ECCF9F49-AAF8-D811-98FC-0080C8F89650
+Save Postscript in Even pages=psselect -e %in %out.even.ps
+Save Postscript in Odd pages=psselect -o %in %out.odd.ps
+----------seperator20=1
+Extract / Convert PDF files=%PROC%F07A9A26-E419-D911-814D-0080C8F89650
+Convert Postscript files to PDF=%PROC%5A7A9A26-E419-D911-814D-0080C8F89650
+---seperator2=1
+Convert SGML files to LaTeX=sgml2latex %in %out.tex
+Convert text files to LaTeX=%WorkShellFile%
+Save Editor text as LaTeX=%WorkShellFile%
+----------seperator9912=1
+Make LaTeX Index=%WorkShellFile%
+Convert LaTeX files to DVI=%WorkShellFile%
+Convert LaTeX files to PDF (pdfTeX)=%WorkShellFile%
+Convert DVI to Postscript=%WorkShellFile%
+
+[Horizontal line / spaces]
+Horizontal rule=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+Horizontal line=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+Horizontal space=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+------seperator2=1
+Dot fill=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+Horizontal Rule fill=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+Horizontal Fill=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+
+[Vertical line / spaces]
+Vertical space=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+Verticle Fill=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+
+[Line break]
+\\=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+\\[1em]=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+\\*[1em]=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+\linebreak[4]=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+\nolinebreak[4]=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[LaTeX editor tag ...]
+Edit TeX font=%CREATENEW%
+Insert LaTeX character=%CREATENEW%
+-----------seperator2333=1
+TeX scan selection=%GetCustomCommand%XFGMemoInsertFormat%XFGMemoDoTeXFormat
+Insert TeX file=%CREATENEW%
+Insert picture=%CREATENEW%
+-------seperator2=1
+Line break=%CREATENEW%
+Add Comments=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Add Caption=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+--------seperator433=1
+Make Title=%CREATENEW%
+Book Structure=%CREATENEW%
+Table of Content=%CREATENEW%
+Sectioning=%CREATENEW%
+Bibliography=%CREATENEW%
+Indexing=%CREATENEW%
+--------seperator330=1
+Lists=%CREATENEW%
+Add columns=%CREATENEW%
+Footnotes=%CREATENEW%
+Marginal notes=%CREATENEW%
+TeX Text alignment=%CREATENEW%
+Box=%CREATENEW%
+Horizontal line / spaces=%CREATENEW%
+Vertical line / spaces=%CREATENEW%
+Page break=%CREATENEW%
+Verbatim=%CREATENEW%
+
+[Book Structure]
+FrontMatter=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+MainMatter=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+BackMatter=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+-----------seperator2333=1
+Add URL link=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Add Appendix=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+
+[Bibliography]
+Add cite reference=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+-----------seperator2333=1
+Add Bibliography enviroment=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+Treat lines as bibtem Key=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[List of Figures]
+Make List of Figures=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+-----------seperator2333=1
+To LOF as Section=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+To LOF as SubSection=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+To LOF as SubSubSection=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+--------seperator3=1
+Add to LOF content=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[List of Tables]
+Make List of Tables=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+-----------seperator2333=1
+To LOT as Section=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+To LOT as SubSection=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+To LOT as SubSubSection=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+--------seperator3=1
+Add to LOT content=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[Table of Content]
+Make Table of content=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+List of Figures=%CREATENEW%
+List of Tables=%CREATENEW%
+-----------seperator2333=1
+To TOC as Section=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+To TOC as SubSection=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+To TOC as SubSubSection=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+--------seperator3=1
+Add to TOC content=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[Indexing]
+Make Index=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+-----------seperator2333=1
+add index=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+add sub index=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+add italic index=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+add bold index=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+add italic number index=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+add bold number index=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[Verbatim]
+Verbatim lines=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Start verbatim=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+End verbatim=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[Lists]
+Item list=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Number list=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Description list=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[Set Footnote number Symbol]
+arabic footnote number=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+roman footnote number=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+Roman footnote number=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+alpha footnote number=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+Alpha footnote number=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+fnsymbol footnote number=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+
+[Footnotes]
+Set Footnote number Symbol=%CREATENEW%
+Treat Selection as Footnotes=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[Marginal notes]
+Marginal text=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[Edit TeX font]
+Edit font face=%CREATENEW%
+Edit font size=%CREATENEW%
+Edit font style=%CREATENEW%
+Edit font color=%CREATENEW%
+
+[Make Title]
+Make title=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+Title footnote=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Title split=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+
+[Box]
+No frame Box=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+No frame Left justified Box=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+No frame Right justified Box=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+No frame Streched Box=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+------seperator20=1
+Frame Box=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Frame Left justified Box=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Frame Right justified Box=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Frame Streched Box=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+------seperator2=1
+Top Raised box=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Bottom Raised box=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+----seperator552=1
+Verticle Centered text box=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Verticle Top aligned text box=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+Verticle Bottom aligned text box=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+----seperator52=1
+Double frame text box=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[Page break]
+Page break=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+No Page break=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+New page=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+------seperator2=1
+Clear page=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+Clear double page=%GetCustomCommand%XFGMemoInsertAtCursor%GetValue%XFGMemoInsertTeXTag
+
+[Insert TeX file]
+Treat editor text as TeX input=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+File input tag only=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertTeXTag
+
+[Edit TeX fontImage]
+Edit font face=[HOME]/redstone/FileGarden/image/fonts-21.png
+Edit font size=[HOME]/redstone/FileGarden/image/fonts-21.png
+Edit font style=[HOME]/redstone/FileGarden/image/fonts-21.png
+Edit font color=[HOME]/redstone/FileGarden/image/fonts-21.png
+
+[LaTeX editor tag ...Image]
+Insert TeX file=[HOME]/redstone/FileGarden/image/TeX-21.png
+Insert picture=[HOME]/redstone/FileGarden/image/emblem-pictures-21.png
+TeX scan selection=[HOME]/redstone/FileGarden/image/TeX-21.jpg
+Insert LaTeX character=[HOME]/redstone/FileGarden/image/key-21.png
+Edit TeX font=[HOME]/redstone/FileGarden/image/fonts-21.png
+
+[Page ToolsImage]
+Convert text files to LaTeX=[HOME]/redstone/FileGarden/image/TeX-21.jpg
+LaTeX editor=[HOME]/redstone/FileGarden/image/TeX-21.jpg
+Save &Editor text as booklet=[HOME]/redstone/FileGarden/image/contents-21.png
+Save &Postscript files as booklet=[HOME]/redstone/FileGarden/image/contents-21.png
+Save Postscript in Even pages=1
+Save Postscript in Odd pages=1
+Convert Postscript files to PDF=[HOME]/redstone/FileGarden/image/acroread-21.png
+Extract / Convert PDF files=[HOME]/redstone/FileGarden/image/acroread-21.png
+Convert DVI to Postscript=[HOME]/redstone/FileGarden/image/contents-21.png
+Convert LaTeX files to DVI=[HOME]/redstone/FileGarden/image/dvi-21.png
+Save Editor text as LaTeX=[HOME]/redstone/FileGarden/image/TeX-21.jpg
+Convert SGML files to LaTeX=[HOME]/redstone/FileGarden/image/TeX-21.jpg
+Convert LaTeX files to PDF (pdfTeX)=[HOME]/redstone/FileGarden/image/acroread-21.png
+Make LaTeX Index=[HOME]/redstone/FileGarden/image/TeX-21.jpg
+
+[xfgMemoSpeedButton]
+Close all=%BUILTIN%
+Close page=%BUILTIN%
+New page=%BUILTIN%
+
+[xfgMemoCombo]
+Column=true="none"|"72"|"75"|"80"|"82"|"85"|"90"
+Alignment=false="Left"|"Center"|"Right"
+Fonts=false=%ScreenFonts%
+Points=false=%FontsSize%
+
+[xfgMemoEditMid]
+Search=%BUILTIN%
+Replace=%BUILTIN%
+
+[xfgMemoEditMidImage]
+Search=[HOME]/redstone/FileGarden/image/search-text.png
+Replace=[HOME]/redstone/FileGarden/image/replace-text.png
+
+[xfgMemoEditTop]
+
+[xfgMemoEditTopImage]
+
+[xfgMemoSpeedButtonImage]
+New page=[HOME]/redstone/FileGarden/image/filenew.png
+Close page=[HOME]/redstone/FileGarden/image/pmremovepoint.png
+Close all=[HOME]/redstone/FileGarden/image/close-all.png
+
+[Options]
+FileView Default=%CREATENEW%
+FileManager Setup=%CREATENEW%
+Main Quick Button Setup=%VCLINTERNAL%
+File Manager Open File Setup=%VCLINTERNAL%
+-=----seperator
+Advance Setup=%CREATENEW%
+
+[Advance Setup]
+FileGarden Application Configuration=%VCLINTERNAL%
+My Table Advance Configuration=%VCLINTERNAL%
+
+[Advance SetupImage]
+My Table Advance Configuration=[HOME]/redstone/FileGarden/image/gnome-settings-21.png
+FileGarden Application Configuration=[HOME]/redstone/FileGarden/image/gnome-settings-21.png
+
+[FileView Default]
+FileManager FileView default=%VCLINTERNAL%
+DOC Bench FileView default=%VCLINTERNAL%
+Editor FileView default=%VCLINTERNAL%
+
+[FileManager Setup]
+FileManager Interface=%VCLINTERNAL%
+
+[Original Options]
+Default FileView=%VCLINTERNAL%
+Program setup=%VCLINTERNAL%
+Menu setup=%VCLINTERNAL%
+Page setup=%VCLINTERNAL%
+script=%VCLINTERNAL%
+
+[OptionsImage]
+Main Quick Button Setup=[HOME]/redstone/FileGarden/image/gnome-settings-21.png
+File Manager Open File Setup=[HOME]/redstone/FileGarden/image/gnome-settings-21.png
+FileView Default=[HOME]/redstone/FileGarden/image/gnome-settings-21.png
+FileManager Setup=[HOME]/redstone/FileGarden/image/gnome-settings-21.png
+Program setup=[HOME]/redstone/FileGarden/image/exec.png
+Page setup=[HOME]/redstone/FileGarden/image/print-preview-small.png
+script=[HOME]/redstone/FileGarden/image/widget_doc-21.png
+FileGarden Application Configuration=[HOME]/redstone/FileGarden/image/gnome-settings-21.png
+
+[netpnm]
+PNG to Postcript=pngtopnm %in | pnmtops > %out.ps
+JPG/JPEG to Postcript=jpegtopnm %in | pnmtops -width=8.26 -height=11.69 > %out.ps
+GIF to Postcript=giftopnm %in | pnmtops -width=8.26 -height=11.69 > %out.ps
+BMP to Postcript=bmptopnm %in | pnmtops -width=8.26 -height=11.69 > %out.ps
+XPM to Postcript=xpmtoppm %in | pnmtops -width=8.26 -height=11.69 > %out.ps
+TGA to Postcript=tgatoppm %in | pnmtops -width=8.26 -height=11.69 > %out.ps
+PICT to Postcript=picttoppm %in | pnmtops -width=8.26 -height=11.69 > %out.ps
+TIFF to Postcript=tifftopnm %in | pnmtops -width=8.26 -height=11.69 > %out.ps
+PCX to Postcript=pcxtoppm %in | pnmtops -width=8.26 -height=11.69 > %out.ps
+PNM to Postscript=pnmtops -dpi=75 %in > %out.ps
+---seperator1=1
+PPM to BMP=ppmtobmp %in > %out.bmp
+Any To PNM=anytopnm %in > %out.pnm
+Postcript To PNM=pstopnm -xborder 0 -yborder 0 -portrait -nocrop %in > %out.ppm
+PNM To JPG/JPEG=pnmtojpeg %in > %out.jpg
+Any to 120x120 JPEG=anytopnm %in | pnmscale -xysize 120 120 | pnmtojpeg -quality=75 > %out.jpg
+---seperator2=1
+Make Contact-Sheet1=pnmindex -across 6 &in > &outcontact.pnm
+
+[netpnmImage]
+PNG to Postcript=[HOME]/redstone/FileGarden/image/gsview-21.png
+JPG/JPEG to Postcript=[HOME]/redstone/FileGarden/image/gsview-21.png
+GIF to Postcript=[HOME]/redstone/FileGarden/image/gsview-21.png
+BMP to Postcript=[HOME]/redstone/FileGarden/image/gsview-21.png
+XPM to Postcript=[HOME]/redstone/FileGarden/image/gsview-21.png
+TGA to Postcript=[HOME]/redstone/FileGarden/image/gsview-21.png
+PICT to Postcript=[HOME]/redstone/FileGarden/image/gsview-21.png
+TIFF to Postcript=[HOME]/redstone/FileGarden/image/gsview-21.png
+PCX to Postcript=[HOME]/redstone/FileGarden/image/gsview-21.png
+PNM to Postscript=[HOME]/redstone/FileGarden/image/gsview-21.png
+---seperator1=1
+PPM to BMP=[HOME]/redstone/FileGarden/image/image-21.png
+Any To PNM=[HOME]/redstone/FileGarden/image/image-21.png
+Postcript To PNM=[HOME]/redstone/FileGarden/image/image-21.png
+PNM To JPG/JPEG=[HOME]/redstone/FileGarden/image/image-21.png
+Any to 120x120 JPEG=[HOME]/redstone/FileGarden/image/gsview-21.png
+---seperator2=1
+Make Contact-Sheet1=[HOME]/redstone/FileGarden/image/image-21.png
+
+[FileViewFilter]
+All Files=ALL
+Text files=xfgTextEXT
+Image files=xfgImageEXT
+Sound files=xfgSoundEXT
+Video files=xfgVideoEXT
+PS/PDF files=xfgPSEXT
+
+[xfgPSEXT]
+EPS=1
+EPS2=1
+EPS3=1
+EPSF=1
+EPSI=1
+EPT=1
+PS=1
+PS3=1
+PS2=1
+pdf=1
+
+[xfgPDFEXT]
+pdf=1
+
+[xfgPDFEXTImage]
+pdf=%adobe%
+
+[xfgPSEXTImage]
+EPS=%postscript%
+EPS2=%postscript%
+EPS3=%postscript%
+EPSF=%postscript%
+EPSI=%postscript%
+EPT=%postscript%
+PS=%postscript%
+PS3=%postscript%
+PS2=%postscript%
+pdf=%adobe%
+
+[xfgFileInputBottom]
+XFG=%BUILTIN%
+Show file commander=%BUILTIN%
+Show File List View=%BUILTIN%
+Show Trash Bin=%BUILTIN%
+Show ThumbView window=%BUILTIN%
+Show ImageView window=%BUILTIN%
+Show memo=%BUILTIN%
+Mail Implant=%VCLINTERNAL%
+
+[xfgFileInputBottomImage]
+Show File List View=[HOME]/redstone/FileGarden/image/listview-32.png
+XFG=[HOME]/redstone/FileGarden/image/gear.png
+Show file commander=[HOME]/redstone/FileGarden/image/redhat-file-manager.png
+Show Trash Bin=[HOME]/redstone/FileGarden/image/trashcan_full.png
+Show ThumbView window=[HOME]/redstone/FileGarden/image/view_icon.png
+Show ImageView window=[HOME]/redstone/FileGarden/image/emblem-pictures.png
+Show memo=[HOME]/redstone/FileGarden/image/me.png
+Mail Implant=[HOME]/redstone/FileGarden/image/Mail/mail-get-32quick.png
+
+[Mount]
+To be implemented=1
+
+[Rename]
+Normal=1
+---seperator1=1
+Append left=%CREATENEW%
+Append right=%CREATENEW%
+Append Number List=%CREATENEW%
+------seperator000=1
+Append Left-side with string=%FilenameAppendLeftWithStrings%
+Append Right-side with string=%FilenameAppendRightWithStrings%
+Delete Left-side no. of char=%FilenameAppendDeleteLeftNoChar%
+Delete Right-side no. of char=%FilenameAppendDeleteRightNoChar%
+------seperator22200=1
+Clone=%filenameappendClone%
+
+[Append Number List]
+Leftside numbering=%filenameappendNumberlistLeft%
+Rightside numbering=%filenameappendNumberlistRight%
+
+[Append left]
+~=%FilenameAppendLeft%
+Backup-=%FilenameAppendLeft%
+DeadFile-=%FilenameAppendLeft%
+PleaseDoNotUseThisFile-=%FilenameAppendLeft%
+---seperator1=1
+Delete appended left=%FilenameAppendDeleteLeft%
+
+[Append right]
+~=%FilenameAppendRight%
+-Backup=%FilenameAppendRight%
+-DeadFile=%FilenameAppendLeft%
+-PleaseDoNotUseThisFile=%FilenameAppendRight%
+--------seperator1111=1
+.txt=%FilenameAppendRight%
+.html=%FilenameAppendRight%
+.cfg=%FilenameAppendRight%
+.conf=%FilenameAppendRight%
+.jpg=%FilenameAppendRight%
+.png=%FilenameAppendRight%
+.pnm=%FilenameAppendRight%
+.gif=%FilenameAppendRight%
+---seperator1=1
+Delete appended right=%FilenameAppendDeleteRight%
+Delete file extension=%FilenameAppendDeleteFileExtension%
+
+[RenameImage]
+Normal=1
+Express=1
+
+[xfgFilesEXT]
+rpm=1
+sh=1
+deb=1
+
+[xfgFilesEXTImage]
+rpm=%compression%
+sh=%executables%
+deb=%compression%
+
+[Package ...]
+View=%CreateNew%
+---seperator2=1
+Create=%CreateNew%
+Unpack=%CreateNew%
+
+[Package ...Image]
+View=1
+---seperator2=1
+Create=1
+Unpack=1
+
+[QInputDLG]
+Search for RPM ...=Searching for installed RPM that contains ...|xfree
+Execute command in Xterm [ HOLD ]=Execute command in Xterm ...
+dig=Dig on host ...|www.yahoo.com
+Traceroute=Trace on host ...|www.yahoo.com
+ping=Ping on host ...|www.yahoo.com
+MontageImages-WithFrame=MontageImages-WithFrame to filename ...|contact.jpg
+Reduce color=Reduce image color to |255
+Execute command=Run command ...
+View Man page=Which man page to view ...|man
+
+[View]
+View tar=%WorkShellFile%
+View gzip=%WorkShellFile%
+View bz2=%WorkShellFile%
+View zip=%WorkShellFile%
+---seperator2=1
+View rpm=%WorkShellFile%
+View deb=%WorkShellFile%
+
+[Unpack]
+Unpack tar=%WorkShellFile%
+Unpack gzip=%WorkShellFile%
+Unpack bz2=%WorkShellFile%
+Unpack zip=%WorkShellFile%
+
+[UnpackImage]
+Mount HDE3=1
+UMOUNT HDE3=1
+
+[xfgImageEXT]
+BMP=1
+DCM=1
+DCX=1
+DIB=1
+FAX=1
+FITS=1
+G3=1
+GIF=1
+GIF87=1
+GRAY=1
+ICM=1
+ICO=1
+ICON=1
+JP2=1
+JPEG=1
+JPG=1
+LOGO=1
+MIFF=1
+MONO=1
+PALM=1
+PBM=1
+PCD=1
+PCDS=1
+PCL=1
+PCT=1
+PCX=1
+PDB=1
+PGM=1
+PICT=1
+PM=1
+PNG=1
+PNM=1
+PPM=1
+PSD=1
+RAS=1
+SGI=1
+SUN=1
+SVG=1
+TGA=1
+TIF=1
+TIFF=1
+UIL=1
+XPM=1
+WMF=1
+WPG=1
+X=1
+XBM=1
+XCF=1
+XWD=1
+
+[xfgImageEXTImage]
+BMP=%image%
+DCM=%image%
+DCX=%image%
+DIB=%image%
+FAX=%image%
+FITS=%image%
+G3=%image%
+GIF=%image%
+GIF87=%image%
+GRAY=%image%
+ICM=%image%
+ICO=%image%
+ICON=%image%
+JP2=%image%
+JPEG=%image%
+JPG=%image%
+LOGO=%image%
+MIFF=%image%
+MONO=%image%
+PALM=%image%
+PBM=%image%
+PCD=%image%
+PCDS=%image%
+PCL=%image%
+PCT=%image%
+PCX=%image%
+PDB=%image%
+PGM=%image%
+PICT=%image%
+PM=%image%
+PNG=%image%
+PNM=%image%
+PPM=%image%
+PSD=%image%
+RAS=%image%
+SGI=%image%
+SUN=%image%
+SVG=%image%
+TGA=%image%
+TIF=%image%
+TIFF=%image%
+UIL=%image%
+XPM=%image%
+WMF=%image%
+WPG=%image%
+XBM=%image%
+XCF=%image%
+XWD=%image%
+
+[xfgCompressionEXT]
+tar.gz=1
+tar=1
+gz=1
+zip=1
+tgz=1
+gz=1
+bz2=1
+tbz=1
+
+[xfgCompressionEXTImage]
+tar.gz=%compression%
+tar=%compression%
+gz=%compression%
+zip=%compression%
+tgz=%compression%
+gz=%compression%
+bz2=%compression%
+tbz=%compression%
+
+[Man PageImage]
+Man 0p=[HOME]/redstone/FileGarden/image/gdict-21.png
+Man 1=[HOME]/redstone/FileGarden/image/gdict-21.png
+Man 1p=[HOME]/redstone/FileGarden/image/gdict-21.png
+Man 2=[HOME]/redstone/FileGarden/image/gdict-21.png
+Man 3=[HOME]/redstone/FileGarden/image/gdict-21.png
+Man 3p=[HOME]/redstone/FileGarden/image/gdict-21.png
+Man 4=[HOME]/redstone/FileGarden/image/gdict-21.png
+Man 5=[HOME]/redstone/FileGarden/image/gdict-21.png
+Man 6=[HOME]/redstone/FileGarden/image/gdict-21.png
+Man 7=[HOME]/redstone/FileGarden/image/gdict-21.png
+Man 8=[HOME]/redstone/FileGarden/image/gdict-21.png
+
+[Doc Bench]
+XFG help Doc=%JustExecuteThisAndDoNothingPlease%dillo [HOME]/redstone/FileGarden/install.html
+Component info=%VCLEXTERNAL%
+-------seperator2=1
+XFG home site=%JustExecuteThisAndDoNothingPlease%dillo "http://redstone.sourceforge.net/"
+XFG project site=%JustExecuteThisAndDoNothingPlease%dillo "http://sourceforge.net/projects/redstone/"
+XFG help site=%JustExecuteThisAndDoNothingPlease%dillo "http://redstone.sourceforge.net/install.html"
+XFG latest release site=%JustExecuteThisAndDoNothingPlease%dillo "http://redstone.sourceforge.net/index.html#1"
+-----------seperator1111=1
+Human Interface=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/RedBook/HumanInterface/GuideLine
+SegusoLand=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/RedBook/HumanInterface/SegusoLand
+OneFinger=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/RedBook/HumanInterface/OneFinger
+LogicalDesktop=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/RedBook/HumanInterface/LogicalDesktop
+Linux HowTo=%JustExecuteThisAndDoNothingPlease%howto
+Linux articles=%JustExecuteThisAndDoNothingPlease%dillo /usr/dict/dump/UNIX_HOWTO_MAN/linuxcookbook/index.html
+SGML=%JustExecuteThisAndDoNothingPlease%dillo /usr/dict/dump/UNIX_HOWTO_MAN/RedBook/sgml/index.html
+SGML-BSD=%JustExecuteThisAndDoNothingPlease%dillo /usr/dict/dump/UNIX_HOWTO_MAN/RedBook/sgml-BSD/SGML-BSD.html
+Postscript Simple=%JustExecuteThisAndDoNothingPlease%dillo /usr/dict/dump/UNIX_HOWTO_MAN/RedBook/PostScript/postscript.html
+Postscript Book=%JustExecuteThisAndDoNothingPlease%acroread /usr/dict/dump/UNIX_HOWTO_MAN/RedBook/ThinkingInPostScript.pdf
+LaTeX=%CREATENEW%
+Linux HowTo-Single=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/html-single-HOWTO
+Man Page=%CREATENEW%
+RedBook=%CREATENEW%
+RedDoc=%CREATENEW%
+
+[LaTeX]
+TeX4ht=%JustExecuteThisAndDoNothingPlease%dillo /usr/dict/dump/UNIX_HOWTO_MAN/RedBook/TeX4ht/index.html
+LaTeX-MAIN01=%JustExecuteThisAndDoNothingPlease%dillo /usr/share/texmf/doc/index.html
+LaTeX-MAIN02=%JustExecuteThisAndDoNothingPlease%dillo /usr/dict/dump/UNIX_HOWTO_MAN/RedBook/LaTeX-main/index.html
+LaTeX2E=%JustExecuteThisAndDoNothingPlease%dillo /usr/dict/dump/UNIX_HOWTO_MAN/RedBook/latex2e-html/index.html
+LaTeX=%JustExecuteThisAndDoNothingPlease%dillo /usr/dict/dump/UNIX_HOWTO_MAN/RedBook/LaTeX/node3.html
+LaTeX-02=%JustExecuteThisAndDoNothingPlease%dillo /usr/dict/dump/UNIX_HOWTO_MAN/RedBook/LaTeX-02/index.html
+LaTeX-03=%JustExecuteThisAndDoNothingPlease%dillo /usr/dict/dump/UNIX_HOWTO_MAN/RedBook/LaTeX-03/LaTeX-Home.html
+LaTeX-Dump=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/RedBook/LaTeX-Dump
+
+[LaTeXImage]
+TeX4ht=[HOME]/redstone/FileGarden/image/book-21.png
+LaTeX-MAIN01=[HOME]/redstone/FileGarden/image/book-21.png
+LaTeX-MAIN02=[HOME]/redstone/FileGarden/image/book-21.png
+LaTeX2E=[HOME]/redstone/FileGarden/image/book-21.png
+LaTeX=[HOME]/redstone/FileGarden/image/book-21.png
+LaTeX-02=[HOME]/redstone/FileGarden/image/book-21.png
+LaTeX-03=[HOME]/redstone/FileGarden/image/book-21.png
+LaTeX-Dump=[HOME]/redstone/FileGarden/image/gdict-21.png
+
+[RedBook]
+Does Studying Economics Inhibit Cooperation=%JustExecuteThisAndDoNothingPlease%dillo "/usr/dict/dump/UNIX_HOWTO_MAN/RedBook/FSF/economics_frank/frank.html"
+Interview with Richard Stallman Transcript=%JustExecuteThisAndDoNothingPlease%dillo "/usr/dict/dump/UNIX_HOWTO_MAN/RedBook/FSF/audio/rms-interview-edinburgh-040527.txt"
+SCO on Free Software=%JustExecuteThisAndDoNothingPlease%dillo "/usr/dict/dump/UNIX_HOWTO_MAN/RedBook/FSF/sco/index.html"
+Links to Open Organisations=%JustExecuteThisAndDoNothingPlease%dillo "/usr/dict/dump/UNIX_HOWTO_MAN/RedBook/FSF/links/links.html"
+FSF=%JustExecuteThisAndDoNothingPlease%dillo "/usr/dict/dump/UNIX_HOWTO_MAN/RedBook/FSF/index.html"
+Articles=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/RedBook/Articles
+
+[RedDoc]
+cdrtools=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/RedDoc/cdrtools
+Ogg=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/RedDoc/Ogg
+Flac=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/RedDoc/Flac
+Lame=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/RedDoc/Lame
+Mencoder-HTML=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/RedDoc/Mencoder/html
+Mjpegtools=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/RedDoc/Mjpegtools
+Mjpegtools-HTML=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/RedDoc/Mjpegtools/html
+Sox=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/RedDoc/Sox
+Video articles=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/RedDoc/Video Audio command
+Others command=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/RedDoc/Others command
+
+[RedBookImage]
+FSF=[HOME]/redstone/FileGarden/image/book-21.png
+Articles=[HOME]/redstone/FileGarden/image/gdict-21.png
+Does Studying Economics Inhibit Cooperation=[HOME]/redstone/FileGarden/image/book-21.png
+Interview with Richard Stallman Transcript=[HOME]/redstone/FileGarden/image/book-21.png
+SCO on Free Software=[HOME]/redstone/FileGarden/image/book-21.png
+Links to Open Organisations=[HOME]/redstone/FileGarden/image/book-21.png
+
+[RedDocImage]
+Articles=[HOME]/redstone/FileGarden/image/book-21.png
+cdrtools=[HOME]/redstone/FileGarden/image/gdict-21.png
+Ogg=[HOME]/redstone/FileGarden/image/gdict-21.png
+Flac=[HOME]/redstone/FileGarden/image/gdict-21.png
+Lame=[HOME]/redstone/FileGarden/image/gdict-21.png
+Mencoder-HTML=[HOME]/redstone/FileGarden/image/gdict-21.png
+Mjpegtools=[HOME]/redstone/FileGarden/image/gdict-21.png
+Mjpegtools-HTML=[HOME]/redstone/FileGarden/image/gdict-21.png
+Sox=[HOME]/redstone/FileGarden/image/gdict-21.png
+Video articles=[HOME]/redstone/FileGarden/image/book-21.png
+Others command=[HOME]/redstone/FileGarden/image/book-21.png
+
+[Man Page]
+Man 0p=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man0p
+Man 1=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man1
+Man 1p=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man1p
+Man 2=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man2
+Man 3=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man3
+Man 3p=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man3p
+Man 4=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man4
+Man 5=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man5
+Man 6=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man6
+Man 7=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man7
+Man 8=%ExpandDirForDocumentation%/usr/dict/dump/UNIX_HOWTO_MAN/man-pages-1.67/man8
+
+[Doc BenchImage]
+SegusoLand=[HOME]/redstone/FileGarden/image/book-21.png
+OneFinger=[HOME]/redstone/FileGarden/image/book-21.png
+LogicalDesktop=[HOME]/redstone/FileGarden/image/book-21.png
+Human Interface=[HOME]/redstone/FileGarden/image/book-21.png
+SGML=[HOME]/redstone/FileGarden/image/book-21.png
+Linux articles=[HOME]/redstone/FileGarden/image/book-21.png
+XFG home site=[HOME]/redstone/FileGarden/image/book-21.png
+XFG help Doc=[HOME]/redstone/FileGarden/image/book-21.png
+XFG project site=[HOME]/redstone/FileGarden/image/book-21.png
+Component info=[HOME]/redstone/FileGarden/image/screen_green.png
+Linux HowTo=[HOME]/redstone/FileGarden/image/book-21.png
+Linux HowTo-Single=[HOME]/redstone/FileGarden/image/gdict-21.png
+Man Page=[HOME]/redstone/FileGarden/image/gdict-21.png
+RedDoc=[HOME]/redstone/FileGarden/image/gdict-21.png
+RedBook=[HOME]/redstone/FileGarden/image/gdict-21.png
+LaTeX=[HOME]/redstone/FileGarden/image/gdict-21.png
+Postscript Simple=[HOME]/redstone/FileGarden/image/book-21.png
+Postscript Book=[HOME]/redstone/FileGarden/image/book-21.png
+SGML-BSD=[HOME]/redstone/FileGarden/image/book-21.png
+XFG help site=[HOME]/redstone/FileGarden/image/book-21.png
+XFG latest release site=[HOME]/redstone/FileGarden/image/book-21.png
+
+[xfgDocumentationEXT]
+xfgManEXT=1
+xfgFilesEXT=1
+xfgSoundEXT=1
+xfgPSEXT=1
+xfgTextEXT=1
+xfgImageEXT=1
+xfgCompressionEXT=1
+xfgVideoEXT=1
+
+[xfgFileTypeExecution]
+%man%=man !in | col -bx
+%text%=me $in &
+%postscript%=gv $in &
+%adobe%=acroread $in &
+%html%=dillo $in &
+%image%=display $in &
+%dvi%=tkdvi $in &
+%folder%=dillo %in &
+%sound%=xmms -ep $in &
+%file%=me $in &
+%video%=xine -g -I -H --no-logo --no-splash --session session=0,quit ; xine -g -Z --no-logo --no-splash --loop=loop --enqueue $in -pq --session session=0,playlist=first,play &
+
+[xfgManEXT]
+man=1
+h.0p=1
+0=1
+1=1
+2=1
+3=1
+4=1
+5=1
+6=1
+7=1
+8=1
+0.gz=1
+1.GZ=1
+2.gz=1
+3.gz=1
+4.gz=1
+5.gz=1
+6.gz=1
+7.gz=1
+8.gz=1
+0p=1
+1p=1
+2p=1
+3p=1
+4p=1
+5p=1
+6p=1
+7p=1
+8p=1
+
+[xfgManEXTImage]
+man=%man%
+h.0p=%man%
+0=%man%
+1=%man%
+2=%man%
+3=%man%
+4=%man%
+5=%man%
+6=%man%
+7=%man%
+8=%man%
+0.gz=%man%
+1.GZ=%man%
+2.gz=%man%
+3.gz=%man%
+4.gz=%man%
+5.gz=%man%
+6.gz=%man%
+7.gz=%man%
+8.gz=%man%
+0p=%man%
+1p=%man%
+2p=%man%
+3p=%man%
+4p=%man%
+5p=%man%
+6p=%man%
+7p=%man%
+8p=%man%
+
+[xfgTarEXTEND]
+tar=1
+
+[xfgGzipEXTEND]
+tgz=1
+tar.gz=1
+gz=1
+
+[xfgBz2EXTEND]
+bz2=1
+tbz=1
+tar.bz=1
+
+[xfgZipEXTEND]
+zip=1
+
+[xfgRpmEXTEND]
+rpm=1
+i386.rpm=1
+
+[xfgDebEXTEND]
+deb=1
+
+[Shows only ...]
+All Files=%FileViewFilter%
+Text files=%FileViewFilter%
+Image files=%FileViewFilter%
+Sound files=%FileViewFilter%
+PS/PDF files=%FileViewFilter%
+Video files=%FileViewFilter%
+
+[Shows only ...Image]
+All Files=1
+Text files=[HOME]/redstone/FileGarden/image/document2-21.png
+Image files=[HOME]/redstone/FileGarden/image/image-21.png
+Sound files=[HOME]/redstone/FileGarden/image/sound-21.png
+PS/PDF files=[HOME]/redstone/FileGarden/image/postscript-21.png
+Video files=[HOME]/redstone/FileGarden/image/video-21.png
+
+[xfgTextEXT]
+TXT=1
+C=1
+cpp=1
+pas=1
+conf=1
+rec=1
+ini=1
+cfg=1
+log=1
+html=1
+htm=1
+xml=1
+dpk=1
+bpl=1
+sgml=1
+sgm=1
+tex=1
+dvi=1
+
+[xfgTextEXTImage]
+TXT=%text%
+C=%text%
+cpp=%text%
+pas=%text%
+conf=%text%
+rec=%text%
+ini=%text%
+cfg=%text%
+log=%text%
+html=%html%
+htm=%html%
+xml=%html%
+dpk=%text%
+bpl=%text%
+sgml=%html%
+sgm=%html%
+tex=%tex%
+dvi=%dvi%
+
+[xfgDVIEXT]
+dvi=1
+
+[xfgFileTypeMerge]
+xfgFilesEXT=1
+xfgSoundEXT=1
+xfgPSEXT=1
+xfgTextEXT=1
+xfgImageEXT=1
+xfgCompressionEXT=1
+xfgManEXT=1
+xfgVideoEXT=1
+
+[xfgFileTypeNormalIconImage]
+%broken%=[HOME]/redstone/FileGarden/image/file_broken-25.png
+%folder%=[HOME]/redstone/FileGarden/image/folder-24.png
+%file%=[HOME]/redstone/FileGarden/image/mime_empty.png
+%executables%=[HOME]/redstone/FileGarden/image/executable-25.png
+%image%=[HOME]/redstone/FileGarden/image/image.png
+%postscript%=[HOME]/redstone/FileGarden/image/postscript.png
+%sound%=[HOME]/redstone/FileGarden/image/sound.png
+%text%=[HOME]/redstone/FileGarden/image/document2.png
+%adobe%=[HOME]/redstone/FileGarden/image/pdf.png
+%compression%=[HOME]/redstone/FileGarden/image/gnome-package-25.png
+%html%=[HOME]/redstone/FileGarden/image/html.png
+%socket%=[HOME]/redstone/FileGarden/image/socket-25.png
+%block%=[HOME]/redstone/FileGarden/image/blockdev-25.png
+%character%=[HOME]/redstone/FileGarden/image/chardev-25.png
+%fifo%=[HOME]/redstone/FileGarden/image/gnome-fs-fifo.png
+%man%=[HOME]/redstone/FileGarden/image/gdict-25.png
+%video%=[HOME]/redstone/FileGarden/image/video-25.png
+%tex%=[HOME]/redstone/FileGarden/image/TeX-25.png
+%dvi%=[HOME]/redstone/FileGarden/image/dvi-25.png
+
+[xfgFileTypeNormalIcon]
+%folder%=1
+%file%=1
+%broken%=1
+%executables%=1
+%image%=1
+%postscript%=1
+%sound%=1
+%text%=1
+%adobe%=1
+%compression%=1
+%html%=1
+%socket%=1
+%block%=1
+%character%=1
+%fifo%=1
+%man%=1
+%tex%=1
+%dvi%=1
+
+[xfgFileTypeLinkIcon]
+%folder%=1
+%file%=1
+%broken%=1
+%executables%=1
+%image%=1
+%postscript%=1
+%sound%=1
+%text%=1
+%adobe%=1
+%compression%=1
+%html%=1
+%socket%=1
+%block%=1
+%character%=1
+%fifo%=1
+%man%=1
+%tex%=1
+%dvi%=1
+
+[xfgFileTypeLinkIconImage]
+%broken%=[HOME]/redstone/FileGarden/image/file_broken-25.png
+%folder%=[HOME]/redstone/FileGarden/image/folder-24-link.png
+%file%=[HOME]/redstone/FileGarden/image/mime_empty-link.png
+%executables%=[HOME]/redstone/FileGarden/image/executable-25-link.png
+%image%=[HOME]/redstone/FileGarden/image/image-link.png
+%postscript%=[HOME]/redstone/FileGarden/image/postscript-link.png
+%sound%=[HOME]/redstone/FileGarden/image/sound-link.png
+%text%=[HOME]/redstone/FileGarden/image/document2-link.png
+%adobe%=[HOME]/redstone/FileGarden/image/pdf-link.png
+%compression%=[HOME]/redstone/FileGarden/image/gnome-package-25-link.png
+%html%=[HOME]/redstone/FileGarden/image/html-link.png
+%socket%=[HOME]/redstone/FileGarden/image/socket-25-link.png
+%block%=[HOME]/redstone/FileGarden/image/blockdev-25-link.png
+%character%=[HOME]/redstone/FileGarden/image/chardev-25-link.png
+%fifo%=[HOME]/redstone/FileGarden/image/gnome-fs-fifo-link.png
+%man%=[HOME]/redstone/FileGarden/image/gdict-25-link.png
+%video%=[HOME]/redstone/FileGarden/image/video-25-link.png
+%tex%=[HOME]/redstone/FileGarden/image/TeX-25.png
+%dvi%=[HOME]/redstone/FileGarden/image/dvi-25.png
+
+[xfgFileInputInfoMenu]
+Select all=%BUILTIN%
+Invert Select=%BUILTIN%
+Refresh=%BUILTIN%
+
+[xfgFileInputInfoMenuImage]
+Select all=1
+Invert Select=1
+Refresh=1
+
+[xfgFileInputTop]
+Up=%BUILTIN%
+Home=%BUILTIN%
+Shows hidden files=%BUILTIN%
+Don't show hidden files=%BUILTIN%
+Search tool=%VCLINTERNAL%
+Refresh=%BUILTIN%
+Image Thumbnail Mode=%BUILTIN%
+Copy=%BUILTIN%
+Create symlink=%BUILTIN%
+Move=%BUILTIN%
+Delete=%BUILTIN%
+Default resize=%BUILTIN%
+Shift to bottom=%BUILTIN%
+Editor Mode=%BUILTIN%
+
+[xfgFileInputTopImage]
+Up=[HOME]/redstone/FileGarden/image/up.png
+Home=[HOME]/redstone/FileGarden/image/home.png
+Shows hidden files=[HOME]/redstone/FileGarden/image/services.png
+Don't show hidden files=[HOME]/redstone/FileGarden/image/login-photo.png
+Search tool=[HOME]/redstone/FileGarden/image/find.png
+Refresh=[HOME]/redstone/FileGarden/image/bell.png
+Image Thumbnail Mode=[HOME]/redstone/FileGarden/image/view_icon.png
+Default resize=[HOME]/redstone/FileGarden/image/sawfish-placement.png
+Shift to bottom=[HOME]/redstone/FileGarden/image/panel-logout.png
+Delete=[HOME]/redstone/FileGarden/image/file_broken.png
+Editor Mode=[HOME]/redstone/FileGarden/image/folder_blue.png
+Copy=[HOME]/redstone/FileGarden/image/copy.png
+Create symlink=[HOME]/redstone/FileGarden/image/linkcopy.png
+Move=[HOME]/redstone/FileGarden/image/cut.png
+
+[As Email]
+As New Text Email=%DumpToVCL%
+As Email Attachment=%DumpToVCL%
+
+[xfgFileInputMenu]
+Open File=%CreateNew%
+My Table=%xfgOnMyTable%xfgFileInputMenuOnMyTable
+Package ...=%CreateNew%
+Utility=%CreateNew%
+As Email=%CreateNew%
+------seperator90=1
+Select all=%BUILTIN%
+Invert Select=%BUILTIN%
+List Directory=%xfgListDirCommand%
+New directory=%BUILTIN%
+-------seperator999=1
+Rename=%CREATENEW%
+Delete=%BUILTIN%
+Recover trash=%BUILTIN%
+Empty trash bin=%BUILTIN%
+---seperator9=1
+File info=1
+
+[Sound Tools]
+Play MusicCD=%DoListCustomCommand%GetCDTrack
+Stop playing MusicCD=%WorkShellFile%
+Eject MusicCD=%WorkShellFile%
+---seperator94=1
+Play sound with Xine=xine -g -I -H --no-logo --no-splash --session session=0,quit ; xine -g -Z --no-logo --no-splash --loop=loop --enqueue $in -pq --session session=0,playlist=first,play &
+Play sound with XMMS=xmms -ep $in &
+-----------seperator400=1
+Convert CD track to OGG=%DoListCustomCommand%GetCDTrack
+Convert CD track to Flac=%DoListCustomCommand%GetCDTrack
+Convert CD track to Wave=%DoListCustomCommand%GetCDTrack
+Extract multiple CD tracks=%WorkShellFile%
+-------seperator4=1
+OGG Bench=%CREATENEW%
+Flac Bench=%CREATENEW%
+MP3 Bench=%CREATENEW%
+-----------seperator400=1
+Wave tools=%WorkShellFile%
+Convert sound to Wave=sox %in %out.wav &
+Join multiple Wave files=%WorkShellFile%
+Encode Wave files to movie audio (Mp2)=%WorkShellFile%
+
+[OGG Bench]
+Convert Wave / Aiff to OGG=%WorkShellFile%
+Convert OGG to Wave=%WorkShellFile%
+
+[Flac Bench]
+Convert Wave / Aiff to Flac=%WorkShellFile%
+Convert Flac to Wave=%WorkShellFile%
+
+[MP3 Bench]
+Convert MP3 to OGG=%WorkShellFile%
+Convert MP3 to Flac=%WorkShellFile%
+Convert MP3 to Wave=%WorkShellFile%
+
+[OGG BenchImage]
+Convert OGG to Wave=[HOME]/redstone/FileGarden/image/sound-21.png
+Convert Wave / Aiff to OGG=[HOME]/redstone/FileGarden/image/sound-21.png
+
+[Flac BenchImage]
+Convert Wave / Aiff to Flac=[HOME]/redstone/FileGarden/image/sound-21.png
+Convert Flac to Wave=[HOME]/redstone/FileGarden/image/sound-21.png
+
+[MP3 BenchImage]
+Convert MP3 to OGG=[HOME]/redstone/FileGarden/image/sound-21.png
+Convert MP3 to Flac=[HOME]/redstone/FileGarden/image/sound-21.png
+Convert MP3 to Wave=[HOME]/redstone/FileGarden/image/sound-21.png
+
+[Sound ToolsImage]
+Play MusicCD=[HOME]/redstone/FileGarden/image/cdr-21.png
+Play sound with XMMS=[HOME]/redstone/FileGarden/image/sound-file-21.png
+Play sound with Xine=[HOME]/redstone/FileGarden/image/sound-file-21.png
+Convert CD track to OGG=[HOME]/redstone/FileGarden/image/convert-sound-21.png
+Convert CD track to Flac=[HOME]/redstone/FileGarden/image/convert-sound-21.png
+Convert CD track to Wave=[HOME]/redstone/FileGarden/image/convert-sound-21.png
+Convert sound to Wave=[HOME]/redstone/FileGarden/image/sound-21.png
+Join multiple Wave files=[HOME]/redstone/FileGarden/image/sound-21.png
+Encode Wave files to movie audio (Mp2)=[HOME]/redstone/FileGarden/image/videodat-21.png
+Flac Bench=[HOME]/redstone/FileGarden/image/sound-file-21.png
+OGG Bench=[HOME]/redstone/FileGarden/image/sound-file-21.png
+MP3 Bench=[HOME]/redstone/FileGarden/image/sound-file-21.png
+Extract multiple CD tracks=[HOME]/redstone/FileGarden/image/convert-sound-21.png
+Wave tools=[HOME]/redstone/FileGarden/image/sound-file-21.png
+
+[Video Tools]
+Play VCD=%WorkShellFile%
+Eject VCD=%WorkShellFile%
+------seperator4000=1
+Play Enqueued video with Xine=xine -g -Z --no-logo --no-splash --loop=loop --enqueue $in -pq --session session=0,playlist=first,play &
+Play Multiple video with Xine=xine -g --no-logo --no-splash  --loop=loop %in &
+-----------seperator400=1
+Extract VCD to Mpeg=%WorkShellFile%
+Encode AVI to Mpeg=%WorkShellFile%
+------seperator4=1
+Extract VCD to images=%WorkShellFile%
+Convert AVI to images=%WorkShellFile%
+Convert images to AVI / Mpeg=%WorkShellFile%
+Extract Wave from AVI / Mpeg=%WorkShellFile%
+---seperator455=1
+Join multiple Mjepg AVI files=%WorkShellFile%
+Encode Mjpeg AVI to Mp1 / Mp2=%WorkShellFile%
+Multiplex MPEG video / audio=%WorkShellFile%
+
+[Video ToolsImage]
+Play VCD=[HOME]/redstone/FileGarden/image/videodat-21.png
+Play Enqueued video with Xine=[HOME]/redstone/FileGarden/image/videodat-21.png
+Play Multiple video with Xine=[HOME]/redstone/FileGarden/image/videodat-21.png
+Extract VCD to Mpeg=[HOME]/redstone/FileGarden/image/videodat-21.png
+Encode AVI to Mpeg=[HOME]/redstone/FileGarden/image/video-21.png
+Extract VCD to images=[HOME]/redstone/FileGarden/image/image-21.png
+Convert AVI to images=[HOME]/redstone/FileGarden/image/image-21.png
+Convert images to AVI / Mpeg=[HOME]/redstone/FileGarden/image/video-21.png
+Extract Wave from AVI / Mpeg=[HOME]/redstone/FileGarden/image/sound-21.png
+Join multiple Mjepg AVI files=[HOME]/redstone/FileGarden/image/video-21.png
+Encode Mjpeg AVI to Mp1 / Mp2=[HOME]/redstone/FileGarden/image/videodat-21.png
+Multiplex MPEG video / audio=[HOME]/redstone/FileGarden/image/videodat-21.png
+
+[xfgMenuitemCheckFileEXT]
+SAMPLE1=xfgAllFilesEXT
+SAMPLE2=xfgAllDirEXT
+View tar=xfgTarEXTEND
+View gzip=xfgGzipEXTEND
+View bz2=xfgBz2EXTEND
+View zip=xfgZipEXTEND
+View rpm=xfgRpmEXTEND
+View deb=xfgDebEXTEND
+Unpack bz2=xfgBz2EXTEND
+Unpack tar=xfgTarEXTEND
+Unpack gzip=xfgGzipEXTEND
+Unpack zip=xfgZipEXTEND
+Create=xfgAllEXT
+View text file=xfgAllEXT
+View PS=xfgPSEXT
+View PDF=xfgPSEXT
+View PDF with Acroread=xfgPDFEXT
+View Dvi=xfgDVIEXT
+View HTML=xfgAllEXT
+View Image=xfgImageEXT
+Play sound with Xine=xfgXineAudioEXT
+Play video with Xine=xfgVideoEXT
+Play video with mplayer=xfgVideoEXT
+Play sound=xfgSoundEXT
+View with Gimp=xfgImageEXT
+View with XFig=xfgAllEXT
+Rename=xfgAllEXT
+List Directory=xfgAllEXT
+Delete=xfgAllEXT
+Properties=xfgAllEXT
+ImageMagick=xfgImageEXT
+netpnm=xfgImageEXT
+View Man=xfgManEXT
+Convert Wave / Aiff to OGG=xfgWaveAiffEXT
+Convert Wave / Aiff to Flac=xfgWaveAiffEXT
+Convert sound to Wave=xfgSound2WaveEXT
+Convert MP3 to OGG=xfgMP3EXT
+Convert MP3 to Flac=xfgMP3EXT
+Join multiple Wave files=xfgWaveAiffEXT
+Encode Wave files to movie audio (Mp2)=xfgWaveAiffEXT
+Convert Flac to Wave=xfgFlacEXT
+Convert OGG to Wave=xfgOGGEXT
+Convert MP3 to Wave=xfgMP3EXT
+Encode AVI to Mpeg=xfgVideoEXT
+Convert AVI to images=xfgVideoEXT
+Extract Wave from AVI / Mpeg=xfgVideoEXT
+Join multiple Mjepg AVI files=xfgVideoEXT
+Encode Mjpeg AVI to Mp1 / Mp2=xfgVideoEXT
+
+[xfgFileInputMenuImage]
+As Email=[HOME]/redstone/FileGarden/image/Mail/mail-get-16.png
+My Table=[HOME]/redstone/FileGarden/image/desktop-21.png
+Open File=[HOME]/redstone/FileGarden/image/redhat-file-manager-21.png
+Select all=[HOME]/redstone/FileGarden/image/selectall-24.png
+Invert Select=1
+List Directory=[HOME]/redstone/FileGarden/image/services-21.png
+New directory=[HOME]/redstone/FileGarden/image/folder-21.png
+Rename=1
+Delete=[HOME]/redstone/FileGarden/image/file_broken-21.png
+Recover trash=[HOME]/redstone/FileGarden/image/gnome-unknown.png
+Empty trash bin=[HOME]/redstone/FileGarden/image/gnome-fs-trash-empty.png
+---seperator9=1
+testing=1
+Package ...=[HOME]/redstone/FileGarden/image/gnome-package-21.png
+Shows only ...=1
+Utility=[HOME]/redstone/FileGarden/image/properties-21.png
+File info=[HOME]/redstone/FileGarden/image/gnome-info.png
+
+[Create]
+Create tar=%PROC%E2A6A049-AAF8-D811-98FC-0080C8F89650
+Create gzip=%PROC%786A4189-05FA-D811-8149-0080C8F89650
+Create bz2=%PROC%C88B4889-05FA-D811-8149-0080C8F89650
+Create zip=%PROC%F25D4789-05FA-D811-8149-0080C8F89650
+
+[CreateImage]
+Create tar=1
+Create gzip=1
+Create bz2=1
+Create zip=1
+
+[Utility]
+Execute command=%WorkShellFile%
+Execute file as shell script=xterm -hold -e "sh $in ;echo ;echo ;echo ;echo End OF Command "&
+Open Xterm here=%JustExecuteThisAndDoNothingPlease%xterm
+ls dir=ls -al
+Shows only ...=%CreateNew%
+
+[UtilityImage]
+Execute command=1
+Execute file as shell script=[HOME]/redstone/FileGarden/image/gnome-monitor.png
+Open Xterm here=[HOME]/redstone/FileGarden/image/gnome-monitor.png
+List directory=1
+---seperator2=1
+ImageMagick=[HOME]/redstone/FileGarden/image/image-21.png
+netpnm=[HOME]/redstone/FileGarden/image/image-21.png
+Sound Tools=[HOME]/redstone/FileGarden/image/sound-21.png
+Video Tools=[HOME]/redstone/FileGarden/image/video-21.png
+
+[Utilities Tools]
+Mount=%CreateNew%
+Package ...=%CREATENEW%
+CDROM tray=%CREATENEW%
+Rename=%CREATENEW%
+View Man page=man %QInputDLG% | col -bx
+Execute Editor lines=%WorkShellFile%
+
+[CDROM tray]
+Eject all CDROM=%WorkShellFile%
+Close all CDROM=%WorkShellFile%
+
+[Utilities ToolsImage]
+Execute Editor lines=[HOME]/redstone/FileGarden/image/gnome-monitor.png
+Mount=[HOME]/redstone/FileGarden/image/blockdev-21.png
+Package ...=[HOME]/redstone/FileGarden/image/gnome-package-21.png
+View Man page=[HOME]/redstone/FileGarden/image/gdict-21.png
+CDROM tray=[HOME]/redstone/FileGarden/image/cdrom-tray-21.png
+Rename=[HOME]/redstone/FileGarden/image/services-21.png
+
+[xfgWaveAiffEXT]
+aiff=1
+wav=1
+wave=1
+wv=1
+wve=1
+
+[xfgMP3EXT]
+mp3=1
+
+[xfgOGGEXT]
+vorbis=1
+ogg=1
+
+[xfgFlacEXT]
+flac=1
+fla=1
+flc=1
+
+[xfgSound2WaveEXT]
+aiff=1
+al=1
+au=1
+auto=1
+avr=1
+cdr=1
+cvs=1
+dat=1
+vms=1
+gsm=1
+hcom=1
+la=1
+lu=1
+maud=1
+nul=1
+ossdsp=1
+raw=1
+sb=1
+sf=1
+sl=1
+smp=1
+sndt=1
+sph=1
+8svx=1
+sw=1
+txw=1
+ub=1
+ul=1
+uw=1
+voc=1
+wve=1
+mpa=1
+mp2=1
+
+[xfgSoundEXT]
+wav=1
+wave=1
+m3u=1
+mp3=1
+mpa=1
+mp2=1
+aiff=1
+al=1
+au=1
+auto=1
+avr=1
+cdr=1
+cvs=1
+dat=1
+vms=1
+gsm=1
+hcom=1
+la=1
+lu=1
+maud=1
+nul=1
+ossdsp=1
+raw=1
+sb=1
+sf=1
+sl=1
+smp=1
+sndt=1
+sph=1
+8svx=1
+sw=1
+txw=1
+ub=1
+ul=1
+uw=1
+voc=1
+vorbis=1
+wve=1
+ogg=1
+flac=1
+fla=1
+flc=1
+vorbis=1
+wv=1
+
+[xfgSoundEXTImage]
+mpa=%sound%
+mp2=%sound%
+wav=%sound%
+wave=%sound%
+m3u=%sound%
+mp3=%sound%
+vox=%sound%
+aiff=%sound%
+al=%sound%
+au=%sound%
+auto=%sound%
+avr=%sound%
+cdr=%sound%
+cvs=%sound%
+dat=%sound%
+vms=%sound%
+gsm=%sound%
+hcom=%sound%
+la=%sound%
+lu=%sound%
+maud=%sound%
+nul=%sound%
+ossdsp=%sound%
+raw=%sound%
+sb=%sound%
+sf=%sound%
+sl=%sound%
+smp=%sound%
+sndt=%sound%
+sph=%sound%
+8svx=%sound%
+sw=%sound%
+txw=%sound%
+ub=%sound%
+ul=%sound%
+uw=%sound%
+voc=%sound%
+vorbis=%sound%
+wve=%sound%
+ogg=%sound%
+flac=%sound%
+fla=%sound%
+flc=%sound%
+vorbis=%sound%
+wv=%sound%
+
+[xfgXineAudioEXT]
+mpa=1
+mp2=1
+wav=1
+mp3=1
+aiff=1
+al=1
+au=1
+auto=1
+avr=1
+cdr=1
+cvs=1
+dat=1
+vms=1
+gsm=1
+hcom=1
+la=1
+lu=1
+maud=1
+nul=1
+ossdsp=1
+raw=1
+sb=1
+sf=1
+sl=1
+smp=1
+sndt=1
+sph=1
+8svx=1
+sw=1
+txw=1
+ub=1
+ul=1
+uw=1
+voc=1
+vorbis=1
+wve=1
+ogg=1
+
+[xfgVideoEXT]
+wmv=1
+mpg=1
+m1v=1
+m2v=1
+mpeg=1
+ts=1
+avi=1
+asf=1
+mpv=1
+wma=1
+dat=1
+yuv=1
+
+[xfgVideoEXTImage]
+wmv=%video%
+mpg=%video%
+mpeg=%video%
+ts=%video%
+avi=%video%
+asf=%video%
+mpv=%video%
+wma=%video%
+m1v=%video%
+m2v=%video%
+yuv=%video%
+dat=%video%
+
+[ImageMagick]
+Convert Image=%PROC%3A7B9815-90FA-D811-8D8C-0080C8F89650
+Resize Image=%PROC%32D19015-90FA-D811-8D8C-0080C8F89650
+Create background canvas=%PROC%127C9A26-E419-D911-814D-0080C8F89650
+Reduce color=/usr/bin/convert -colors %QInputDLG% -dither %in %out
+MontageImages-WithFrame=%PROC%685F9515-90FA-D811-8D8C-0080C8F89650
+---seperator2=1
+Convert to XPM=/usr/bin/convert %in %out.xpm
+Convert to BMP=/usr/bin/convert %in %out.bmp
+Convert to JPEG=/usr/bin/convert %in %out.jpg
+Convert to GIF=/usr/bin/convert %in %out.gif
+Convert to EPS=/usr/bin/convert %in %out.eps
+Convert to A4 Postcript=/usr/bin/convert -page A4+0+0 %in %out.ps
+Convert to Monochrome.JPEG=/usr/bin/convert -monochrome %in %outMONO.jpg
+---seperator1=1
+MontageImages-NoFrame=/usr/bin/montage +frame +shadow +label -tile 5 -geometry 100x100+10+10 &in &outcontact.png
+Make Contact-Sheet2=/usr/bin/montage -tile 5 -bordercolor black -geometry 100x100+10+10 &in &out%QInputDLG%
+
+[ImageMagickImage]
+Convert to XPM=1
+Convert to BMP=1
+Convert to JPEG=1
+Convert to GIF=1
+Convert to A4 Postcript=[HOME]/redstone/FileGarden/image/gsview-21.png
+Convert to Monochrome.JPEG=[HOME]/redstone/FileGarden/image/image-21.png
+---seperator1=1
+Resize Image ...=1
+Reduce color=[HOME]/redstone/FileGarden/image/image-21.png
+MontageImages-NoFrame=1
+MontageImages-WithFrame=1
+Make Contact-Sheet2=1
+
+[SystemInfo]
+cpuinfo=cat /proc/cpuinfo
+devices=cat /proc/devices
+filesystems=cat /proc/filesystems
+interrupts=cat /proc/interrupts
+iomem=cat /proc/iomem
+ioports=cat /proc/ioports
+meminfo=cat /proc/meminfo
+modules=cat /proc/modules
+mounts=cat /proc/mounts
+partitions=cat /proc/partitions
+pci=cat /proc/pci
+cups access=cat /var/log/cups/access_log
+cups error=cat /var/log/cups/error_log
+bootlog=cat /var/log/boot.log
+dmesg=tail -n30 /var/log/dmesg
+messsages=tail -n20 /var/log/messages
+secure=tail -n20 /var/log/secure
+last=last | tail -n50
+who=who | tail -n50
+
+[SystemInfoImage]
+cpuinfo=[HOME]/redstone/FileGarden/image/system.png
+devices=[HOME]/redstone/FileGarden/image/system.png
+filesystems=[HOME]/redstone/FileGarden/image/system.png
+interrupts=[HOME]/redstone/FileGarden/image/system.png
+iomem=[HOME]/redstone/FileGarden/image/system.png
+ioports=[HOME]/redstone/FileGarden/image/system.png
+meminfo=[HOME]/redstone/FileGarden/image/system.png
+modules=[HOME]/redstone/FileGarden/image/system.png
+mounts=[HOME]/redstone/FileGarden/image/system.png
+partitions=[HOME]/redstone/FileGarden/image/system.png
+pci=[HOME]/redstone/FileGarden/image/system.png
+cups access=[HOME]/redstone/FileGarden/image/system.png
+cups error=[HOME]/redstone/FileGarden/image/system.png
+bootlog=[HOME]/redstone/FileGarden/image/system.png
+dmesg=[HOME]/redstone/FileGarden/image/system.png
+messsages=[HOME]/redstone/FileGarden/image/system.png
+secure=[HOME]/redstone/FileGarden/image/system.png
+last=[HOME]/redstone/FileGarden/image/system.png
+who=[HOME]/redstone/FileGarden/image/system.png
+
+[Command]
+Execute command=%REALTASK%%QInputDLG%
+Execute Editor lines=%WorkShellFile%
+Open Xterm=%WorkShellFile%
+---seperator1=1
+List Current Directory=ls -al
+Network Activity=netstat -anp
+Network Hardware Status=ifconfig
+Print System Process=ps -aux
+Disk Usage=df -am
+Memory Usage=free -m
+Device Mounted=mount
+Print ldconfig=ldconfig -p
+----------seperator6=1
+Search for RPM ...=%REALTASK%rpm -qa | grep %QInputDLG%
+tail messages=%REALTASK%tail -f --retry -n 1 /var/log/messages
+ping=%REALTASK%ping %QInputDLG%
+TCPDUMP=%REALTASK%tcpdump -l | cat
+dig=%REALTASK%dig %QInputDLG%
+Traceroute=%REALTASK%traceroute %QInputDLG%
+route=%REALTASK%route
+
+[CommandImage]
+Search for RPM ...=1
+Execute command=[HOME]/redstone/FileGarden/image/gnome-monitor.png
+Execute Editor lines=[HOME]/redstone/FileGarden/image/gnome-monitor.png
+Open Xterm=[HOME]/redstone/FileGarden/image/gnome-monitor.png
+---seperator1=1
+List Current Directory=[HOME]/redstone/FileGarden/image/system.png
+Network Activity=[HOME]/redstone/FileGarden/image/system.png
+Network Hardware Status=[HOME]/redstone/FileGarden/image/system.png
+Print System Process=[HOME]/redstone/FileGarden/image/system.png
+Memory Usage=[HOME]/redstone/FileGarden/image/system.png
+Device Mounted=[HOME]/redstone/FileGarden/image/system.png
+Disk Usage=[HOME]/redstone/FileGarden/image/system.png
+Print ldconfig=[HOME]/redstone/FileGarden/image/system.png
+----------seperator6=1
+tail messages=1
+ping=1
+TCPDUMP=1
+dig=1
+Traceroute=1
+route=[HOME]/redstone/FileGarden/image/system.png
+
+[MenuViewWith]
+View Man=man !in | col -bx
+View Dvi=tkdvi $in &
+View text file=me $in &
+View PS=gv $in &
+View PDF=acroread $in &
+View HTML=dillo $in &
+View Image=display $in &
+Play sound with Xine=xine -g -I -H --no-logo --no-splash --session session=0,quit ; xine -g -Z --no-logo --no-splash --loop=loop --enqueue -pq --session session=0,playlist=first,play $in &
+Play video with Xine=xine -g -I -H --no-logo --no-splash --session session=0,quit ; xine -g -Z --no-logo --no-splash --loop=loop --enqueue -pq --session session=0,playlist=first,play $in&
+Play video with mplayer=mplayer $in &
+Play sound=xmms -ep $in &
+View with Gimp=gimp $in &
+View with XFig=xfig $in &
+View PDF with Acroread=acroread $in &
+
+[MenuViewWithImage]
+View Man=none
+View Dvi=none
+View text file=none
+View PS=none
+View PDF=none
+View HTML=none
+View Image=none
+Play sound with Xine=none
+Play video with Xine=none
+Play video with mplayer=none
+Play sound=none
+View with Gimp=none
+View with XFig=none
+View PDF with Acroread=none
+
+[xfgSpeedButton]
+xfgopen=%BUILTIN%
+xfgsaveas=%BUILTIN%
+xfgsave=%BUILTIN%
+xfgfont=%BUILTIN%
+xfgclear=%BUILTIN%
+Search tool=%VCLINTERNAL%
+Copy to file commander=%BUILTIN%
+Create symlink to file commander=%BUILTIN%
+Move to file commander=%BUILTIN%
+Delete files in filelist=%BUILTIN%
+View text file=%MenuViewWith%
+View PS=%MenuViewWith%
+View HTML=%MenuViewWith%
+View PDF=%MenuViewWith%
+View with Gimp=%MenuViewWith%
+View Dvi=%MenuViewWith%
+Play sound=%MenuViewWith%
+Play video with Xine=%MenuViewWith%
+
+[xfgSpeedButtonImage]
+xfgopen=[HOME]/redstone/FileGarden/image/redhat-file-manager.png
+xfgsaveas=[HOME]/redstone/FileGarden/image/saveas.png
+xfgsave=[HOME]/redstone/FileGarden/image/save.png
+xfgfont=[HOME]/redstone/FileGarden/image/fonts.png
+xfgclear=[HOME]/redstone/FileGarden/image/clear.png
+Search tool=[HOME]/redstone/FileGarden/image/find.png
+Copy to file commander=[HOME]/redstone/FileGarden/image/copy.png
+Create symlink to file commander=[HOME]/redstone/FileGarden/image/linkcopy.png
+Move to file commander=[HOME]/redstone/FileGarden/image/cut.png
+Delete files in filelist=[HOME]/redstone/FileGarden/image/file_broken.png
+View text file=[HOME]/redstone/FileGarden/image/me.png
+View PS=[HOME]/redstone/FileGarden/image/gsview.png
+View HTML=[HOME]/redstone/FileGarden/image/www.png
+View PDF=[HOME]/redstone/FileGarden/image/acroread.png
+View with Gimp=[HOME]/redstone/FileGarden/image/gimp.png
+View Dvi=[HOME]/redstone/FileGarden/image/book-32.png
+Play sound=[HOME]/redstone/FileGarden/image/cdr-32.png
+Play video with Xine=[HOME]/redstone/FileGarden/image/videodat-32.png
+
+[xfgFileTypeIconBuiltin]
+%broken%=1
+%linkbroken%=2
+%folder%=3
+%linkfolder%=4
+%file%=5
+%linkfile%=6
+%executables%=7
+%linkexecutables%=8
+%image%=9
+%linkimage%=10
+%postscript%=11
+%linkpostscript%=12
+%sound%=13
+%linksound%=14
+%text%=15
+%linktext%=16
+%adobe%=17
+%linkadobe%=18
+%compression%=19
+%linkcompression%=20
+%html%=21
+%linkhtml%=22
+%socket%=23
+%linksocket%=24
+%block%=25
+%linkblock%=26
+%character%=27
+%linkcharacter%=28
+%fifo%=29
+%linkfifo%=30
+%man%=31
+%linkman%=32
+%video%=33
+%linkvideo%=34
+%tex%=35
+%linktex%=36
+%dvi%=37
+%linkdvi%=38
+
+[xfgFileTypeIconImage]
+%broken%=[HOME]/redstone/FileGarden/image/file_broken-25.png
+%linkbroken%=[HOME]/redstone/FileGarden/image/file_broken-25.png
+%folder%=[HOME]/redstone/FileGarden/image/folder-24.png
+%linkfolder%=[HOME]/redstone/FileGarden/image/folder-24-link.png
+%file%=[HOME]/redstone/FileGarden/image/mime_empty.png
+%linkfile%=[HOME]/redstone/FileGarden/image/mime_empty-link.png
+%executables%=[HOME]/redstone/FileGarden/image/executable-25.png
+%linkexecutables%=[HOME]/redstone/FileGarden/image/executable-25-link.png
+%image%=[HOME]/redstone/FileGarden/image/image.png
+%linkimage%=[HOME]/redstone/FileGarden/image/image-link.png
+%postscript%=[HOME]/redstone/FileGarden/image/postscript.png
+%linkpostscript%=[HOME]/redstone/FileGarden/image/postscript-link.png
+%sound%=[HOME]/redstone/FileGarden/image/sound.png
+%linksound%=[HOME]/redstone/FileGarden/image/sound-link.png
+%text%=[HOME]/redstone/FileGarden/image/document2.png
+%linktext%=[HOME]/redstone/FileGarden/image/document2-link.png
+%adobe%=[HOME]/redstone/FileGarden/image/pdf.png
+%linkadobe%=[HOME]/redstone/FileGarden/image/pdf-link.png
+%compression%=[HOME]/redstone/FileGarden/image/gnome-package-25.png
+%linkcompression%=[HOME]/redstone/FileGarden/image/gnome-package-25-link.png
+%html%=[HOME]/redstone/FileGarden/image/html.png
+%linkhtml%=[HOME]/redstone/FileGarden/image/html-link.png
+%socket%=[HOME]/redstone/FileGarden/image/socket-25.png
+%linksocket%=[HOME]/redstone/FileGarden/image/socket-25-link.png
+%block%=[HOME]/redstone/FileGarden/image/blockdev-25.png
+%linkblock%=[HOME]/redstone/FileGarden/image/blockdev-25-link.png
+%character%=[HOME]/redstone/FileGarden/image/chardev-25.png
+%linkcharacter%=[HOME]/redstone/FileGarden/image/chardev-25-link.png
+%fifo%=[HOME]/redstone/FileGarden/image/gnome-fs-fifo.png
+%linkfifo%=[HOME]/redstone/FileGarden/image/gnome-fs-fifo-link.png
+%man%=[HOME]/redstone/FileGarden/image/gdict-25.png
+%linkman%=[HOME]/redstone/FileGarden/image/gdict-25-link.png
+%video%=[HOME]/redstone/FileGarden/image/video-25.png
+%linkvideo%=[HOME]/redstone/FileGarden/image/video-25-link.png
+%tex%=[HOME]/redstone/FileGarden/image/TeX-25.png
+%linktex%=[HOME]/redstone/FileGarden/image/TeX-25.png
+%dvi%=[HOME]/redstone/FileGarden/image/dvi-25.png
+%linkdvi%=[HOME]/redstone/FileGarden/image/dvi-25.png
+rpm=%compression%
+sh=%executables%
+deb=%compression%
+wav=%sound%
+wave=%sound%
+m3u=%sound%
+mp3=%sound%
+mpa=%sound%
+mp2=%sound%
+aiff=%sound%
+al=%sound%
+au=%sound%
+auto=%sound%
+avr=%sound%
+cdr=%sound%
+cvs=%sound%
+dat=%video%
+vms=%sound%
+gsm=%sound%
+hcom=%sound%
+la=%sound%
+lu=%sound%
+maud=%sound%
+nul=%sound%
+ossdsp=%sound%
+raw=%sound%
+sb=%sound%
+sf=%sound%
+sl=%sound%
+smp=%sound%
+sndt=%sound%
+sph=%sound%
+8svx=%sound%
+sw=%sound%
+txw=%sound%
+ub=%sound%
+ul=%sound%
+uw=%sound%
+voc=%sound%
+vorbis=%sound%
+wve=%sound%
+ogg=%sound%
+flac=%sound%
+fla=%sound%
+flc=%sound%
+wv=%sound%
+eps=%postscript%
+eps2=%postscript%
+eps3=%postscript%
+epsf=%postscript%
+epsi=%postscript%
+ept=%postscript%
+ps=%postscript%
+ps3=%postscript%
+ps2=%postscript%
+pdf=%adobe%
+txt=%text%
+c=%text%
+cpp=%text%
+pas=%text%
+conf=%text%
+rec=%text%
+ini=%text%
+cfg=%text%
+log=%text%
+html=%html%
+htm=%html%
+xml=%html%
+dpk=%text%
+bpl=%text%
+sgml=%html%
+sgm=%html%
+tex=%tex%
+dvi=%dvi%
+bmp=%image%
+dcm=%image%
+dcx=%image%
+dib=%image%
+fax=%image%
+fits=%image%
+g3=%image%
+gif=%image%
+gif87=%image%
+gray=%image%
+icm=%image%
+ico=%image%
+icon=%image%
+jp2=%image%
+jpeg=%image%
+jpg=%image%
+logo=%image%
+miff=%image%
+mono=%image%
+palm=%image%
+pbm=%image%
+pcd=%image%
+pcds=%image%
+pcl=%image%
+pct=%image%
+pcx=%image%
+pdb=%image%
+pgm=%image%
+pict=%image%
+pm=%image%
+png=%image%
+pnm=%image%
+ppm=%image%
+psd=%image%
+ras=%image%
+sgi=%image%
+sun=%image%
+svg=%image%
+tga=%image%
+tif=%image%
+tiff=%image%
+uil=%image%
+xpm=%image%
+wmf=%image%
+wpg=%image%
+x=none
+xbm=%image%
+xcf=%image%
+xwd=%image%
+tar.gz=%compression%
+tar=%compression%
+gz=%compression%
+zip=%compression%
+tgz=%compression%
+bz2=%compression%
+tbz=%compression%
+man=%man%
+h.0p=%man%
+0=%man%
+1=%man%
+2=%man%
+3=%man%
+4=%man%
+5=%man%
+6=%man%
+7=%man%
+8=%man%
+0.gz=%man%
+1.gz=%man%
+2.gz=%man%
+3.gz=%man%
+4.gz=%man%
+5.gz=%man%
+6.gz=%man%
+7.gz=%man%
+8.gz=%man%
+0p=%man%
+1p=%man%
+2p=%man%
+3p=%man%
+4p=%man%
+5p=%man%
+6p=%man%
+7p=%man%
+8p=%man%
+wmv=%video%
+mpg=%video%
+m1v=%video%
+m2v=%video%
+mpeg=%video%
+ts=%video%
+avi=%video%
+asf=%video%
+mpv=%video%
+wma=%video%
+yuv=%video%
+
+[WorkShellFile]
+Execute Editor lines=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertXFGCommandTag
+Selection as File location=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertXFGCommandTag
+Selection as Editor link=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertXFGCommandTag
+Selection as File link=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertXFGCommandTag
+Selection as HTML link=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertXFGCommandTag
+Selection as HTML link [ Opera ]=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertXFGCommandTag
+Selection as PDF link=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertXFGCommandTag
+Selection as Postscript link=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertXFGCommandTag
+Selection as DVI link=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertXFGCommandTag
+Selection as Image link=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertXFGCommandTag
+Selection as Sound link=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertXFGCommandTag
+Selection as Enqueued Video link=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertXFGCommandTag
+Selection as Multiple Video link=%GetCustomCommand%XFGMemoInsertAtLine%GetValue%XFGMemoInsertXFGCommandTag
+Mount HDE3=mount /dev/hde3 /mnt/rw-01
+UMOUNT HDE3=umount /dev/hde3
+Mount HDE4=mount /dev/hde4 /mnt/rw-01
+Umount HDE4=umount /dev/hde4
+Mount HDE5=mount /dev/hde5 /mnt/rw-01
+UMOUNT HDE5=umount /dev/hde5
+Mount HDE6=mount /dev/hde6 /mnt/rw-01
+Umount HDE6=umount /dev/hde6
+MOUNT HDE7=mount /dev/hde7 /mnt/rw-01
+Umount HDE7=umount /dev/hde7
+mount hde8=mount /dev/hde8 /mnt/rw-02
+umount hde8=umount /dev/hde8
+mount hde9=mount /dev/hde9 /mnt/rw-01
+umount hde9=umount /dev/hde9
+Unpack bz2=tar -xjf %in
+Unpack tar=tar -xf %in
+Unpack gzip=tar -xzf %in
+Unpack zip=unzip -qq -o %in
+View tar=tar -tvf !in
+View gzip=tar -tvzf !in
+View bz2=tar -tvjf !in
+View zip=unzip -vv !in
+Create tar=tar -cf &outnew.tar &in
+Create gzip=tar -czf &outnew.tar.gz &in
+Create bz2=tar -jcf &outnew.bz2 &in
+Create zip=zip -r &outnew.zip &in
+View rpm=rpm -qlp !in
+View deb=dpkg-deb -c !in
+View Man=man !in | col -bx
+XXXView Man=groff -t -e -mandoc -Tascii !in | col -bx
+ls dir=ls -al %in
+Open Xterm=%JustExecuteThisAndDoNothingPlease%xterm
+Open Xterm here=%JustExecuteThisAndDoNothingPlease%xterm
+Execute command=%REALTASK%%QInputDLG%
+Stop playing MusicCD=%JustExecuteThisAndDoNothingPlease%cdplay -c %GetCustomCommand%GetPlayCDROM stop
+Eject MusicCD=%JustExecuteThisAndDoNothingPlease%eject %GetCustomCommand%GetPlayCDROM
+Play MusicCD=cdplay -c %GetCustomCommand%GetPlayCDROM play %GetCustomCommand%GetCaption &
+Play VCD=%JustExecuteThisAndDoNothingPlease%xine -g -H --no-logo --no-splash --session session=0,quit ; xine -g -Z --no-logo --no-splash --loop=loop -pq --session session=0,playlist=first,play,mrl=vcd://%GetCustomCommand%GetPlayCDROM@
+Play VCD track ...=xine -g -I -H --no-logo --no-splash --session session=0,quit ; xine -g --no-logo --no-splash --loop=loop -pq --session session=0,playlist=first,play,mrl=vcd://%GetCustomCommand%GetPlayCDROM@T%GetCaption% &
+Eject VCD=%JustExecuteThisAndDoNothingPlease%eject %GetCustomCommand%GetPlayCDROM
+Convert CD track to OGG=%PROC%2CF1D359-8702-D911-86FE-0080C8F89650
+Convert CD track to Flac=%PROC%4CE50159-8702-D911-86FE-0080C8F89650
+Convert CD track to Wave=%PROC%C6779A26-E419-D911-814D-0080C8F89650
+Convert Wave / Aiff to OGG=%PROC%2EEFD359-8702-D911-86FE-0080C8F89650
+Convert Wave / Aiff to Flac=%PROC%D0EDD359-8702-D911-86FE-0080C8F89650
+Convert MP3 to OGG=%PROC%BAEAD359-8702-D911-86FE-0080C8F89650
+Convert MP3 to Flac=%PROC%BEF0D359-8702-D911-86FE-0080C8F89650
+Convert sound to Wave=sox %in %out.wav &
+Extract VCD to Mpeg=%PROC%A4E70159-8702-D911-86FE-0080C8F89650
+Encode AVI to Mpeg=%PROC%A6EFD359-8702-D911-86FE-0080C8F89650
+Extract VCD to images=%PROC%1CE80159-8702-D911-86FE-0080C8F89650
+Convert images to AVI / Mpeg=%PROC%14F0D359-8702-D911-86FE-0080C8F89650
+Convert AVI to images=%PROC%20E90159-8702-D911-86FE-0080C8F89650
+Extract Wave from AVI / Mpeg=%PROC%A4F8D4BC-AF14-D911-85EE-0080C8F89650
+Convert OGG to Wave=%PROC%A0BD05BC-AF14-D911-85EE-0080C8F89650
+Convert Flac to Wave=%PROC%56F1D4BC-AF14-D911-85EE-0080C8F89650
+Convert MP3 to Wave=%PROC%3AF9D4BC-AF14-D911-85EE-0080C8F89650
+Encode Wave files to movie audio (Mp2)=%PROC%96B805BC-AF14-D911-85EE-0080C8F89650
+Join multiple Wave files=%PROC%B8B905BC-AF14-D911-85EE-0080C8F89650
+Join multiple Mjepg AVI files=%PROC%D8749A26-E419-D911-814D-0080C8F89650
+Encode Mjpeg AVI to Mp1 / Mp2=%PROC%72F3D4BC-AF14-D911-85EE-0080C8F89650
+Multiplex MPEG video / audio=%PROC%88F6D4BC-AF14-D911-85EE-0080C8F89650
+Wave tools=%PROC%5C7D9A26-E419-D911-814D-0080C8F89650
+Extract multiple CD tracks=%PROC%12E24A29-E419-D911-814D-0080C8F89650
+SSSSvcd:///dev/cdrom2@=1
+SSPlay VCD=%JustExecuteThisAndDoNothingPlease%xine -g -I -H --no-logo --no-splash --session session=0,quit ; xine -g -Z --no-logo --no-splash --loop=loop -s VCD -pq --session session=0,playlist=first,play &
+XXXXXXXXXXConvert CD track to OGG=cdda2wav -D %GetCustomCommand%GetPlayCDROM -x -H -t %GetCustomCommand%GetCaption -q -v disable -O wav %GetCustomCommand%GetUserDataDir%GetCustomCommand%GetCaptionToBeDeleted.wav ; oggenc %GetCustomCommand%GetUserDataDir%GetCustomCommand%GetCaptionToBeDeleted.wav -o %GetCustomCommand%GetCurrentDir%GetCustomCommand%GetCaption.ogg -t %GetCustomCommand%GetCaption -q 4 ; rm %GetCustomCommand%GetUserDataDir%GetCustomCommand%GetCaptionToBeDeleted.wav &
+XXXXXXXXXXConvert CD track to Flac=cdda2wav -D %GetCustomCommand%GetPlayCDROM -x -H -t %GetCustomCommand%GetCaption -q -v disable -O wav %GetCustomCommand%GetUserDataDir%GetCustomCommand%GetCaptionToBeDeleted.wav ; flac %GetCustomCommand%GetUserDataDir%GetCustomCommand%GetCaptionToBeDeleted.wav -V -o %GetCustomCommand%GetCurrentDir%GetCustomCommand%GetCaption.flac ; rm %GetCustomCommand%GetUserDataDir%GetCustomCommand%GetCaptionToBeDeleted.wav &
+XXXXXXXXXXConvert CD track to Wave=cdda2wav -D %GetCustomCommand%GetPlayCDROM -x -H -t %GetCustomCommand%GetCaption -q -v disable -O wav %GetCustomCommand%GetCurrentDir%GetCustomCommand%GetCaption.wav &
+testing=%PROC%4C4F9D49-AAF8-D811-98FC-0080C8F89650
+Save Editor text as LaTeX=%PROC%88E44A29-E419-D911-814D-0080C8F89650
+Convert text files to LaTeX=%PROC%66E34A29-E419-D911-814D-0080C8F89650
+Convert DVI to Postscript=%PROC%88799A26-E419-D911-814D-0080C8F89650
+Eject all CDROM=%JustExecuteThisAndDoNothingPlease%%GetCustomCommand%EjectAllCD
+Close all CDROM=%JustExecuteThisAndDoNothingPlease%%GetCustomCommand%CloseAllCD
+Make LaTeX Index=%RunMessage%echo "Making TeX index --- $in ";makeindex *.idx
+Convert LaTeX files to DVI=%RunMessage%latex -interaction=nonstopmode "%in"
+Convert LaTeX files to PDF (pdfTeX)=%RunMessage%pdftex -interaction=nonstopmode -ini -fmt=pdflatex latex.ltx;pdftex &pdflatex "%in"
+
+[WorkShellFileImage]
+Execute Editor lines=none
+Selection as File location=none
+Selection as Editor link=none
+Selection as File link=none
+Selection as HTML link=none
+Selection as PDF link=none
+Selection as Postscript link=none
+Selection as DVI link=none
+Selection as Image link=none
+Selection as Sound link=none
+Selection as Video link=none
+Mount HDE3=none
+UMOUNT HDE3=none
+Mount HDE4=none
+Umount HDE4=none
+Mount HDE5=none
+UMOUNT HDE5=none
+Mount HDE6=none
+Umount HDE6=none
+MOUNT HDE7=none
+Umount HDE7=none
+mount hde8=none
+umount hde8=none
+mount hde9=none
+umount hde9=none
+Unpack bz2=none
+Unpack tar=none
+Unpack gzip=none
+Unpack zip=none
+View tar=none
+View gzip=none
+View bz2=none
+View zip=none
+Create tar=none
+Create gzip=none
+Create bz2=none
+Create zip=none
+View rpm=none
+View deb=none
+View Man=none
+XXXView Man=none
+ls dir=none
+Open Xterm=none
+Open Xterm here=none
+Execute command=none
+Stop playing MusicCD=none
+Eject MusicCD=none
+Play MusicCD=none
+Play VCD=none
+Play VCD track ...=none
+Eject VCD=none
+Convert CD track to OGG=none
+Convert CD track to Flac=none
+Convert CD track to Wave=none
+Convert Wave / Aiff to OGG=none
+Convert Wave / Aiff to Flac=none
+Convert MP3 to OGG=none
+Convert MP3 to Flac=none
+Convert sound to Wave=none
+Extract VCD to Mpeg=none
+Encode AVI to Mpeg=none
+Extract VCD to images=none
+Convert images to AVI / Mpeg=none
+Convert AVI to images=none
+Extract Wave from AVI / Mpeg=none
+Convert OGG to Wave=none
+Convert Flac to Wave=none
+Convert MP3 to Wave=none
+Encode Wave files to movie audio (Mp2)=none
+Join multiple Wave files=none
+Join multiple Mjepg AVI files=none
+Encode Mjpeg AVI to Mp1 / Mp2=none
+Multiplex MPEG video / audio=none
+Wave tools=none
+Extract multiple CD tracks=none
+SSSSvcd:///dev/cdrom2@=none
+SSPlay VCD=none
+XXXXXXXXXXConvert CD track to OGG=none
+XXXXXXXXXXConvert CD track to Flac=none
+XXXXXXXXXXConvert CD track to Wave=none
+testing=none
+Save Editor text as LaTeX=none
+Convert text files to LaTeX=none
+Convert DVI to Postscript=none
+Eject all CDROM=none
+Close all CDROM=none
+Make LaTeX Index=none
+Convert LaTeX files to DVI=none
+Convert LaTeX files to PDF (pdfTeX)=none
+
+[Open File]
+Manage FileManager FileView=%VCLINTERNAL%
+---seperator94=1
+View text file=%MenuViewWith%
+View PS=%MenuViewWith%
+View PDF=%MenuViewWith%
+View Dvi=%MenuViewWith%
+View HTML=%MenuViewWith%
+View Image=%MenuViewWith%
+Play sound=%MenuViewWith%
+Play sound with Xine=%MenuViewWith%
+Play video with Xine=%MenuViewWith%
+Play video with mplayer=%MenuViewWith%
+------seperator904=1
+View Man=%MenuViewWith%
+View with Gimp=%MenuViewWith%
+
+[Open FileImage]
+Manage FileManager FileView=[HOME]/redstone/FileGarden/image/gnome-settings-21.png
+---seperator94=none
+View text file=[HOME]/redstone/FileGarden/image/me-21.png
+View PS=[HOME]/redstone/FileGarden/image/gsview-21.png
+View PDF=[HOME]/redstone/FileGarden/image/acroread-21.png
+View Dvi=[HOME]/redstone/FileGarden/image/dvi-25.png
+View HTML=[HOME]/redstone/FileGarden/image/www-21.png
+View Image=[HOME]/redstone/FileGarden/image/image-21.png
+Play sound=[HOME]/redstone/FileGarden/image/sound-file-21.png
+Play sound with Xine=[HOME]/redstone/FileGarden/image/sound-file-21.png
+Play video with Xine=[HOME]/redstone/FileGarden/image/video-21.png
+Play video with mplayer=[HOME]/redstone/FileGarden/image/video-21.png
+------seperator904=none
+View Man=[HOME]/redstone/FileGarden/image/gdict-21.png
+View with Gimp=[HOME]/redstone/FileGarden/image/gimp-21.png
+
+[defaultviewfile]
+Open File=1
+--------------=1
+xfgMenuitemCheckFileEXT=1
+WorkShellFile=1
+MenuViewWith=1
+
+[IndependentComponentPanel]
+MailPanelMessage=1
+MailPanelFolder=1
+

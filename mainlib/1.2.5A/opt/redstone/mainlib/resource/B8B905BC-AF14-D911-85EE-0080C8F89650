@@ -1,0 +1,49 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Join multiple Wave files ...
+FrameLabel= Join multiple Wave files ...
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=NONE
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Output name=edit=none
+View messages=checkbox=true=%RunMessage%
+
+[VALUE]
+cmd=%View messages%shntool join -prepad -postpad -stdout &in > &out%Output name%.wav &
+
+[DefaultValue]
+
+[ActualValue]
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+VCD PAL (Mpeg movie)=
+VCD NTSC (Mpeg movie)=
+VCD SECAM (Mpeg movie)=
+VCD FILM (Mpeg movie)=
+SVCD PAL (Mpeg movie)=
+SVCD NTSC (Mpeg movie)=
+SVCD SECAM (Mpeg movie)=
+SVCD FILM (Mpeg movie)=
+Software PAL (Mpeg movie)=
+Software NTSC (Mpeg movie)=
+Software SECAM (Mpeg movie)=
+Software FILM (Mpeg movie)=
+Broadband 600K (Mpeg movie)=
+Broadband 384K (Mpeg movie)=
+Narrowband 128K (Mpeg movie)=

@@ -1,0 +1,34 @@
+[XFG_advance_setup]
+Save memo=[HOME]/redstone/FileGarden/image/saveas.png
+Load Default=[HOME]/redstone/FileGarden/image/find.png
+Load From File=[HOME]/redstone/FileGarden/image/find.png
+Backup=[HOME]/redstone/FileGarden/image/saveas.png
+Apply settings=[HOME]/redstone/FileGarden/image/floppy.png
+Close=[HOME]/redstone/FileGarden/image/exit.png
+
+[Mail Implant]
+Configure=[HOME]/redstone/FileGarden/image/Mail/mail-setting-32.png
+Get All=[HOME]/redstone/FileGarden/image/Mail/mail-get-32.png
+Compose New=[HOME]/redstone/FileGarden/image/Mail/mail-compose-32.png
+Queue=[HOME]/redstone/FileGarden/image/Mail/mail-compose-32.png
+My Letter=[HOME]/redstone/FileGarden/image/Mail/mail-myletter-32.png
+InBox=[HOME]/redstone/FileGarden/image/Mail/mail-folder-32.png
+OutBox=[HOME]/redstone/FileGarden/image/Mail/mail-sent-folder-32.png
+Trash=[HOME]/redstone/FileGarden/image/Mail/mail-trash-32.png
+Info=[HOME]/redstone/FileGarden/image/ktip.png
+
+[Mail ImplantShowPanel]
+MailPanelFolder=1
+MailPanelMessage=1
+
+[SingleInstance]
+Mail Implant=1
+
+[SingleInstanceLock]
+Mail Implant=[HOME]/redstone/FileGarden/data/E0BA7167-178A-D911-8941-0080C8F89650-Mail ImplantToBeDeleted
+
+[DumpToVCL]
+As New Text Email=[HOME]/redstone/resource/XFGVCL_Mail_Implant_Properties
+As Email Attachment=[HOME]/redstone/resource/XFGVCL_Mail_Implant_Properties
+Editor text as Email Text=[HOME]/redstone/resource/XFGVCL_Mail_Implant_Properties
+

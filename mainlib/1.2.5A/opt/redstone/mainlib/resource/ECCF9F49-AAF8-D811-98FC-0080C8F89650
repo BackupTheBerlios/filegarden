@@ -1,0 +1,33 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=430
+FrameCaption=Print Postscript files to booklet format
+FrameLabel=  Print Postscript files to booklet format
+LabelWidth=120
+LabelImage=/root/redstone/FileGarden/image/contents.png
+InputFrom=none
+REFRESH=none
+ShowAfter=COMMANDER
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Paper size=combo=false="A4"|"A3"|"A5"|"B5"|"letter"|"legal"|"tabloid"|"statement"|"executive"|"folio"|"quarto"|"10x14"
+N-up=combo=true="2"|"4"|"6"|"8"|"10"|"12"|"14"|"16"|"18"|"20"
+Draw border=combo=true="0"|"1"|"2"|"3"|"4"|"5"
+Additional margin=combo=true="0"|"1"|"2"|"3"|"4"|"5"
+Column-Major=checkbox=false=-c
+Save with extension=edit=-Book.ps
+
+[VALUE]
+cmd=psbook %in | psnup -p%Paper size% -%N-up% -d%Draw border% -b%Additional margin% %Column-Major% > %out%Save with extension%
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+

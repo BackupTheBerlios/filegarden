@@ -1,0 +1,6 @@
+Values :   none
+    Key :   %BUILTIN% = Built in xfgFileCommander item.Unconfigurable except for button image 
+
+             The item type of xfgFileInputBottom belongs to button items on the file manager's 
+             top panel.
+             Only changing of button image is allowed

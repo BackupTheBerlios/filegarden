@@ -1,0 +1,22 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=430
+FrameCaption=Testing Custom Dialog
+FrameLabel=Testing Custom Dialog : 
+LabelWidth=150
+InputFrom=none
+REFRESH=commander
+ShowAfter=COMMANDER
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Image size=combo=true="120x120"|"120x120"|"120x120"|"120x120"|"120x120"|"120x120"
+Hello=edit=Just a testing
+
+[VALUE]
+cmd=/usr/bin/convert -resize %Image size%  %in +profile "*" %out
+
+

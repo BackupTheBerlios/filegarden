@@ -1,0 +1,26 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Create Zip Achieves
+FrameLabel= Create new Zip achieve
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=200
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=Commander
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Recurse into directory=checkbox=true=-r
+Store symlinks as symlinks=checkbox=false=-y
+Achieve for DOS / Windows system=checkbox=false=-X
+Save new tar file as=edit=%FileSaveEdit%=new.zip
+
+[VALUE]
+cmd=zip %Achieve for DOS / Windows system% %Recurse into directory% %Store symlinks as symlinks% &out%Save new tar file as% &in
+

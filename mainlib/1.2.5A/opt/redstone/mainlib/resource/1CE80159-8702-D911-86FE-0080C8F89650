@@ -1,0 +1,51 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Extract VCD to images ...
+FrameLabel= Extract VCD to images ...
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=Commander
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE 
+
+[CREATE]
+VCD track=combo=false="1"|"2"
+Output image type=combo=false="jpeg"|"pgm"|"png"|"tga"
+Scale image size=combo=false="160x120 (minimal small screen)"|"256x192 (small screen)"|"352x240 (NTSC quarter screen)"|"352x288 (PAL quarter screen)"|"720x480 (standard NTSC)"|"720x576 (standard PAL)"|"640x480 (square pixel NTSC)"|"768x576 (square pixel PAL)"
+Start from N seconds=edit=none 
+End at N seconds=edit=none 
+Output directory=edit=%diropenedit%=none 
+
+[VALUE]
+cmd=cd %Output directory% && echo "#!/bin/bash" > %GetCustomCommand%GetGuids && echo "mencoder vcd://%VCD track% -cdrom-device %GetCustomCommand%GetPlayCDROM -ovc lavc -lavcopts vcodec=mjpeg -vf %Scale image size% -ss %Start from N seconds% -endpos %End at N seconds% -o %GetCustomCommand%GetUserDataDir%GetCustomCommand%GetGuidsToBeDeleted.avi -nosound && mplayer %GetCustomCommand%GetUserDataDir%GetCustomCommand%GetGuidsToBeDeleted.avi -vo %Output image type% -nosound && rm %GetCustomCommand%GetUserDataDir%GetCustomCommand%GetGuidsToBeDeleted.avi   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Extract VCD to images" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+
+
+[DefaultValue]
+VCD track=2
+Scale image size=640x480 (square pixel NTSC)
+
+[ActualValue]
+2160000 --> Default=2160000
+160x120 (minimal small screen)=scale=160:120
+256x192 (small screen)=scale=256:192  
+352x240 (NTSC quarter screen)=scale=352:240
+352x288 (PAL quarter screen)=scale=352:288
+720x480 (standard NTSC)=scale=720:480  
+720x576 (standard PAL)=scale=720:576 
+640x480 (square pixel NTSC)=scale=640:480 
+768x576 (square pixel PAL)=scale=768:576          
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+

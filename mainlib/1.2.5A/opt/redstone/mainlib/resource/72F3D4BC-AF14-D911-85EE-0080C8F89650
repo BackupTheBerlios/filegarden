@@ -1,0 +1,51 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=450
+FrameCaption=Encode Mjpeg AVI to Mp1 / Mp2 ...
+FrameLabel= Encode Mjpeg AVI to Mp1 / Mp2 ...
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=NONE
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Output name=edit=none
+Output type=combo=false="VCD PAL (Mpeg movie)"|"VCD NTSC (Mpeg movie)"|"VCD SECAM (Mpeg movie)"|"VCD FILM (Mpeg movie)"|"SVCD PAL (Mpeg movie)"|"SVCD NTSC (Mpeg movie)"|"SVCD SECAM (Mpeg movie)"|"SVCD FILM (Mpeg movie)"|"Software PAL (Mpeg movie)"|"Software NTSC (Mpeg movie)"|"Software SECAM (Mpeg movie)"|"Software FILM (Mpeg movie)"|"Software PAL (Mpeg movie)"|"Broadband 600K (Mpeg movie)"|"Broadband 384K (Mpeg movie)"|"Narrowband 128K (Mpeg movie)"
+
+[VALUE]
+cmd=echo "#!/bin/bash" > %GetCustomCommand%GetGuids && echo "lav2yuv %in %Output type%
+
+[DefaultValue]
+
+[ActualValue]
+VCD PAL (Mpeg movie)=| yuvscaler -v 1 -O SIZE_352x240 -n p | mpeg2enc -v 0 -s -f 1 -V 46 -4 2 -2 1 -S 700 -g 6 -G 15 -r 16 -F 3 -a 1 -o %out%Output name%.mpv   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Encode Mjpeg AVI to VCD PAL Mp1 / Mp2" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+VCD NTSC (Mpeg movie)=| yuvscaler -v 1 -O SIZE_352x240 -n n | mpeg2enc -v 0 -s -f 1 -V 46 -4 2 -2 1  -S 700 -g 6 -G 15 -r 16 -F 4 -a 1 -o %out%Output name%.mpv   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Encode Mjpeg AVI to VCD NTSC Mp1 / Mp2" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+VCD SECAM (Mpeg movie)=| yuvscaler -v 1 -O SIZE_352x240 -n s | mpeg2enc -v 0 -s -f 1 -V 46 -4 2 -2 1 -S 700 -g 6 -G 15 -r 16 -F 3 -a 1 -o %out%Output name%.mpv   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Encode Mjpeg AVI to VCD SECAM Mp1 / Mp2" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+VCD FILM (Mpeg movie)=| yuvscaler -v 1 -O SIZE_352x240 -n p | mpeg2enc -v 0 -s -f 1 -V 46 -4 2 -2 1 -S 700 -g 6 -G 15 -r 16 -F 2 -a 1 -o %out%Output name%.mpv   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Encode Mjpeg AVI to VCD Film Mp1 / Mp2" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+SVCD PAL (Mpeg movie)=| yuvscaler -v 1 -O SIZE_352x240 -n p | mpeg2enc -v 0 -s -f 4 -V 230 -4 2 -2 1 -S 700 -g 6 -G 15 -r 16 -F 3 -a 2 -o %out%Output name%.mpv   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Encode Mjpeg AVI to SVCD PAL Mp1 / Mp2" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+SVCD NTSC (Mpeg movie)=| yuvscaler -v 1 -O SIZE_352x240 -n n | mpeg2enc -v 0 -s -f 4 -V 230 -4 2 -2 1 -S 700 -g 6 -G 15 -r 16 -F 4 -a 2 -o %out%Output name%.mpv   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Encode Mjpeg AVI to SVCD NTSC Mp1 / Mp2" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+SVCD SECAM (Mpeg movie)=| yuvscaler -v 1 -O SIZE_352x240 -n s | mpeg2enc -v 0 -s -f 4 -V 230 -4 2 -2 1 -S 700 -g 6 -G 15 -r 16 -F 3 -a 2 -o %out%Output name%.mpv   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Encode Mjpeg AVI to SVCD SECAM Mp1 / Mp2" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+SVCD FILM (Mpeg movie)=| yuvscaler -v 1 -O SIZE_352x240 -n p | mpeg2enc -v 0 -s -f 4 -V 230 -4 2 -2 1 -S 700 -g 6 -G 15 -r 16 -F 2 -a 2 -o %out%Output name%.mpv   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Encode Mjpeg AVI to SVCD Film Mp1 / Mp2" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+Software PAL (Mpeg movie)=| yuvscaler -v 1 -O SIZE_352x240 -n p | mpeg2enc -v 0 -f 3 -b 2200 -B 2326 -V 4000 -4 2 -2 1 -g 6 -G 15 -r 16 -F 3 -a 1 -o %out%Output name%.mpv   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Encode Mjpeg AVI to Sofware PAL Mp1 / Mp2" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+Software NTSC (Mpeg movie)=| yuvscaler -v 1 -O SIZE_352x240 -n n | mpeg2enc -v 0 -s -f 5 -b 2200 -B 2326 -V 4000 -4 2 -2 1 -g 6 -G 15 -r 16 -F 4 -a 1 -o %out%Output name%.mpv &  " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Encode Mjpeg AVI to Sofware NTSC Mp1 / Mp2" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+Software SECAM (Mpeg movie)=| yuvscaler -v 1 -O SIZE_352x240 -n s | mpeg2enc -v 0 -f 0 -b 2200 -B 2326 -V 4000 -4 2 -2 1 -g 6 -G 15 -r 16 -F 3 -a 1 -o %out%Output name%.mpv   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Encode Mjpeg AVI to Sofware SECAM Mp1 / Mp2" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+Software FILM (Mpeg movie)=| yuvscaler -v 1 -O SIZE_352x240 -n p | mpeg2enc -v 0 -s -f 0 -b 2200 -B 2326 -V 4000 -4 2 -2 1 -g 6 -G 15 -r 16 -F 2 -a 1 -o %out%Output name%.mpv &  " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Encode Mjpeg AVI to Sofware Film Mp1 / Mp2" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+Broadband 600K (Mpeg movie)=| yuvscaler -v 1 -O SIZE_352x240 -n p | mpeg2enc -v 0 -f 0 -b 480 -B 600 -V 4000 -4 2 -2 1 -g 6 -G 15 -r 16 -F 2 -a 1 -o %out%Output name%.mpv   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Encode Mjpeg AVI to Broadband 600k Mp1 / Mp2" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+Broadband 384K (Mpeg movie)=| yuvscaler -v 1 -O SIZE_256x192 -n p | mpeg2enc -v 0 -f 0 -b 334 -B 384 -V 4000 -4 2 -2 1 -g 6 -G 15 -r 16 -F 2 -a 1 -o %out%Output name%.mpv   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Encode Mjpeg AVI to Broadband 384k Mp1 / Mp2" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+Narrowband 128K (Mpeg movie)=| yuvscaler -v 1 -O SIZE_160x120 -n p | mpeg2enc -v 0 -f 0 -b 92 -B 128 -V 4000 -4 2 -2 1 -g 6 -G 15 -r 16 -F 3 -a 1 -o %out%Output name%.mpv   " >> %GetCustomCommand%GetGuids && chmod u+x %GetCustomCommand%GetGuids && xterm -title "Encode Mjpeg AVI to Broadband 128k Mp1 / Mp2" -hold -e ./%GetCustomCommand%GetGuids && rm -f %GetCustomCommand%GetGuids &
+
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/
+

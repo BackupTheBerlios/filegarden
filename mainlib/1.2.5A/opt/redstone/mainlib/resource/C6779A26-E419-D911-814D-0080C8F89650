@@ -1,0 +1,39 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Convert CD track to wave
+FrameLabel= Convert CD track to wave
+LabelImage=/root/redstone/FileGarden/image/gnome-package-48.png
+LabelWidth=170
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=COMMANDER
+ShowAfter=Commander
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Wave format=combo=false="Don't strip wave header"|"Strip wave header"
+
+Extract num of seconds=edit=none
+View messages=checkbox=true=%RunMessage%
+
+[VALUE]
+cmd=%View messages%%Wave format%
+
+[DefaultValue]
+
+[ActualValue]
+Extract num of seconds=-d %insert-here%
+Don't strip wave header=cdda2wav %Extract num of seconds% -D %GetCustomCommand%GetPlayCDROM -x -H -t %GetCustomCommand%GetCaption -O wav track%GetCustomCommand%GetCaption.wav &
+Strip wave header=cdda2wav %Extract num of seconds% -D %GetCustomCommand%GetPlayCDROM -x -H -t %GetCustomCommand%GetCaption -O wav track%GetCustomCommand%GetCaption-PRE.wav && echo track%GetCustomCommand%GetCaption-PRE.wav | shntool cat -nh -nr > track%GetCustomCommand%GetCaption.wav && rm -f track%GetCustomCommand%GetCaption-PRE.wav &
+
+[Sample]
+Choose directory=edit=%DirOpenEdit%=
+Choose file=edit=%FileOpenEdit%
+Save file=edit=%FileSaveEdit%=new.tar
+Change to current directory=checkbox=false=-C %GETCURRENTDIR%
+Don't achieve directory path=checkbox=false=%StripPathFromInputFileNames%
+Change to directory=edit=%DirOpenEdit%=~/

@@ -1,0 +1,74 @@
+[INIT]
+FrameType=DIALOG
+FrameWidth=400
+FrameCaption=Resize Image
+FrameLabel=Resize Image :
+LabelWidth=130
+LabelImage=/root/redstone/FileGarden/image/image-32.png
+InputFrom=none
+StripPathFromInputFileNames=0
+REFRESH=none
+ShowAfter=NONE
+version=none
+SInputFrom=EDITOR : COMMANDER : NONE
+SREFRESH=EDITOR : COMMANDER : NONE
+SShowAfter=EDITOR : COMMANDER : NONE
+
+[CREATE]
+Size=combo=true="16x16"|"21x21"|"25x25"|"32x32"|"64x64"|"120x120"|"640x480"
+Save with name part=edit=new
+Convert image to=combo=false="BMP"|"DCM"|"DCX"|"DIB"|"FAX"|"FITS"|"G3"|"GIF"|"GIF87"|"GRAY"|"ICM"|"ICO"|"ICON"|"JPEG"|"JPG"|"LOGO"|"MIFF"|"MONO"|"PALM"|"PBM"|"PCD"|"PCDS"|"PCL"|"PCT"|"PCX"|"PDB"|"PGM"|"PICT"|"PM"|"PNG"|"PNM"|"PPM"|"PSD"|"RAS"|"SGI"|"SUN"|"SVG"|"TGA"|"TIF"|"TIFF"|"UIL"|"XPM"|"WMF"|"WPG"|"X"|"XBM"|"XCF"|"XWD"
+
+[VALUE]
+cmd=/usr/bin/convert %in -resize %Size%  +profile "*" %out%Save with name part%.%Convert image to%
+
+[ActualValue]
+BMP=bmp
+DCM=dcm
+DCX=dcx
+DIB=dib
+FAX=fax
+FITS=fits
+G3=g3
+GIF=gif
+GIF87=gif
+GRAY=gray
+ICM=icm
+ICO=ico
+ICON=icon
+JPEG=jpg
+JPG=jpg
+LOGO=logo
+MIFF=miff
+MONO=mono
+PALM=palm
+PBM=pbm
+PCD=pcd
+PCDS=pcds
+PCL=pcl
+PCT=pct
+PCX=pcx
+PDB=pdb
+PGM=pgm
+PICT=pict
+PM=pm
+PNG=png
+PNM=pnm
+PPM=ppm
+PSD=psd
+RAS=ras
+SGI=sgi
+SUN=sun
+SVG=svg
+TGA=tga
+TIF=tif
+TIFF=tiff
+UIL=uil
+XPM=xpm
+WMF=wmf
+WPG=wpg
+X=x
+XBM=xbm
+XCF=xcf
+XWD=xwd
+

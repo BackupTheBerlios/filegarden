@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<body bgcolor=white><base font face=Helvetica>
+<pre>
+<font size=4 face=Helvetica>
+<b><font size=10>"ImageMagick" menuitem</font></b>
+<b><font size=10>"netpnm" menuitem</font></b>
+
+<img src="capturedM.jpg">
+
+Step 1 : Click "Clear page" to clear the editor if needed.
+Step 2 : Click "Select files ..." button to open a open-file dialog.
+Step 3 : Double click on a file or multi-select multiple files 
+         to display a file listing on the editor page.
+Step 4 : Click "ImageMagik" or "netpnm" menuitem and choose a command
+         to process the file listing.
+
+
+----------------------------------------------------------------------
+<b><font size=6>To insert new "ImageMagick" command menuitem</font></b>
+
+Step 1 : Shutdown FileGarden.
+Step 2 : Edit the file " /opt/redstone/FileGarden/xfg.conf "
+
+<font size=3 color=red>note : File path might not be the same as your installation.
+       There is no way to edit this file when FileGarden is running.</font>
+
+----------------------------------------------------------------------
+example 1 : To add in new command into the "ImageMagick"  or the "netpnm" 
+            menuitem.
+
+command : " /usr/bin/convert -size 120x120 %in  -resize 120x120 +profile "*" %out "
+          To covert and resize image files to 120x120 pixel
+
+
+
+<font size=3 color=darkgreen>
+...
+...
+...
+[ImageMagick]
+To 120x120=/usr/bin/convert -size 120x120 %in  -resize 120x120 +profile "*" %out
+To 48x48=/usr/bin/convert -size 48x48 %in  -resize 48x48 +profile "*" %out
+To 32x32=/usr/bin/convert -size 32x32 %in  -resize 32x32 +profile "*" %out
+To 21x21=/usr/bin/convert -size 32x32 %in  -resize 21x21 +profile "*" %out
+To 16x16=/usr/bin/convert -size 32x32 %in  -resize 16x16 +profile "*" %out
+To 120x120.JPEG=/usr/bin/convert -size 120x120 %in  -resize 120x120 +profile "*" %out.jpg
+To Postcript=/usr/bin/convert -page A4+0+0 %in %out.ps
+To Monochrome.JPEG=/usr/bin/convert -monochrome %in %out.mono.jpg
+-=
+MontageImages-NoFrame=/usr/bin/montage +frame +shadow +label -tile 5x5 -geometry +0+0 &in &outcontact.png
+MontageImages-WithFrame=/usr/bin/montage &in &outcontact.png
+...
+...
+...</font>
+
+<font size=3 color=red>note : to insert a seperator use " - " 
+       use " %in " = input of files from the file listing on the editor. 
+       use " %out " = output of the resulting file size/format with the same filename+extension
+       use " &in " and " &out" to process/convert multiple files to a single file.
+       do not use any spaces , example : " &out.png " is different from " &out .png " </font> 
+
+----------------------------------------------------------------------
+example 2 : To add in image icon for the menuitem 
+
+<font size=3 color=darkgreen>
+...
+...
+...
+[ImageMagickImage]
+To 32x32=
+To 16x16=
+To 120x120.JPEG=/opt/redstone/FileGarden/image/gnome-image-jpeg.png
+To Postcript=/opt/redstone/FileGarden/image/gnome-application-postscript.png
+...
+...
+...
+</font>
+
+
+</font>
+</pre>
+</body></html>
